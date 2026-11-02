@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><!-- screen set name --> — wireframe</title>
+<link rel="stylesheet" href="wireframe.css">
+</head>
+<body>
+
+<!-- optional hand-drawn wobble; drop it if you want dead-straight rules -->
+<svg width="0" height="0" aria-hidden="true" style="position:absolute">
+  <filter id="wobble">
+    <feTurbulence type="fractalNoise" baseFrequency="0.014 0.02" numOctaves="2" seed="7" result="noise"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+
+<main class="board">
+
+  <section>
+    <div class="screen__caption"><b>01</b> <!-- screen name --> — desktop</div>
+    <div class="screen screen--desktop">
+
+      <header class="topbar">
+        <div class="brand"><span class="brand__mark">T</span> <!-- product --></div>
+        <nav class="nav">
+          <a href="#" aria-current="page">Section</a>
+          <a href="#">Section</a>
+        </nav>
+        <div class="topbar__spacer"></div>
+        <div class="avatar">AB</div>
+      </header>
+
+      <div class="page">
+
+        <div class="row row--between">
+          <div>
+            <p class="eyebrow"><!-- context --></p>
+            <h1><!-- page title --></h1>
+            <p class="muted measure"><!-- one line of why this screen exists --></p>
+          </div>
+          <div class="row">
+            <span class="pin">1</span>
+            <button class="btn btn--primary">Primary action</button>
+          </div>
+        </div>
+
+        <!-- content: cards, tables, lists — see references/components.md -->
+
+      </div>
+
+      <footer class="footer">
+        <span class="muted"><!-- product --> v—</span>
+        <span class="muted">Wireframe — content not final</span>
+      </footer>
+
+    </div>
+  </section>
+
+  <section style="width:420px">
+    <div class="screen__caption"><b>Notes</b> open questions</div>
+    <ol class="notes">
+      <li><span class="pin">1</span><span><!-- what is still undecided --></span></li>
+    </ol>
+  </section>
+
+</main>
+
+</body>
+</html>

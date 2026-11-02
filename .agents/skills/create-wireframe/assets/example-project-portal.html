@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>TDP client portal — wireframe</title>
+<link rel="stylesheet" href="wireframe.css">
+</head>
+<body>
+
+<svg width="0" height="0" aria-hidden="true" style="position:absolute">
+  <filter id="wobble">
+    <feTurbulence type="fractalNoise" baseFrequency="0.014 0.02" numOctaves="2" seed="7" result="noise"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.2" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+
+<main class="board">
+
+  <!-- ───────────────────────── 1. dashboard ───────────────────────── -->
+  <section>
+    <div class="screen__caption"><b>01</b> Projects — desktop</div>
+    <div class="screen screen--desktop">
+
+      <header class="topbar">
+        <div class="brand"><span class="brand__mark">T</span> TDP Portal</div>
+        <nav class="nav">
+          <a href="#" aria-current="page">Projects</a>
+          <a href="#">Files</a>
+          <a href="#">Invoices</a>
+        </nav>
+        <div class="topbar__spacer"></div>
+        <div class="search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21"/></svg>
+          <input placeholder="Search projects">
+        </div>
+        <span class="pin">1</span>
+        <div class="avatar">PR</div>
+      </header>
+
+      <div class="page">
+        <div class="row row--between">
+          <div>
+            <p class="eyebrow">Client portal</p>
+            <h1>Your projects</h1>
+            <p class="muted measure">Three active engagements with The Design Project.</p>
+          </div>
+          <div class="row">
+            <span class="pin">2</span>
+            <button class="btn btn--primary">New request</button>
+          </div>
+        </div>
+
+        <div class="grid grid--4">
+          <div class="card">
+            <p class="metric__label">Active</p>
+            <p class="metric__value">03</p>
+          </div>
+          <div class="card">
+            <p class="metric__label">In review</p>
+            <p class="metric__value">02</p>
+          </div>
+          <div class="card">
+            <p class="metric__label">Hours left</p>
+            <p class="metric__value">32</p>
+          </div>
+          <div class="card">
+            <p class="metric__label">Next call</p>
+            <p class="metric__value">Thu</p>
+          </div>
+        </div>
+
+        <div class="row row--between">
+          <div class="segmented">
+            <button aria-pressed="true">All</button>
+            <button>Active</button>
+            <button>Archived</button>
+          </div>
+          <div class="row">
+            <span class="pin">3</span>
+            <select class="select" style="width:190px"><option>Newest first</option></select>
+          </div>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card">
+            <div class="media media--thumb"></div>
+            <h3 class="card__title mt-4">Finvisor — design system</h3>
+            <p class="muted">Sprint 4 of 6</p>
+            <div class="tl tl--thin w-100 mt-4"></div>
+            <div class="tl tl--thin w-60"></div>
+            <div class="row row--between mt-4">
+              <span class="badge">Active</span>
+              <span class="muted">2 days ago</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="media media--thumb"></div>
+            <h3 class="card__title mt-4">Videra — patient app</h3>
+            <p class="muted">Awaiting feedback</p>
+            <div class="tl tl--scribble w-100 mt-4"></div>
+            <div class="tl tl--scribble w-40"></div>
+            <div class="row row--between mt-4">
+              <span class="badge badge--solid">In review</span>
+              <span class="muted">5 days ago</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="media media--thumb"></div>
+            <h3 class="card__title mt-4">Xcures — marketing site</h3>
+            <p class="muted">Kickoff scheduled</p>
+            <div class="tl tl--thin w-100 mt-4"></div>
+            <div class="tl tl--thin w-70"></div>
+            <div class="row row--between mt-4">
+              <span class="badge btn--quiet">Draft</span>
+              <span class="muted">1 week ago</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="row row--between">
+          <span class="muted">Showing 3 of 3</span>
+          <div class="btn-group">
+            <button class="btn btn--sm" disabled>Previous</button>
+            <button class="btn btn--sm" disabled>Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────────────── 2. detail ───────────────────────── -->
+  <section>
+    <div class="screen__caption"><b>02</b> Project detail — desktop</div>
+    <div class="screen screen--desktop">
+      <div class="shell">
+        <aside class="sidebar">
+          <div class="brand"><span class="brand__mark">T</span> TDP</div>
+          <nav class="nav nav--stack">
+            <a href="#">Overview</a>
+            <a href="#" aria-current="page">Deliverables</a>
+            <a href="#">Files</a>
+            <a href="#">Invoices</a>
+            <a href="#">Team</a>
+          </nav>
+          <div class="rule"></div>
+          <div class="field">
+            <span class="label">Hours remaining</span>
+            <div class="bars" style="height:10px;border:0;gap:3px">
+              <span class="bars__bar" style="height:10px"></span>
+              <span class="bars__bar" style="height:10px"></span>
+              <span class="bars__bar" style="height:10px"></span>
+              <span class="bars__bar bars__bar--ghost" style="height:10px"></span>
+              <span class="bars__bar bars__bar--ghost" style="height:10px"></span>
+            </div>
+            <span class="hint">32 of 80 hours left</span>
+          </div>
+        </aside>
+
+        <div class="page">
+          <div class="row row--between">
+            <div>
+              <p class="eyebrow">Finvisor</p>
+              <h1>Design system</h1>
+            </div>
+            <div class="row">
+              <span class="pin">4</span>
+              <button class="btn">Share</button>
+              <button class="btn btn--primary">Upload</button>
+            </div>
+          </div>
+
+          <div class="tabs">
+            <a href="#" aria-selected="true">Deliverables</a>
+            <a href="#">Activity</a>
+            <a href="#">Files</a>
+          </div>
+
+          <div class="split split--aside">
+            <div class="stack stack--loose">
+              <div class="card">
+                <div class="card__head">
+                  <span class="card__title">Sprint 4 — components</span>
+                  <span class="badge badge--solid">In review</span>
+                </div>
+                <table class="table">
+                  <thead>
+                    <tr><th>Deliverable</th><th>Owner</th><th>Status</th><th>Updated</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Button + input states</td><td>Pili</td><td>Ready</td><td>Mon</td></tr>
+                    <tr><td>Data table</td><td>Leo</td><td>In review</td><td>Tue</td></tr>
+                    <tr><td>Chart tokens</td><td>—</td><td>Not started</td><td>—</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="card">
+                <div class="card__head"><span class="card__title">Weekly output</span></div>
+                <div class="bars">
+                  <span class="bars__bar" style="height:40%"></span>
+                  <span class="bars__bar" style="height:65%"></span>
+                  <span class="bars__bar" style="height:52%"></span>
+                  <span class="bars__bar" style="height:88%"></span>
+                  <span class="bars__bar" style="height:70%"></span>
+                  <span class="bars__bar bars__bar--ghost" style="height:95%"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="stack">
+              <span class="pin">5</span>
+              <div class="card">
+                <div class="card__head"><span class="card__title">Next milestone</span></div>
+                <p class="lead">Usability review</p>
+                <p class="muted">Thursday, 14:00 — 60 min</p>
+                <div class="rule mt-4"></div>
+                <div class="row mt-4">
+                  <div class="avatar">PR</div>
+                  <div class="avatar">LG</div>
+                  <div class="avatar">+2</div>
+                </div>
+                <button class="btn btn--block mt-4">Join call</button>
+              </div>
+
+              <div class="callout">Files older than 30 days are archived automatically.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────────────── 3. mobile + modal ───────────────────────── -->
+  <section>
+    <div class="screen__caption"><b>03</b> Mobile list + share modal</div>
+    <div class="row row--top">
+      <div class="screen screen--mobile">
+        <header class="topbar">
+          <div class="brand"><span class="brand__mark">T</span></div>
+          <div class="topbar__spacer"></div>
+          <button class="btn btn--icon" aria-label="Menu">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </button>
+        </header>
+        <div class="page" style="padding:16px">
+          <h2>Projects</h2>
+          <div class="search full"><input placeholder="Search"></div>
+          <ul class="list">
+            <li class="list__item">
+              <div class="media media--thumb" style="width:52px;min-height:52px"></div>
+              <div style="flex:1">
+                <p><strong>Finvisor</strong></p>
+                <div class="tl tl--thin w-70"></div>
+              </div>
+            </li>
+            <li class="list__item">
+              <div class="media media--thumb" style="width:52px;min-height:52px"></div>
+              <div style="flex:1">
+                <p><strong>Videra</strong></p>
+                <div class="tl tl--thin w-50"></div>
+              </div>
+            </li>
+            <li class="list__item">
+              <div class="media media--thumb" style="width:52px;min-height:52px"></div>
+              <div style="flex:1">
+                <p><strong>Xcures</strong></p>
+                <div class="tl tl--thin w-60"></div>
+              </div>
+            </li>
+          </ul>
+          <button class="btn btn--primary btn--block mt-4">New request</button>
+        </div>
+      </div>
+
+      <div class="screen screen--fluid" style="width:560px">
+        <div class="overlay" style="min-height:100%;border:0;border-radius:0">
+          <div class="modal">
+            <div class="row row--between">
+              <h2>Share project</h2>
+              <span class="pin">6</span>
+            </div>
+            <div class="field">
+              <span class="label">Email address</span>
+              <input class="input" placeholder="name@company.com">
+              <span class="hint">They get view-only access.</span>
+            </div>
+            <div class="field">
+              <span class="label">Permission</span>
+              <div class="row stack--tight">
+                <label class="radio"><span class="radio__dot radio__dot--on"></span> Can comment</label>
+                <label class="radio"><span class="radio__dot"></span> Can edit</label>
+              </div>
+            </div>
+            <label class="check"><span class="check__box check__box--on"></span> Notify by email</label>
+            <div class="row row--between">
+              <button class="btn">Cancel</button>
+              <button class="btn btn--primary">Send invite</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────────────────── notes ───────────────────────── -->
+  <section style="width:420px">
+    <div class="screen__caption"><b>Notes</b> open questions</div>
+    <ol class="notes">
+      <li><span class="pin">1</span><span>Search is global or project-scoped? Assume global.</span></li>
+      <li><span class="pin">2</span><span>"New request" opens the brief form, not a project.</span></li>
+      <li><span class="pin">3</span><span>Sort persists per client.</span></li>
+      <li><span class="pin">4</span><span>Upload needs a plan-limit error state.</span></li>
+      <li><span class="pin">5</span><span>Milestone card collapses on mobile.</span></li>
+      <li><span class="pin">6</span><span>Invite list: show pending invites inline.</span></li>
+    </ol>
+    <div class="todo mt-4">
+      <div class="todo__head">Out of scope</div>
+      <span class="muted">Billing, SSO, and notification preferences are separate flows.</span>
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>

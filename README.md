@@ -1,3 +1,82 @@
 # TDP Wireframe Framework
 
-Wireframe framework for TDP.
+Low-fidelity UI wireframes drawn in code: **Balsamiq Sans**, **black ink on white
+paper**, rendered to PNG. No grey, no tint, no colour — structure, flow, and priority
+only.
+
+The framework is an agent skill. It ships its own design system, component vocabulary,
+worked example, and two guard rails: a monochrome linter and a renderer that proves the
+export carries no colour.
+
+## What's inside
+
+```
+.agents/skills/create-wireframe/
+├── SKILL.md                        the workflow an agent follows
+├── assets/
+│   ├── wireframe.css               the whole design system + embedded Balsamiq Sans
+│   ├── template.html               starter board
+│   ├── example-project-portal.html worked example (dashboard, detail, mobile, modal)
+│   └── example-project-portal.png  its render — the quality bar
+├── references/
+│   ├── monochrome.md               how to build hierarchy with two values
+│   ├── components.md               component markup, icons, states, annotations
+│   └── review-checklist.md         pre-handover review
+└── scripts/
+    ├── render.sh                   HTML → trimmed PNG (inlines the sheet, checks chroma)
+    └── lint-mono.sh                fails on any colour, opacity, shadow or remote asset
+```
+
+## Examples
+
+| Dashboard, detail, mobile, modal | Notes panel |
+|---|---|
+| ![Wireframe board](.agents/skills/create-wireframe/assets/example-project-portal.png) | see the same file |
+
+## Use it
+
+With an agent in this repo, just ask for a wireframe — the skill is discovered from
+`.agents/skills/`. To run it by hand:
+
+```bash
+S=.agents/skills/create-wireframe
+cp $S/assets/template.html wireframes/my-flow.html
+
+$S/scripts/lint-mono.sh wireframes/my-flow.html
+$S/scripts/render.sh   wireframes/my-flow.html --width 1500 --inline
+```
+
+`render.sh` inlines the stylesheet and fonts, so `my-flow.standalone.html` opens
+anywhere and `my-flow.png` is the thing you actually show people.
+
+Requirements: `chromium` (or Chrome), `python3`, and ImageMagick (`magick`) for the
+trim step. Everything renders offline.
+
+## The rules
+
+1. **Two values.** `#000` and `#fff`. The linter fails the build otherwise.
+2. **Balsamiq Sans** for every glyph. It is embedded in `wireframe.css` (latin subset,
+   woff2, SIL OFL 1.1 — © The Balsamiq Sans Project Authors).
+3. **Offline.** No remote fonts, images, or scripts in the artefact.
+4. **Images are crosses.** Never stock photography, never screenshots.
+5. **No lorem ipsum.** Real domain words, or an honest placeholder.
+6. **One loud element per screen.** A second solid-black button is a design bug.
+7. **Caption and annotate every screen.** Numbered pins plus a notes panel; the board
+   should be readable out loud.
+8. **States count.** Empty, loading, error, permission-denied, long content: draw them
+   or declare them out of scope.
+
+Hierarchy without grey comes from four levers only: stroke weight, fill style
+(solid / hatched / dashed / empty), type size and weight, and space. See
+`references/monochrome.md`.
+
+## Adding a component
+
+Add it to `assets/wireframe.css`, built only from `--ink`, `--paper`, `--stroke*` and
+the spacing scale, then run `scripts/lint-mono.sh assets/wireframe.css`. Never patch a
+screen file with local styling — the sheet is the design system.
+
+## Collaborators
+
+Repo lives under the TDP org (private). Wireframes produced with it belong in each
+project's `wireframes/` directory, one file per flow.
