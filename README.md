@@ -70,6 +70,13 @@ Hierarchy without grey comes from four levers only: stroke weight, fill style
 (solid / hatched / dashed / empty), type size and weight, and space. See
 `references/monochrome.md`.
 
+## Hosted boards
+
+Every push deploys to Vercel: `master` to production, other branches to preview URLs.
+`scripts/build-site.mjs` collects each `wireframes/<project>/<board>.html` (plus its PNG
+and the shared `wireframe.css`) into `dist/` and writes an index, so a new board is
+online after the next push. Build locally with `node scripts/build-site.mjs`.
+
 ## Design checks (Impeccable)
 
 [Impeccable](https://impeccable.style) (Apache-2.0) is installed per project for Claude

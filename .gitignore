@@ -8,3 +8,5 @@ node_modules/
 .agents/skills/impeccable/scripts/bin/
 .impeccable/hook.cache.json
 .claude/settings.local.json
+dist/
+.vercel
