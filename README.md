@@ -1,3 +1,3 @@
-# web-tdp-new-website
+# TDP Wireframe Framework
 
-New website for TDP.
+Wireframe framework for TDP.
