@@ -262,6 +262,10 @@ A homepage is one tall `.screen--desktop` made of stacked `.section` blocks.
 - `.board__intro` is a full-width block above the screens for the board's rationale:
   why this structure, what it is based on, and its main trade-off. Put it first in
   `.board`, with a `<b>Why</b>` caption and a `.card` holding one `.lead` paragraph.
+- `.board--doc` makes a board of cards, tables and notes (an overview, a summary)
+  reflow to any viewport instead of fixed widths: `.grid--5` drops to 3 then 1
+  column, `.split` stacks, and wide tables go in `.table-scroll` so they scroll inside
+  their box, never the page. Device frames keep their fixed widths.
 - `.flow__step--quiet` (dashed) is the "old way" or not-yet state in a before/after.
 
 ## Adding a component
