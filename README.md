@@ -72,7 +72,8 @@ Hierarchy without grey comes from four levers only: stroke weight, fill style
 
 ## Hosted boards
 
-Every push deploys to Vercel: `master` to production, other branches to preview URLs.
+Every push deploys to Vercel through its Git integration: `master` to production
+(https://tdp-wireframes.vercel.app), other branches to preview URLs.
 `scripts/build-site.mjs` collects each `wireframes/<project>/<board>.html` (plus its PNG
 and the shared `wireframe.css`) into `dist/` and writes an index, so a new board is
 online after the next push. Build locally with `node scripts/build-site.mjs`.
