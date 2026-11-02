@@ -633,6 +633,11 @@ small { font-size: var(--fs-xs); }
 }
 .lens--static { position: static; display: inline-block; }
 
+/* board intro: a full-width rationale block above the screens */
+.board__intro { flex-basis: 100%; }
+.board__intro .card { max-width: 1280px; }
+.board__intro p { max-width: 82ch; }
+
 .screen--mobile .section       { padding: var(--s-6) var(--s-4); }
 .screen--mobile .section--hero { padding: var(--s-7) var(--s-4) var(--s-6); }
 .screen--mobile .display       { font-size: var(--fs-2xl); }
@@ -661,6 +666,16 @@ small { font-size: var(--fs-xs); }
 <body>
 
 <main class="board">
+
+  <!-- ───────────────────────── why: rationale ───────────────────────── -->
+  <section class="board__intro">
+    <div class="screen__caption"><b>Why</b> the thinking behind this version</div>
+    <div class="card stack">
+      <p class="lead">Our unfair advantage is that we work in public, with YouTube episodes and open GitHub repos. Most studios only claim they're good; we can show it. So right after the hero, the visitor watches us build a real feature (B), then sees a short strip of proof (C) and gets free tools they can use today (D). Giving something useful first makes people more willing to give something back, in our case a call. Testimonials (E) and the community (F) show that other people are already here. The close (G) offers a call or, for people who aren't ready yet, an email signup. <strong>Trade-off:</strong> it depends on having one episode good enough to be the centerpiece of the homepage.</p>
+      <p class="hint"><strong>How to read this board:</strong> the big frame on the left is the full homepage, top to bottom. Each section is lettered (A, B, C…) and carries a small dashed tag naming the persuasion principle it relies on. Those principles are explained in plain words on the Overview board. The right column shows the phone version, a section-by-section summary and open questions.</p>
+    </div>
+  </section>
+
 
   <!-- ───────────────────────── 01 homepage desktop ───────────────────────── -->
   <section>

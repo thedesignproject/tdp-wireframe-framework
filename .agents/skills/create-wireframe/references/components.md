@@ -259,6 +259,9 @@ A homepage is one tall `.screen--desktop` made of stacked `.section` blocks.
   dashed and italic so it never reads as UI. On mobile it drops into the flow.
 - The hero CTA is the page's one solid button. Later repeats of the same action use
   `.btn--bold`.
+- `.board__intro` is a full-width block above the screens for the board's rationale:
+  why this structure, what it is based on, and its main trade-off. Put it first in
+  `.board`, with a `<b>Why</b>` caption and a `.card` holding one `.lead` paragraph.
 - `.flow__step--quiet` (dashed) is the "old way" or not-yet state in a before/after.
 
 ## Adding a component

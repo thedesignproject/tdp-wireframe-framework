@@ -633,6 +633,11 @@ small { font-size: var(--fs-xs); }
 }
 .lens--static { position: static; display: inline-block; }
 
+/* board intro: a full-width rationale block above the screens */
+.board__intro { flex-basis: 100%; }
+.board__intro .card { max-width: 1280px; }
+.board__intro p { max-width: 82ch; }
+
 .screen--mobile .section       { padding: var(--s-6) var(--s-4); }
 .screen--mobile .section--hero { padding: var(--s-7) var(--s-4) var(--s-6); }
 .screen--mobile .display       { font-size: var(--fs-2xl); }
@@ -661,6 +666,16 @@ small { font-size: var(--fs-xs); }
 <body>
 
 <main class="board">
+
+  <!-- ───────────────────────── why: rationale ───────────────────────── -->
+  <section class="board__intro">
+    <div class="screen__caption"><b>Why</b> the thinking behind this version</div>
+    <div class="card stack">
+      <p class="lead">This version comes from the Joshua Bell story on the call: one of the world's best violinists played in a subway station and almost nobody stopped. The same music was valued completely differently because of the setting. So this page sets the frame before showing anything. First it names a pain the visitor already feels: their roadmap is stuck waiting on handoffs (B). Then it shows the shift, the old way next to how we work (C). When the proof arrives (D), it reads as the answer to their problem rather than bragging. The team (E) and the ways to work with us, with prices (F), clear the last doubts before the ask (G). <strong>Trade-off:</strong> proof only appears in the fourth section, so a visitor who skims may leave before seeing it.</p>
+      <p class="hint"><strong>How to read this board:</strong> the big frame on the left is the full homepage, top to bottom. Each section is lettered (A, B, C…) and carries a small dashed tag naming the persuasion principle it relies on. Those principles are explained in plain words on the Overview board. The right column shows the phone version, a section-by-section summary and open questions.</p>
+    </div>
+  </section>
+
 
   <!-- ───────────────────────── 01 homepage desktop ───────────────────────── -->
   <section>
