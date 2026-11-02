@@ -42,7 +42,8 @@ jobs:
         run: |
           prod=""
           [ "$GITHUB_REF" = "refs/heads/master" ] && prod="--prod"
-          url=$(npx -y vercel@latest deploy --yes $prod --token "$VERCEL_TOKEN")
+          npx -y vercel@latest deploy --yes --json $prod --token "$VERCEL_TOKEN" > deploy.json
+          url=$(node -p 'const d = require("./deploy.json").deployment; d.productionUrl || d.url')
           echo "Deployed: $url"
           echo "### Deployed to Vercel" >> "$GITHUB_STEP_SUMMARY"
           echo "$url" >> "$GITHUB_STEP_SUMMARY"
