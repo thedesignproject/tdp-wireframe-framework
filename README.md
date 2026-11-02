@@ -70,6 +70,20 @@ Hierarchy without grey comes from four levers only: stroke weight, fill style
 (solid / hatched / dashed / empty), type size and weight, and space. See
 `references/monochrome.md`.
 
+## Design checks (Impeccable)
+
+[Impeccable](https://impeccable.style) (Apache-2.0) is installed per project for Claude
+Code (`.claude/`) and Codex (`.agents/skills/impeccable`, `.codex/hooks.json`). Its hook
+scans every HTML file an agent edits and reports anti-patterns before the agent calls
+the work done. In Codex, approve the project hook once via `/hooks`.
+
+- The engine binary is not committed (`scripts/bin/` is ignored); the launcher downloads
+  the pinned version into `~/.impeccable/` on first run.
+- Ignores live in `.impeccable/config.json`, each with a reason. The detector cannot see
+  `wireframe.css` (it is inlined at render time), so type-scale and padding findings on
+  board sources are false positives; check the PNG and add a scoped ignore.
+- Update: `npx impeccable update`, then re-commit.
+
 ## Adding a component
 
 Add it to `assets/wireframe.css`, built only from `--ink`, `--paper`, `--stroke*` and
