@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>designproject.io V2 Wall of Voices — wireframe</title>
+<link rel="stylesheet" href="wireframe.css">
+</head>
+<body>
+
+<main class="board">
+
+  <!-- ───────────────────────── 01 homepage desktop ───────────────────────── -->
+  <section>
+    <div class="screen__caption"><b>V2</b> Wall of Voices · <b>01</b> Homepage — desktop</div>
+    <div class="screen screen--desktop">
+
+      <header class="topbar">
+        <div class="brand"><span class="brand__mark">T</span> The Design Project</div>
+        <nav class="nav">
+          <a href="#">Work</a>
+          <a href="#">How we work</a>
+          <a href="#">Industries</a>
+          <a href="#">Pricing</a>
+          <a href="#">Resources</a>
+        </nav>
+        <div class="topbar__spacer"></div>
+        <a class="btn btn--sm" href="#">Book a call</a>
+      </header>
+
+      <!-- A. hero (constant) -->
+      <section class="section section--hero">
+        <span class="lens">A · Constant hero · Ethos + Authority</span>
+        <p class="eyebrow">AI-native product studio &amp; design lab</p>
+        <h1 class="display">A design-led, AI-native product studio</h1>
+        <p class="lead measure">Designers, PMs and engineers working as one team with yours, using AI to take a feature from kickoff to live.</p>
+        <div class="row">
+          <span class="pin">1</span>
+          <a class="btn btn--primary btn--lg" href="#">Book a call</a>
+          <a class="btn btn--quiet btn--lg" href="#">See the results</a>
+        </div>
+        <div class="proof-strip">
+          <span class="proof"><b>Woven</b> acquired by <b>Slack</b></span>
+          <span class="proof"><b>Brev</b> acquired by <b>NVIDIA</b></span>
+          <span class="proof"><b>Vyro</b> acquired by <b>MrBeast</b></span>
+          <span class="proof"><b>Monte Carlo</b> backed by <b>Accel</b></span>
+        </div>
+      </section>
+
+      <!-- B. wall of voices -->
+      <section class="section">
+        <span class="lens">B · Social proof + Liking · Pathos</span>
+        <div class="row row--between">
+          <div class="section__head">
+            <div class="row"><span class="pin">2</span><p class="eyebrow">From people we've worked with</p></div>
+            <h2>Teams that bet on us and won</h2>
+          </div>
+          <div class="stack stack--tight" style="text-align:right">
+            <p class="metric__value">82+</p>
+            <p class="metric__label">Client NPS</p>
+          </div>
+        </div>
+
+        <div class="grid grid--3">
+          <!-- featured: video testimonial spans two columns -->
+          <article class="card stack" style="grid-column:span 2">
+            <div class="row"><span class="pin">3</span><span class="eyebrow">Video, 45 sec</span></div>
+            <div class="media" style="min-height:230px"><span class="play"></span><span class="media__tag">client on camera — founder or head of product</span></div>
+            <div class="cite">
+              <div class="avatar">??</div>
+              <div><strong>[Name]</strong> · <span class="muted">[Role, Company] — to record</span></div>
+            </div>
+          </article>
+
+          <article class="card stack">
+            <p class="quote--sm">"The redesign pushed us forward on our mission to verify 100% of IDs in real time."</p>
+            <div class="cite"><div class="avatar">ES</div><div><strong>Erick Soto</strong><br><span class="muted">VP of Product, Socure</span></div></div>
+            <span class="badge badge--solid" style="justify-self:start">Raised $100M after</span>
+          </article>
+
+          <article class="card stack">
+            <p class="quote--sm">"Communication was 10/10 from start to finish … Working with TDP is 100% worth it."</p>
+            <div class="cite"><div class="avatar">CM</div><div><strong>Colleen McBride</strong><br><span class="muted">CMO, Navengage</span></div></div>
+          </article>
+
+          <article class="card stack">
+            <p class="quote--sm">"Communication is fluid and enables us to move quickly, adapt to changes and pivot to achieve our goals."</p>
+            <div class="cite"><div class="avatar">EC</div><div><strong>Elliot Chen</strong><br><span class="muted">Head of Product, OXIO</span></div></div>
+          </article>
+
+          <article class="card stack">
+            <div class="tl tl--scribble w-100"></div>
+            <div class="tl tl--scribble w-80"></div>
+            <div class="cite"><div class="avatar">??</div><div><strong>[Quote to collect]</strong><br><span class="muted">Big Health — FDA approval story</span></div></div>
+          </article>
+
+          <article class="card stack">
+            <div class="tl tl--scribble w-100"></div>
+            <div class="tl tl--scribble w-60"></div>
+            <div class="cite"><div class="avatar">??</div><div><strong>[Quote to collect]</strong><br><span class="muted">Imera — speed: weeks, not months</span></div></div>
+          </article>
+
+          <article class="card stack">
+            <div class="tl tl--scribble w-100"></div>
+            <div class="tl tl--scribble w-70"></div>
+            <div class="cite"><div class="avatar">??</div><div><strong>[Quote to collect]</strong><br><span class="muted">Finvisor — design system + product</span></div></div>
+          </article>
+        </div>
+        <div class="row"><span class="pin">4</span><a class="btn btn--quiet btn--sm" href="#">Show 6 more</a><span class="hint">Grid expands in place; no carousel.</span></div>
+      </section>
+
+      <!-- C. numbers strip -->
+      <section class="section section--tight">
+        <span class="lens">C · Authority · Logos</span>
+        <div class="grid grid--4">
+          <div class="stack stack--tight"><p class="metric__value">50+</p><p class="muted">funded B2B startups</p></div>
+          <div class="stack stack--tight"><p class="metric__value">3x</p><p class="muted">faster on 15+ AI-powered projects</p></div>
+          <div class="stack stack--tight"><p class="metric__value">2019</p><p class="muted">shipping since; Miami + Buenos Aires</p></div>
+          <div class="stack stack--tight"><p class="metric__value">Inc.</p><p class="muted">Power Partner Award</p></div>
+        </div>
+      </section>
+
+      <!-- D. what we do, one sentence -->
+      <section class="section">
+        <span class="lens">D · Logos</span>
+        <div class="split">
+          <div class="section__head">
+            <div class="row"><span class="pin">5</span><p class="eyebrow">What we do</p></div>
+            <h2>You bring the product decision. We take it to production.</h2>
+            <p class="muted">Design, product management and engineering in one cycle, using AI at every step.</p>
+          </div>
+          <div class="stack">
+            <div class="flow">
+              <span class="flow__step">Context</span><span class="flow__arrow"></span>
+              <span class="flow__step">Design</span><span class="flow__arrow"></span>
+              <span class="flow__step">Build</span><span class="flow__arrow"></span>
+              <span class="flow__step">Ship</span>
+            </div>
+            <a class="btn btn--quiet btn--sm" href="#" style="justify-self:start">How we work, in depth</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- E. unity: founders like you -->
+      <section class="section">
+        <span class="lens">E · Unity · Pathos</span>
+        <div class="section__head">
+          <div class="row"><span class="pin">6</span><p class="eyebrow">Teams like yours</p></div>
+          <h2>Wherever you are, someone like you already shipped with us</h2>
+        </div>
+        <div class="tabs">
+          <a href="#" aria-selected="true">Seed: first product</a>
+          <a href="#">Series A: scale the product</a>
+          <a href="#">Series B+: modernise with AI</a>
+        </div>
+        <div class="split split--aside">
+          <div class="stack">
+            <p class="quote">"[Seed-stage founder quote: why we chose a studio over hiring.]"</p>
+            <span class="muted"><strong>[Founder]</strong> · [Company], Seed</span>
+          </div>
+          <article class="card stack">
+            <p class="eyebrow">Case study</p>
+            <div class="media media--thumb"></div>
+            <strong>Imera: zero to B2B platform</strong>
+            <span class="muted">Won a global enterprise customer in three months.</span>
+            <a class="btn btn--sm" href="#">Read the story</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- F. close -->
+      <section class="section section--loud section--center">
+        <span class="lens">F · Reciprocity + Scarcity + Commitment · Pathos</span>
+        <div class="section__head">
+          <h2>Join them</h2>
+          <p class="muted measure">30 minutes with a founder. If we're not the right fit, we'll tell you who is.</p>
+        </div>
+        <div class="row"><span class="pin">7</span><a class="btn btn--bold btn--lg" href="#">Book a call</a><a class="btn btn--quiet" href="#">Or get a free product teardown</a></div>
+        <p class="muted"><strong>[N] spots open for [month]</strong></p>
+      </section>
+
+      <footer class="footer">
+        <span class="muted">The Design Project · Miami · Buenos Aires</span>
+        <span class="muted">Work · How we work · Industries · Pricing · Careers · hello@designproject.io</span>
+      </footer>
+    </div>
+  </section>
+
+  <!-- ───────────────────────── side column ───────────────────────── -->
+  <div class="stack stack--loose" style="width:420px">
+
+    <section>
+      <div class="screen__caption"><b>02</b> First scroll — mobile</div>
+      <div class="screen screen--mobile">
+        <header class="topbar">
+          <div class="brand"><span class="brand__mark">T</span> TDP</div>
+          <div class="topbar__spacer"></div>
+          <button class="btn btn--icon" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        </header>
+        <section class="section section--hero">
+          <h1 class="display">A design-led, AI-native product studio</h1>
+          <p class="muted">Design, product and engineering as one team.</p>
+          <span class="proof"><b>Woven</b> acquired by <b>Slack</b></span>
+        </section>
+        <section class="section section--tight">
+          <p class="eyebrow">Teams that bet on us and won</p>
+          <article class="card stack">
+            <p class="quote--sm">"Working with TDP is 100% worth it."</p>
+            <span class="muted"><strong>Colleen McBride</strong> · Navengage</span>
+          </article>
+          <div class="row"><span class="badge badge--solid">1</span><span class="badge">2</span><span class="badge">3</span><span class="hint">swipe</span></div>
+        </section>
+        <div class="cta-bar"><a class="btn btn--primary btn--block" href="#">Book a call</a></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="screen__caption"><b>Story</b> the hypothesis</div>
+      <div class="card stack">
+        <p><strong>"If I don't know the company I won't read a case study. If many people trust them, I trust them."</strong></p>
+        <div class="flow">
+          <span class="flow__step">Who</span><span class="flow__arrow"></span>
+          <span class="flow__step">Voices</span><span class="flow__arrow"></span>
+          <span class="flow__step">Numbers</span><span class="flow__arrow"></span>
+          <span class="flow__step">Like you</span><span class="flow__arrow"></span>
+          <span class="flow__step">Talk</span>
+        </div>
+        <p class="muted">Tests the 2 Nov counter-argument: volume of voices beats depth of cases for a brand nobody knows. Case studies appear once, as a link, inside the unity block.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="screen__caption"><b>Map</b> persuasion levers by section</div>
+      <table class="table">
+        <thead><tr><th>Sec.</th><th>Cialdini</th><th>Aristotle</th></tr></thead>
+        <tbody>
+          <tr><td>A</td><td>Authority, social proof</td><td>Ethos</td></tr>
+          <tr><td>B</td><td>Social proof, liking</td><td>Pathos</td></tr>
+          <tr><td>C</td><td>Authority</td><td>Logos</td></tr>
+          <tr><td>D</td><td>(none)</td><td>Logos</td></tr>
+          <tr><td>E</td><td>Unity, social proof</td><td>Pathos</td></tr>
+          <tr><td>F</td><td>Reciprocity, scarcity, commitment</td><td>Pathos</td></tr>
+        </tbody>
+      </table>
+      <p class="hint mt-4">All 7 present. Weight: pathos 3, logos 2, ethos 1. Most emotional of the five.</p>
+    </section>
+
+    <section>
+      <div class="screen__caption"><b>Notes</b> open questions</div>
+      <ol class="notes">
+        <li><span class="pin">1</span><span>Hero identical to V1, V3, V4 and V5.</span></li>
+        <li><span class="pin">2</span><span>We have 3 usable quotes today. This version needs 8–12 with faces.</span></li>
+        <li><span class="pin">3</span><span>A video testimonial is the strongest liking signal; who would record one?</span></li>
+        <li><span class="pin">4</span><span>Expand in place: a carousel hides most voices.</span></li>
+        <li><span class="pin">5</span><span>One sentence plus a 4-step flow; detail lives on "How we work".</span></li>
+        <li><span class="pin">6</span><span>Stage tabs swap quote and case together. Needs one of each per stage.</span></li>
+        <li><span class="pin">7</span><span>"Free teardown" is a real offer, or it doesn't ship.</span></li>
+      </ol>
+      <div class="todo mt-4">
+        <div class="todo__head">Out of scope</div>
+        <span class="muted">Reviews page, video production, logo wall (the quotes carry the logos).</span>
+      </div>
+    </section>
+
+  </div>
+
+</main>
+
+</body>
+</html>

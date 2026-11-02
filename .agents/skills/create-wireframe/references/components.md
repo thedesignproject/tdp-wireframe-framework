@@ -226,6 +226,41 @@ Inline SVG only, `stroke="currentColor"` or `#000`, `stroke-width="2"`,
 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
 ```
 
+## Marketing pages (long-scroll sites)
+
+A homepage is one tall `.screen--desktop` made of stacked `.section` blocks.
+
+```html
+<section class="section section--hero">          <!-- centred, no top rule -->
+  <span class="lens">A · Ethos + Authority</span>  <!-- annotation, not UI -->
+  <h1 class="display">A design-led, AI-native product studio</h1>
+  <div class="proof-strip"><span class="proof"><b>Woven</b> acquired by <b>Slack</b></span></div>
+</section>
+
+<section class="section section--tight section--center">
+  <div class="logo-wall"><span class="logo">Socure</span> …</div>   <!-- names, never logo images -->
+</section>
+
+<section class="section">
+  <p class="quote--xl">"…"</p>                      <!-- also .quote, .quote--sm -->
+  <div class="cite"><div class="avatar">ES</div><div><strong>Name</strong> · Role</div></div>
+  <div class="media"><span class="play"></span></div>            <!-- video placeholder -->
+  <div class="flow"><span class="flow__step">Context</span><span class="flow__arrow"></span>…</div>
+</section>
+
+<section class="section section--loud section--center">   <!-- the close: 3px top rule -->
+  <a class="btn btn--bold btn--lg">Book a call</a>          <!-- repeat CTA: bold, never solid -->
+</section>
+
+<div class="cta-bar"><a class="btn btn--primary btn--block">Book a call</a></div>  <!-- sticky mobile -->
+```
+
+- `.lens` names the persuasion lever (Cialdini / Aristotle) a section pulls. It is
+  dashed and italic so it never reads as UI. On mobile it drops into the flow.
+- The hero CTA is the page's one solid button. Later repeats of the same action use
+  `.btn--bold`.
+- `.flow__step--quiet` (dashed) is the "old way" or not-yet state in a before/after.
+
 ## Adding a component
 
 If a screen needs something the sheet does not have:
