@@ -9,7 +9,7 @@ overview, then open any version.
 | Board | Story | Hypothesis it tests |
 |---|---|---|
 | [00 Overview](00-overview.png) | all five spines, sections worth borrowing, principle matrix | — |
-| [V6 Before &amp; After](v6-before-after.png) | Hero → one big before/after → three more pairs → quotes → what we do, one line → call | "Design is judged by eye. Show the product before we touched it, and after." |
+| [V6 Proof Up Front](v6-proof-up-front.png) | Split hero (project shot + client quote) → logo wall → results (projects with their numbers) → what we do → watch us build → call | "Show who trusts us and what we built before anyone has to scroll." |
 | [V7 Offer First](v7-offer-first.png) | Hero → three plans with prices → three-question chooser → proof per plan → FAQ → call | "Buyers want to know what they get and what it costs before they talk to anyone." |
 | [V8 Meet the Makers](v8-meet-the-makers.png) | Hero → founder video → the team by face → who pairs with whom → quotes → two studios → book with a founder | "People buy from people. Show who'll actually work on your product." |
 | [V9 Objections, Answered](v9-objections-answered.png) | Hero → five buyer questions, each answered with proof → logo strip → trial terms → call | "Buyers arrive with doubts. Answer them in the order they have them." |
@@ -21,12 +21,12 @@ Each `.html` is the source (needs the skill's `wireframe.css`).
 ## Same rules as round 1
 
 - **Hero, topbar and footer are identical** to round 1, so all ten versions compare story,
-  not headline.
+  not headline. V6 keeps the same hero words but splits the layout to make room for proof.
 - **One primary action:** Book a call. Solid only in the hero; repeats are bold-outline.
 - **No process explainer.** V8's "who pairs with whom" and V10's "Day 7 / 30 / 60" show
   people and outcomes, not steps. V10 is the closest to the line; its notes flag it.
-- **Case studies are never the first proof.** In V6 the before/after pictures are the proof
-  and the case study is one click behind each pair.
+- **Case studies are never the first proof.** V6 shows a project shot with the client's quote
+  over it; the case study is one click behind it.
 - The persuasion tags and per-board maps use the same vocabulary as round 1 (Cialdini's
   seven principles, Aristotle's three appeals plus kairos). It's explained in plain words on
   the [round 1 overview](../designproject-io/00-overview.png).
@@ -34,7 +34,7 @@ Each `.html` is the source (needs the skill's `wireframe.css`).
 ## How round 2 relates to round 1
 
 Round 1's main bets were social proof, reciprocity and unity. Round 2 bets on what round 1
-used only as support: authority (V6, V9), commitment (V7), liking (V8) and timing (V10). The
+used only as support: proof in the first screen (V6), authority (V9), commitment (V7), liking (V8) and timing (V10). The
 likely winner is one spine from either round plus one or two borrowed sections. The
 overview's **Borrow** table suggests where each round 2 section could slot into a round 1
 spine.
@@ -46,7 +46,7 @@ toolbox or V5's "teams like you".
 
 | Version | Needs |
 |---|---|
-| V6 | Written OK from clients to show their old screens, dated and real (not mocked to look worse). Imera and Finvisor have no "before". |
+| V6 | Three hero slides, each a project shot + quote + face + logo (only Socure has all four today); Finvisor and Big Health result metrics. |
 | V7 | A decision to publish prices on the homepage; sales data behind "most picked"; a "from [$X]" for Product Team; trial and pause terms that match the Pricing page. |
 | V8 | A founder on camera, 8 real team photos with each person's sign-off, studio photos, real US-hours overlap. |
 | V9 | Confirmation from sales that these are the five objections, in this order; real days from signed to started; trial terms in writing. |
@@ -60,6 +60,6 @@ number for every "[N] spots" line.
 ```bash
 S=.agents/skills/create-wireframe/scripts
 $S/lint-mono.sh wireframes/designproject-io-round-2/*.html
-$S/render.sh wireframes/designproject-io-round-2/v6-before-after.html --width 1820 --height 9000 --inline
+$S/render.sh wireframes/designproject-io-round-2/v6-proof-up-front.html --width 1820 --height 9000 --inline
 $S/render.sh wireframes/designproject-io-round-2/00-overview.html --width 1800 --height 3000 --inline
 ```

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>designproject.io V6 Before &amp; After — wireframe</title>
+<title>designproject.io V6 Proof Up Front — wireframe</title>
 <style>
 /* ============================================================
    Balsamiq Sans — embedded (latin subset, woff2, base64)
@@ -689,15 +689,15 @@ small { font-size: var(--fs-xs); }
   <section class="board__intro">
     <div class="screen__caption"><b>Why</b> the thinking behind this version</div>
     <div class="card stack">
-      <p class="lead">People judge design with their eyes before they read a single number. So this version doesn't ask visitors to trust a claim: it shows them a client's product as it looked before we worked on it, and as it looks now. After the hero, one big before-and-after (B) does the convincing on its own, with a drag handle so the visitor can compare the two. Three smaller pairs (C) show it wasn't a one-off, each with the result it led to underneath. Then clients say it in their own words (D), we say what we do in one line (E), and we ask for the call (F). <strong>Trade-off:</strong> it's the most convincing page if the pictures are strong, but it needs clients to let us show their old screens, and it can start to feel like a portfolio instead of a studio.</p>
-      <p class="hint"><strong>How to read this board:</strong> the big frame on the left is the full homepage, top to bottom. Each section is lettered (A, B, C…) and carries a small dashed tag naming the persuasion principle it relies on. Those principles are explained in plain words on the Overview board. The right column shows the phone version, a section-by-section summary and open questions.</p>
+      <p class="lead">A stranger decides in a few seconds whether to keep scrolling. So this version puts the proof in the first screen, next to the headline: a real project, with the client saying in their own words what it did for them (A). The words are the same as in every other version; only the right half of the hero is new. Below it, client logos (B) show it wasn't one client, then our results (C), where every project card leads with its number. Only then do we say what we do (D), show that we build in public (E), and ask for the call (F). <strong>Trade-off:</strong> the hero gets busier, and the headline has to share the first screen with a picture.</p>
+      <p class="hint"><strong>How to read this board:</strong> the big frame on the left is the full homepage, top to bottom. Each section is lettered (A, B, C…) and carries a small dashed tag naming the persuasion principle it relies on. Those principles are explained in plain words on the round 1 Overview board. The right column shows the phone version, a section-by-section summary and open questions.</p>
     </div>
   </section>
 
 
   <!-- ───────────────────────── 01 homepage desktop ───────────────────────── -->
   <section>
-    <div class="screen__caption"><b>V6</b> Before &amp; After · <b>01</b> Homepage — desktop</div>
+    <div class="screen__caption"><b>V6</b> Proof Up Front · <b>01</b> Homepage — desktop</div>
     <div class="screen screen--desktop">
 
       <header class="topbar">
@@ -713,146 +713,172 @@ small { font-size: var(--fs-xs); }
         <a class="btn btn--sm" href="#">Book a call</a>
       </header>
 
-      <!-- A. hero (constant across all versions) -->
-      <section class="section section--hero">
-        <span class="lens">A · Constant hero · Ethos + Authority</span>
-        <p class="eyebrow">AI-native product studio &amp; design lab</p>
-        <h1 class="display">A design-led, AI-native product studio</h1>
-        <p class="lead measure">Designers, PMs and engineers working as one team with yours, using AI to take a feature from kickoff to live.</p>
-        <div class="row">
-          <span class="pin">1</span>
-          <a class="btn btn--primary btn--lg" href="#">Book a call</a>
-          <a class="btn btn--quiet btn--lg" href="#">See the results</a>
-        </div>
-        <div class="proof-strip">
-          <span class="pin">2</span>
-          <span class="proof"><b>Woven</b> acquired by <b>Slack</b></span>
-          <span class="proof"><b>Brev</b> acquired by <b>NVIDIA</b></span>
-          <span class="proof"><b>Vyro</b> acquired by <b>MrBeast</b></span>
-          <span class="proof"><b>Monte Carlo</b> backed by <b>Accel</b></span>
-        </div>
-      </section>
-
-      <!-- B. one big before / after -->
-      <section class="section">
-        <span class="lens">B · Authority · Ethos</span>
-        <div class="section__head">
-          <div class="row"><span class="pin">3</span><p class="eyebrow">Before &amp; after</p></div>
-          <h2>Same product. Before we touched it, and after.</h2>
-        </div>
-        <div class="stack">
-          <div class="row row--between">
-            <span class="badge">Before · [year]</span>
-            <div class="row"><span class="pin">4</span><span class="hint">Drag to compare</span></div>
-            <span class="badge badge--solid">After · shipped</span>
-          </div>
-          <div class="grid" style="grid-template-columns:1fr 44px 1fr;gap:0;align-items:stretch">
-            <div class="media media--hero"><span class="media__tag">before — Socure dashboard, real old screen</span></div>
-            <svg width="44" height="100%" viewBox="0 0 44 340" preserveAspectRatio="none" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-label="Slider handle">
-              <path d="M22 0v148M22 192v148"/>
-              <circle cx="22" cy="170" r="20" fill="#fff"/>
-              <path d="M16 162l-7 8 7 8M28 162l7 8-7 8" stroke-width="2.5"/>
-            </svg>
-            <div class="media media--hero"><span class="media__tag">after — same screen, live today</span></div>
-          </div>
-          <div class="row row--between">
-            <div class="stack stack--tight">
-              <p class="eyebrow">Socure · Identity verification</p>
-              <h3>Raised $100M after the redesign.</h3>
+      <!-- A. split hero: constant copy left, proof right -->
+      <section class="section section--hero" style="justify-items:stretch;text-align:left">
+        <span class="lens">A · Hero + proof · Ethos + Social proof + Liking</span>
+        <div class="split" style="align-items:center">
+          <div class="stack stack--loose">
+            <p class="eyebrow">AI-native product studio &amp; design lab</p>
+            <h1 class="display">A design-led, AI-native product studio</h1>
+            <p class="lead">Designers, PMs and engineers working as one team with yours, using AI to take a feature from kickoff to live.</p>
+            <div class="row">
+              <span class="pin">1</span>
+              <a class="btn btn--primary btn--lg" href="#">Book a call</a>
+              <a class="btn btn--quiet btn--lg" href="#">See the results</a>
             </div>
-            <a class="btn btn--quiet" href="#">Read the Socure story</a>
+            <div class="proof-strip" style="justify-content:flex-start">
+              <span class="pin">2</span>
+              <span class="proof"><b>Woven</b> acquired by <b>Slack</b></span>
+              <span class="proof"><b>Brev</b> acquired by <b>NVIDIA</b></span>
+              <span class="proof"><b>Vyro</b> acquired by <b>MrBeast</b></span>
+              <span class="proof"><b>Monte Carlo</b> backed by <b>Accel</b></span>
+            </div>
+          </div>
+
+          <div class="stack">
+            <div class="media" style="min-height:440px">
+              <span class="media__tag" style="left:auto;right:10px;top:10px;bottom:auto">Socure · the shipped product</span>
+              <article class="card stack" style="position:absolute;left:24px;right:24px;bottom:24px">
+                <p class="quote--sm"><strong>"The redesign pushed us forward on our mission to verify 100% of IDs in real time."</strong></p>
+                <div class="row row--between">
+                  <div class="cite">
+                    <div class="media media--circle" style="width:44px;min-height:44px"></div>
+                    <div><strong>Erick Soto</strong><br><span class="muted">VP of Product, Socure</span></div>
+                  </div>
+                  <span class="logo">Socure</span>
+                </div>
+                <p class="callout"><strong>Raised $100M after the redesign.</strong></p>
+              </article>
+            </div>
+            <div class="row row--between">
+              <div class="row"><span class="pin">3</span><span class="badge badge--solid">1</span><span class="badge">2</span><span class="badge">3</span><span class="muted">Socure · Navengage · OXIO</span></div>
+              <a class="btn btn--quiet btn--sm" href="#">Read the Socure story</a>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- C. three smaller pairs -->
+      <!-- B. logo wall -->
+      <section class="section section--tight section--center">
+        <span class="lens">B · Social proof · Ethos</span>
+        <div class="row"><span class="pin">4</span><p class="eyebrow">Trusted by 50+ funded B2B teams</p></div>
+        <div class="logo-wall full">
+          <span class="logo">Socure</span><span class="logo">Coursera</span><span class="logo">Monte Carlo</span>
+          <span class="logo">Big Health</span><span class="logo">Mesh</span><span class="logo">Woven</span>
+          <span class="logo">Finvisor</span><span class="logo">Imera</span><span class="logo">Scalestack</span>
+          <span class="logo">OXIO</span><span class="logo">PureSpectrum</span><span class="logo">JupiterOne</span>
+        </div>
+      </section>
+
+      <!-- C. results = projects, merged -->
       <section class="section">
-        <span class="lens">C · Authority + Social proof · Ethos + Logos</span>
+        <span class="lens">C · Authority + Social proof · Logos</span>
         <div class="row row--between">
           <div class="section__head">
-            <div class="row"><span class="pin">5</span><p class="eyebrow">More before &amp; afters</p></div>
-            <h2>It wasn't a one-off</h2>
+            <div class="row"><span class="pin">5</span><p class="eyebrow">Results</p></div>
+            <h2>What we built, and what it changed</h2>
           </div>
           <a class="btn btn--quiet" href="#">All case studies</a>
         </div>
+        <nav class="tabs">
+          <a href="#" aria-selected="true">All</a>
+          <a href="#">AI</a>
+          <a href="#">Fintech</a>
+          <a href="#">Health</a>
+          <a href="#">Data &amp; security</a>
+          <a href="#">HR tech</a>
+        </nav>
         <div class="grid grid--3">
           <article class="card stack">
-            <div class="grid grid--2" style="gap:8px">
-              <div class="media" style="min-height:140px"><span class="media__tag">before</span></div>
-              <div class="media" style="min-height:140px"><span class="media__tag">after</span></div>
-            </div>
+            <div class="media" style="min-height:160px"></div>
             <p class="metric__value">42%</p>
             <p class="muted">user return rate after the redesign; then acquired by Slack.</p>
             <p class="eyebrow">Woven · HR tech</p>
           </article>
           <article class="card stack">
-            <div class="grid grid--2" style="gap:8px">
-              <div class="media" style="min-height:140px"><span class="media__tag">before</span></div>
-              <div class="media" style="min-height:140px"><span class="media__tag">after</span></div>
-            </div>
+            <div class="media" style="min-height:160px"></div>
             <p class="metric__value">+12%</p>
-            <p class="muted">user retention with dashboards people could act on.</p>
+            <p class="muted">user retention with dashboards people could act on; raised a Series D.</p>
             <p class="eyebrow">Monte Carlo · Data</p>
           </article>
           <article class="card stack">
-            <div class="grid grid--2" style="gap:8px">
-              <div class="media" style="min-height:140px"><span class="media__tag">before</span></div>
-              <div class="media" style="min-height:140px"><span class="media__tag">after</span></div>
-            </div>
+            <div class="media" style="min-height:160px"></div>
             <p class="metric__value">99%</p>
             <p class="muted">of applicants completed business verification.</p>
             <p class="eyebrow">Mesh · Fintech</p>
           </article>
+          <article class="card stack">
+            <div class="media" style="min-height:160px"></div>
+            <p class="metric__value">3 mo</p>
+            <p class="muted">from zero to a B2B platform that won a global enterprise customer.</p>
+            <p class="eyebrow">Imera · AI</p>
+          </article>
+          <article class="card stack">
+            <div class="media" style="min-height:160px"></div>
+            <p class="metric__value">[metric]</p>
+            <p class="muted">[One line on what changed for Finvisor's users.]</p>
+            <p class="eyebrow">Finvisor · Fintech</p>
+          </article>
+          <article class="card stack">
+            <div class="media" style="min-height:160px"></div>
+            <p class="metric__value">[metric]</p>
+            <p class="muted">[One line on what changed for Big Health's patients.]</p>
+            <p class="eyebrow">Big Health · Health</p>
+          </article>
         </div>
-        <p class="hint">Each pair opens its case study. The number sits under the pictures, so the eye goes first and the proof second.</p>
+        <p class="hint">Each card opens its case study. The number is the headline; the client name sits underneath. Socure lives in the hero, so it isn't repeated here.</p>
       </section>
 
-      <!-- D. quotes -->
+      <!-- D. what we do -->
       <section class="section">
-        <span class="lens">D · Social proof + Liking · Pathos</span>
+        <span class="lens">D · Logos</span>
         <div class="section__head">
-          <div class="row"><span class="pin">6</span><p class="eyebrow">In their words</p></div>
-          <h2>What it was like to work with us</h2>
+          <div class="row"><span class="pin">6</span><p class="eyebrow">What we do</p></div>
+          <h2>One team, from decision to production</h2>
         </div>
         <div class="grid grid--3">
-          <article class="card stack">
-            <p class="quote--sm">"The redesign pushed us forward on our mission to verify 100% of IDs in real time."</p>
-            <div class="cite">
-              <div class="media media--circle" style="width:44px;min-height:44px"></div>
-              <div><strong>Erick Soto</strong><br><span class="muted">VP of Product, Socure</span></div>
-            </div>
-          </article>
-          <article class="card stack">
-            <p class="quote--sm">"Communication was 10/10 from start to finish … Working with TDP is 100% worth it."</p>
-            <div class="cite">
-              <div class="media media--circle" style="width:44px;min-height:44px"></div>
-              <div><strong>Colleen McBride</strong><br><span class="muted">CMO, Navengage</span></div>
-            </div>
-          </article>
-          <article class="card stack">
-            <p class="quote--sm">"Communication is fluid and enables us to move quickly, adapt to changes and pivot."</p>
-            <div class="cite">
-              <div class="media media--circle" style="width:44px;min-height:44px"></div>
-              <div><strong>Elliot Chen</strong><br><span class="muted">Head of Product, OXIO</span></div>
-            </div>
-          </article>
+          <div class="stack">
+            <h3>Design leads</h3>
+            <p class="muted">Working prototypes in code, design systems in Storybook.</p>
+          </div>
+          <div class="stack">
+            <h3>Product connects</h3>
+            <p class="muted">Technical PMs turn conversations into a shipped roadmap.</p>
+          </div>
+          <div class="stack">
+            <h3>Engineering ships</h3>
+            <p class="muted">Production-ready features, tested and documented.</p>
+          </div>
         </div>
+        <a class="btn btn--quiet btn--sm" href="#" style="justify-self:start">How we work, in depth</a>
       </section>
 
-      <!-- E. what we do, one line + offers -->
+      <!-- E. watch us build -->
       <section class="section">
-        <span class="lens">E · Commitment · Logos</span>
+        <span class="lens">E · Reciprocity + Liking · Ethos</span>
+        <div class="section__head">
+          <div class="row"><span class="pin">7</span><p class="eyebrow">Watch us build</p></div>
+          <h2>We build in public. Watch, fork, steal.</h2>
+        </div>
         <div class="split">
-          <div class="section__head">
-            <div class="row"><span class="pin">7</span><p class="eyebrow">What we do</p></div>
-            <h2>We design, build and ship product with your team.</h2>
-            <p class="muted">Three ways to work with us. Prices and details live on the pricing page.</p>
+          <div class="stack">
+            <div class="media" style="min-height:220px"><span class="play"></span><span class="media__tag">YouTube — latest episode</span></div>
+            <div class="row row--between">
+              <span class="muted"><strong>YouTube</strong> · weekly episodes</span>
+              <a class="btn btn--sm" href="#">Subscribe</a>
+            </div>
           </div>
-          <ul class="list">
-            <li class="list__item"><div class="row row--between full"><div><strong>Design Team</strong><br><span class="muted">An embedded, AI-first design team</span></div><a class="btn btn--sm" href="#">See plan</a></div></li>
-            <li class="list__item"><div class="row row--between full"><div><strong>Product Sprint</strong><br><span class="muted">One production-ready feature</span></div><a class="btn btn--sm" href="#">See plan</a></div></li>
-            <li class="list__item"><div class="row row--between full"><div><strong>Product Team</strong><br><span class="muted">PM, designers and engineers, custom</span></div><a class="btn btn--sm" href="#">See plan</a></div></li>
-          </ul>
+          <div class="stack">
+            <ul class="list">
+              <li class="list__item"><div><strong>agent-skills</strong><br><span class="muted">Skills and prompts for Claude Code and other agents</span></div></li>
+              <li class="list__item"><div><strong>product-context-guide</strong><br><span class="muted">How we keep decisions, designs and code connected</span></div></li>
+              <li class="list__item"><div><strong>figma-to-storybook</strong><br><span class="muted">Our design-system pipeline, open</span></div></li>
+            </ul>
+            <div class="row row--between">
+              <span class="muted"><strong>GitHub</strong> · open repos</span>
+              <a class="btn btn--sm" href="#">Follow on GitHub</a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -860,11 +886,11 @@ small { font-size: var(--fs-xs); }
       <section class="section section--loud section--center">
         <span class="lens">F · Scarcity + Commitment + Unity · Pathos + Kairos</span>
         <div class="section__head">
-          <h2>Show us your "before"</h2>
-          <p class="muted measure">Bring the screen you'd most like to fix. 30 minutes with a founder, no pitch.</p>
+          <h2>Let's build your next feature</h2>
+          <p class="muted measure">A 30-minute call with a founder. No deck, no pitch.</p>
         </div>
         <div class="grid grid--3" style="max-width:820px;text-align:left">
-          <div class="callout">1 — We look at your product together</div>
+          <div class="callout">1 — We look at your roadmap together</div>
           <div class="callout">2 — You leave with a scoped first feature</div>
           <div class="callout">3 — We start within 7 days, if it's a fit</div>
         </div>
@@ -883,7 +909,7 @@ small { font-size: var(--fs-xs); }
   <div class="stack stack--loose" style="width:420px">
 
     <section>
-      <div class="screen__caption"><b>V6</b> Before &amp; After · <b>02</b> First scroll — mobile</div>
+      <div class="screen__caption"><b>V6</b> Proof Up Front · <b>02</b> First scroll — mobile</div>
       <div class="screen screen--mobile">
         <header class="topbar">
           <div class="brand"><span class="brand__mark">T</span> TDP</div>
@@ -893,18 +919,21 @@ small { font-size: var(--fs-xs); }
         <section class="section section--hero">
           <h1 class="display">A design-led, AI-native product studio</h1>
           <p class="muted">Design, product and engineering as one team.</p>
-          <div class="stack full">
-            <span class="proof"><b>Woven</b> acquired by <b>Slack</b></span>
-            <span class="proof"><b>Brev</b> acquired by <b>NVIDIA</b></span>
+          <div class="media full" style="min-height:300px">
+            <article class="card stack" style="position:absolute;left:12px;right:12px;bottom:12px;text-align:left">
+              <p class="quote--sm"><strong>"Verify 100% of IDs in real time."</strong></p>
+              <div class="cite">
+                <div class="media media--circle" style="width:36px;min-height:36px"></div>
+                <div><strong>Erick Soto</strong><br><span class="muted">Socure · raised $100M</span></div>
+              </div>
+            </article>
           </div>
+          <div class="row"><span class="badge badge--solid">1</span><span class="badge">2</span><span class="badge">3</span><span class="muted">swipe</span></div>
         </section>
         <section class="section section--tight">
-          <div class="row row--between">
-            <p class="eyebrow">Before &amp; after</p>
-            <div class="segmented"><span>Before</span><span aria-pressed="true">After</span></div>
+          <div class="logo-wall">
+            <span class="logo">Coursera</span><span class="logo">Mesh</span><span class="logo">Woven</span>
           </div>
-          <div class="media" style="min-height:200px"><span class="media__tag">after — Socure, tap to flip</span></div>
-          <strong>Socure raised $100M after the redesign.</strong>
         </section>
         <div class="cta-bar"><a class="btn btn--primary btn--block" href="#">Book a call</a></div>
       </div>
@@ -913,13 +942,16 @@ small { font-size: var(--fs-xs); }
     <section>
       <div class="screen__caption"><b>Story</b> the hypothesis</div>
       <div class="card stack">
-        <p><strong>"Design is judged by eye. Show the product before we touched it and after."</strong></p>
+        <p><strong>"Show who trusts us and what we built before anyone has to scroll."</strong></p>
         <div class="flow">
-          <span class="flow__step flow__step--quiet">Before</span><span class="flow__arrow"></span>
-          <span class="flow__step">After</span><span class="flow__arrow"></span>
+          <span class="flow__step">Who + proof</span><span class="flow__arrow"></span>
+          <span class="flow__step">Many</span><span class="flow__arrow"></span>
+          <span class="flow__step">Results</span><span class="flow__arrow"></span>
+          <span class="flow__step">What</span><span class="flow__arrow"></span>
+          <span class="flow__step">See us</span><span class="flow__arrow"></span>
           <span class="flow__step">Talk</span>
         </div>
-        <p class="muted">Before and after, four times over, then the ask. The picture is the proof; numbers and logos come second, as captions. Case studies stay one click behind each pair.</p>
+        <p class="muted">Like V1, but the first proof sits inside the hero instead of below it, and results and projects are one section. The hero copy is unchanged; on desktop it moves left to make room.</p>
       </div>
     </section>
 
@@ -928,32 +960,32 @@ small { font-size: var(--fs-xs); }
       <table class="table">
         <thead><tr><th>Sec.</th><th>Cialdini</th><th>Aristotle</th></tr></thead>
         <tbody>
-          <tr><td>A</td><td>Authority, social proof</td><td>Ethos</td></tr>
-          <tr><td>B</td><td>Authority</td><td>Ethos</td></tr>
-          <tr><td>C</td><td>Authority, social proof</td><td>Ethos, logos</td></tr>
-          <tr><td>D</td><td>Social proof, liking</td><td>Pathos</td></tr>
-          <tr><td>E</td><td>Commitment</td><td>Logos</td></tr>
+          <tr><td>A</td><td>Social proof, authority, liking</td><td>Ethos</td></tr>
+          <tr><td>B</td><td>Social proof</td><td>Ethos</td></tr>
+          <tr><td>C</td><td>Authority, social proof</td><td>Logos</td></tr>
+          <tr><td>D</td><td>(none)</td><td>Logos</td></tr>
+          <tr><td>E</td><td>Reciprocity, liking</td><td>Ethos</td></tr>
           <tr><td>F</td><td>Scarcity, commitment, unity</td><td>Pathos, kairos</td></tr>
         </tbody>
       </table>
-      <p class="hint mt-4">6 of 7 principles; no reciprocity (nothing given away free). Weight: ethos 3, logos 2, pathos 2, kairos 1.</p>
+      <p class="hint mt-4">All 7 principles present. Weight: ethos 3, logos 2, pathos 1, kairos 1.</p>
     </section>
 
     <section>
       <div class="screen__caption"><b>Notes</b> open questions</div>
       <ol class="notes">
-        <li><span class="pin">1</span><span>Hero copy and CTAs are identical to V1–V10 so we compare story, not headline.</span></li>
+        <li><span class="pin">1</span><span>Hero copy and CTAs match every version; only the layout splits to make room for proof.</span></li>
         <li><span class="pin">2</span><span>Homepage says Vyro, /work says Vouch for MrBeast. Confirm before it ships.</span></li>
-        <li><span class="pin">3</span><span>Needs Socure's written OK to show their old screens; if not, lead with the client who says yes.</span></li>
-        <li><span class="pin">4</span><span>Desktop gets a real drag slider; mobile swaps it for a Before / After toggle.</span></li>
-        <li><span class="pin">5</span><span>"Before" must be the real old product, dated, not a mock made worse. Imera and Finvisor have no before (built from zero).</span></li>
-        <li><span class="pin">6</span><span>No quote talks about the visual change itself yet; collect one.</span></li>
-        <li><span class="pin">7</span><span>Offer names only; prices stay on /pricing so the page stays about the work.</span></li>
+        <li><span class="pin">3</span><span>Three slides: project shot + quote + face + logo. Only Socure has all four today.</span></li>
+        <li><span class="pin">4</span><span>12 logos max; which 12 is a sales decision, not a design one.</span></li>
+        <li><span class="pin">5</span><span>Six cards, number first. Finvisor and Big Health still need a metric.</span></li>
+        <li><span class="pin">6</span><span>Process detail moves to its own "How we work" page, per the call.</span></li>
+        <li><span class="pin">7</span><span>Which repos are public and presentable today?</span></li>
         <li><span class="pin">8</span><span>Scarcity line only ships with a real capacity number.</span></li>
       </ol>
       <div class="todo mt-4">
         <div class="todo__head">Out of scope</div>
-        <span class="muted">Slider interaction details, which screens per client, case study template, visual design.</span>
+        <span class="muted">Carousel timing and motion, case study template, pricing on the homepage, visual design.</span>
       </div>
     </section>
 
