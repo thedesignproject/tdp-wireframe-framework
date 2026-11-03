@@ -11,7 +11,7 @@ overview, then open any version.
 | [00 Overview](00-overview.png) | all five spines, sections worth borrowing, principle matrix | — |
 | [V6 Proof Up Front](v6-proof-up-front.png) | Split hero (project shot + client quote) → logo wall → results (projects with their numbers) → what we do → watch us build → call | "Show who trusts us and what we built before anyone has to scroll." |
 | [V7 One Story](v7-one-story.png) | Hero → Imera, zero to enterprise in 3 months, told in four chapters with a clickable prototype → other results → ways to work with full prices → call | "One story told well beats ten logos. Make them want it, then show the price." |
-| [V8 Meet the Makers](v8-meet-the-makers.png) | Hero → founder video → the team by face → who pairs with whom → quotes → two studios → book with a founder | "People buy from people. Show who'll actually work on your product." |
+| [V8 Meet the Makers](v8-meet-the-makers.png) | Hero → logo strip → founder's note → this could be your team (people + their AI agents + what they shipped) → work, with their faces → quotes → meet your team | "Senior people, made faster by AI. Show the humans and what they shipped." |
 | [V9 Objections, Answered](v9-objections-answered.png) | Hero → five buyer questions, each answered with proof → logo strip → trial terms → call | "Buyers arrive with doubts. Answer them in the order they have them." |
 | [V10 Time Receipts](v10-time-receipts.png) | Hero → time-saved quote → their estimate vs. shipped → Day 7 / 30 / 60 → quotes → ship this quarter | "AI-native has to mean faster. Prove it in time, not in adjectives." |
 
@@ -23,8 +23,7 @@ Each `.html` is the source (needs the skill's `wireframe.css`).
 - **Hero, topbar and footer are identical** to round 1, so all ten versions compare story,
   not headline. V6 keeps the same hero words but splits the layout to make room for proof.
 - **One primary action:** Book a call. Solid only in the hero; repeats are bold-outline.
-- **No process explainer.** V8's "who pairs with whom" and V10's "Day 7 / 30 / 60" show
-  people and outcomes, not steps. V10 is the closest to the line; its notes flag it.
+- **No process explainer.** V10's "Day 7 / 30 / 60" shows outcomes, not steps. V10 is the closest to the line; its notes flag it.
 - **Case studies are never the first proof.** V6 shows a project shot with the client's quote
   over it; the case study is one click behind it.
 - The persuasion tags and per-board maps use the same vocabulary as round 1 (Cialdini's
@@ -48,7 +47,7 @@ toolbox or V5's "teams like you".
 |---|---|
 | V6 | Three hero slides, each a project shot + quote + face + logo (only Socure has all four today); Finvisor and Big Health result metrics. |
 | V7 | An Imera testimonial (they have none); OK to embed Imera's prototype publicly, or a clickable mock; which plan Imera is on; a "from [$X]" for Product Team; trial terms. |
-| V8 | A founder on camera, 8 real team photos with each person's sign-off, studio photos, real US-hours overlap. |
+| V8 | A founder's note in their own words; 3–4 real people with photos and sign-off; true "who worked on what" pairings; the agents each person actually runs. |
 | V9 | Confirmation from sales that these are the five objections, in this order; real days from signed to started; trial terms in writing. |
 | V10 | One client's time-saved quote on the record; their own pre-project estimate and the real duration for each receipt (only Imera's 3 months is known). |
 

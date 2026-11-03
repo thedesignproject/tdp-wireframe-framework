@@ -14,8 +14,8 @@
   <section class="board__intro">
     <div class="screen__caption"><b>Why</b> the thinking behind this version</div>
     <div class="card stack">
-      <p class="lead">People buy from people. When you hire a studio you are really hiring the handful of humans who will sit in your Slack every day, so this version shows them. After the same hero as every version, a founder talks to camera for 60 seconds (B), then you meet the team by face, role and specialty (C). Next is a single row showing who on your side talks to whom on ours (D), so it's clear you get named people, not a ticket queue. Two clients then say the people were easy to work with (E), we show the two studios in Miami and Buenos Aires (F), and the close asks you to book with a named founder, not a sales form (G). <strong>Trade-off:</strong> it's the warmest version and the hardest to make: it needs real photos, a founder willing to be on camera, and an update every time the team changes.</p>
-      <p class="hint"><strong>How to read this board:</strong> the big frame on the left is the full homepage, top to bottom. Each section is lettered (A, B, C…) and carries a small dashed tag naming the persuasion principle it relies on. Those principles are explained in plain words on the Overview board. The right column shows the phone version, a section-by-section summary and open questions.</p>
+      <p class="lead">When you hire a studio you are really hiring a few people, and buyers of an "AI-native" studio quietly wonder whether a human is doing the work at all. This version answers that with faces. After the hero and a quiet row of client logos (B), a founder says in a short signed note what we believe (C). Then the visitor meets the kind of team they'd get (D): each person shown with the AI agents they run and a project they shipped. The work (E) carries the same faces, so people and results back each other up. Clients then talk about working with us (F), and the close offers a call with a named lead (G). <strong>Trade-off:</strong> it's the warmest version, but it needs real people willing to be on the page, and it dates every time the team changes.</p>
+      <p class="hint"><strong>How to read this board:</strong> the big frame on the left is the full homepage, top to bottom. Each section is lettered (A, B, C…) and carries a small dashed tag naming the persuasion principle it relies on. Those principles are explained in plain words on the round 1 Overview board. The right column shows the phone version, a section-by-section summary and open questions.</p>
     </div>
   </section>
 
@@ -38,7 +38,7 @@
         <a class="btn btn--sm" href="#">Book a call</a>
       </header>
 
-      <!-- A. hero (constant across all five versions) -->
+      <!-- A. hero (constant across all versions) -->
       <section class="section section--hero">
         <span class="lens">A · Constant hero · Ethos + Authority</span>
         <p class="eyebrow">AI-native product studio &amp; design lab</p>
@@ -58,122 +58,157 @@
         </div>
       </section>
 
-      <!-- B. founder video note -->
-      <section class="section">
-        <span class="lens">B · Liking · Pathos</span>
-        <div class="split split--aside">
-          <div class="media" style="min-height:340px"><span class="play"></span><span class="media__tag">60-second note — founder to camera</span></div>
-          <div class="stack stack--loose">
-            <div class="row"><span class="pin">3</span><p class="eyebrow">A word from the founder</p></div>
-            <h2>Hi, I'm [founder name]. Here's who you'd be working with.</h2>
-            <p class="quote--sm">"[We're a small team on purpose. You'll know every person on your project by name.]"</p>
-            <div class="cite">
-              <div class="media media--circle" style="width:48px;min-height:48px"></div>
-              <div><strong>[Founder name]</strong><br><span class="muted">Founder, The Design Project</span></div>
-            </div>
-            <span class="muted">1:00 · captions on · <a href="#">read the transcript</a></span>
-          </div>
+      <!-- B. logo strip -->
+      <section class="section section--tight section--center">
+        <span class="lens">B · Social proof · Ethos</span>
+        <p class="eyebrow">Trusted by 50+ funded B2B teams</p>
+        <div class="logo-wall full">
+          <span class="logo">Socure</span><span class="logo">Coursera</span><span class="logo">Monte Carlo</span>
+          <span class="logo">Big Health</span><span class="logo">Mesh</span><span class="logo">Imera</span>
         </div>
       </section>
 
-      <!-- C. team grid -->
+      <!-- C. founder's note -->
       <section class="section">
-        <span class="lens">C · Liking + Unity · Ethos</span>
+        <span class="lens">C · Liking + Unity · Pathos</span>
+        <div class="split split--aside" style="align-items:center">
+          <div class="stack stack--loose">
+            <div class="row"><span class="pin">3</span><p class="eyebrow">A note from our founder</p></div>
+            <p class="quote">"We started TDP because good products come from senior people who care, not from bigger teams. AI didn't change that. It means those people spend their week on decisions and craft instead of busywork, so your feature goes from a conversation to live in weeks, not quarters. [Two more lines in the founder's own words.]"</p>
+            <div class="cite">
+              <div class="media media--circle" style="width:56px;min-height:56px"></div>
+              <div><strong>[Founder name]</strong><br><span class="muted">Founder, The Design Project</span></div>
+            </div>
+          </div>
+          <div class="media" style="min-height:300px"><span class="media__tag">Founder photo, candid, at work</span></div>
+        </div>
+      </section>
+
+      <!-- D. this could be your team -->
+      <section class="section">
+        <span class="lens">D · Liking + Authority · Ethos</span>
         <div class="row row--between">
           <div class="section__head">
-            <div class="row"><span class="pin">4</span><p class="eyebrow">The team</p></div>
-            <h2>The people who'll work on your product</h2>
+            <div class="row"><span class="pin">4</span><p class="eyebrow">This could be your team</p></div>
+            <h2>Senior people, made faster by AI</h2>
           </div>
           <a class="btn btn--quiet" href="#">Meet everyone</a>
         </div>
         <div class="grid grid--4">
           <article class="card stack">
-            <div class="media media--circle" style="width:120px;min-height:120px"></div>
-            <div><strong>[Name]</strong><br><span class="muted">Founder · design lead</span></div>
-            <span class="badge" style="justify-self:start">Fintech</span>
+            <div class="media" style="min-height:170px"><span class="media__tag">photo</span></div>
+            <div><strong>[Name]</strong><br><span class="muted">Design lead</span></div>
+            <div class="stack stack--tight">
+              <span class="metric__label">Runs agents for</span>
+              <div class="row" style="flex-wrap:wrap"><span class="badge">research synthesis</span><span class="badge">Storybook</span></div>
+            </div>
+            <div class="rule"></div>
+            <p class="hint"><strong>Shipped:</strong> Socure redesign · $100M raised</p>
           </article>
           <article class="card stack">
-            <div class="media media--circle" style="width:120px;min-height:120px"></div>
-            <div><strong>[Name]</strong><br><span class="muted">Product designer</span></div>
-            <span class="badge" style="justify-self:start">Dashboards</span>
-          </article>
-          <article class="card stack">
-            <div class="media media--circle" style="width:120px;min-height:120px"></div>
-            <div><strong>[Name]</strong><br><span class="muted">Product designer</span></div>
-            <span class="badge" style="justify-self:start">AI agents</span>
-          </article>
-          <article class="card stack">
-            <div class="media media--circle" style="width:120px;min-height:120px"></div>
-            <div><strong>[Name]</strong><br><span class="muted">Design systems</span></div>
-            <span class="badge" style="justify-self:start">Storybook</span>
-          </article>
-          <article class="card stack">
-            <div class="media media--circle" style="width:120px;min-height:120px"></div>
+            <div class="media" style="min-height:170px"><span class="media__tag">photo</span></div>
             <div><strong>[Name]</strong><br><span class="muted">Technical PM</span></div>
-            <span class="badge" style="justify-self:start">B2B roadmaps</span>
+            <div class="stack stack--tight">
+              <span class="metric__label">Runs agents for</span>
+              <div class="row" style="flex-wrap:wrap"><span class="badge">specs from calls</span><span class="badge">release notes</span></div>
+            </div>
+            <div class="rule"></div>
+            <p class="hint"><strong>Shipped:</strong> Imera B2B platform · 3 months</p>
           </article>
           <article class="card stack">
-            <div class="media media--circle" style="width:120px;min-height:120px"></div>
+            <div class="media" style="min-height:170px"><span class="media__tag">photo</span></div>
+            <div><strong>[Name]</strong><br><span class="muted">Product designer</span></div>
+            <div class="stack stack--tight">
+              <span class="metric__label">Runs agents for</span>
+              <div class="row" style="flex-wrap:wrap"><span class="badge">prototypes in code</span><span class="badge">UX copy</span></div>
+            </div>
+            <div class="rule"></div>
+            <p class="hint"><strong>Shipped:</strong> Monte Carlo dashboards · +12%</p>
+          </article>
+          <article class="card stack">
+            <div class="media" style="min-height:170px"><span class="media__tag">photo</span></div>
             <div><strong>[Name]</strong><br><span class="muted">Front-end engineer</span></div>
-            <span class="badge" style="justify-self:start">React + prototypes</span>
-          </article>
-          <article class="card stack">
-            <div class="media media--circle" style="width:120px;min-height:120px"></div>
-            <div><strong>[Name]</strong><br><span class="muted">Back-end engineer</span></div>
-            <span class="badge" style="justify-self:start">APIs + data</span>
-          </article>
-          <article class="card stack">
-            <div class="media media--circle" style="width:120px;min-height:120px"></div>
-            <div><strong>[Name]</strong><br><span class="muted">Researcher</span></div>
-            <span class="badge" style="justify-self:start">User interviews</span>
+            <div class="stack stack--tight">
+              <span class="metric__label">Runs agents for</span>
+              <div class="row" style="flex-wrap:wrap"><span class="badge">code review</span><span class="badge">QA</span></div>
+            </div>
+            <div class="rule"></div>
+            <p class="hint"><strong>Shipped:</strong> Mesh verification · 99%</p>
           </article>
         </div>
-        <p class="hint">Real photos only. Specialty badge = what the person is known for, so buyers spot "their" person.</p>
+        <p class="hint">The person is always the subject; agents are listed as their tools, never as team members.</p>
       </section>
 
-      <!-- D. how we pair -->
+      <!-- E. work, with the people on it -->
       <section class="section">
-        <span class="lens">D · Unity + Commitment · Logos</span>
-        <div class="section__head">
-          <div class="row"><span class="pin">5</span><p class="eyebrow">How we pair with your team</p></div>
-          <h2>Named people on both sides. No ticket queue.</h2>
+        <span class="lens">E · Authority + Social proof · Logos</span>
+        <div class="row row--between">
+          <div class="section__head">
+            <div class="row"><span class="pin">5</span><p class="eyebrow">Work</p></div>
+            <h2>What these people shipped</h2>
+          </div>
+          <a class="btn btn--quiet" href="#">All work</a>
         </div>
         <div class="grid grid--3">
-          <div class="card stack">
-            <div class="flow"><span class="flow__step flow__step--quiet">Your founder or PM</span><span class="flow__arrow"></span><span class="flow__step">Our product lead</span></div>
-            <p class="muted">Priorities and trade-offs, in your Slack.</p>
-          </div>
-          <div class="card stack">
-            <div class="flow"><span class="flow__step flow__step--quiet">Your designer</span><span class="flow__arrow"></span><span class="flow__step">Our design lead</span></div>
-            <p class="muted">One shared design system in Storybook.</p>
-          </div>
-          <div class="card stack">
-            <div class="flow"><span class="flow__step flow__step--quiet">Your engineers</span><span class="flow__arrow"></span><span class="flow__step">Our engineers</span></div>
-            <p class="muted">Same repo, same pull requests.</p>
-          </div>
+          <article class="card stack">
+            <div class="media" style="min-height:200px"></div>
+            <div class="row row--between"><p class="metric__value">$100M</p><span class="row"><span class="avatar">A</span><span class="avatar">B</span></span></div>
+            <p class="muted">raised after the redesign of their verification product.</p>
+            <p class="eyebrow">Socure · Identity</p>
+          </article>
+          <article class="card stack">
+            <div class="media" style="min-height:200px"></div>
+            <div class="row row--between"><p class="metric__value">3 mo</p><span class="row"><span class="avatar">B</span><span class="avatar">D</span></span></div>
+            <p class="muted">from zero to a B2B platform that won a global enterprise customer.</p>
+            <p class="eyebrow">Imera · AI</p>
+          </article>
+          <article class="card stack">
+            <div class="media" style="min-height:200px"></div>
+            <div class="row row--between"><p class="metric__value">+12%</p><span class="row"><span class="avatar">A</span><span class="avatar">C</span></span></div>
+            <p class="muted">user retention with dashboards people could act on.</p>
+            <p class="eyebrow">Monte Carlo · Data</p>
+          </article>
+          <article class="card stack">
+            <div class="media" style="min-height:200px"></div>
+            <div class="row row--between"><p class="metric__value">99%</p><span class="row"><span class="avatar">C</span><span class="avatar">D</span></span></div>
+            <p class="muted">of applicants completed business verification.</p>
+            <p class="eyebrow">Mesh · Fintech</p>
+          </article>
+          <article class="card stack">
+            <div class="media" style="min-height:200px"></div>
+            <div class="row row--between"><p class="metric__value">42%</p><span class="row"><span class="avatar">A</span></span></div>
+            <p class="muted">user return rate; then acquired by Slack.</p>
+            <p class="eyebrow">Woven · HR tech</p>
+          </article>
+          <article class="card stack">
+            <div class="media" style="min-height:200px"></div>
+            <div class="row row--between"><p class="metric__value">[metric]</p><span class="row"><span class="avatar">B</span><span class="avatar">C</span></span></div>
+            <p class="muted">[One line on what changed for Finvisor's users.]</p>
+            <p class="eyebrow">Finvisor · Fintech</p>
+          </article>
         </div>
-        <p class="hint">Dashed = your side, solid = ours. Who talks to whom only; the how lives on "How we work".</p>
+        <p class="hint">The small faces on each card are the people from D who worked on it. Hover shows their names; each card opens its case study.</p>
       </section>
 
-      <!-- E. quotes about the people -->
+      <!-- F. clients on the people -->
       <section class="section">
-        <span class="lens">E · Social proof + Liking · Pathos</span>
+        <span class="lens">F · Social proof + Liking · Pathos</span>
         <div class="section__head">
           <div class="row"><span class="pin">6</span><p class="eyebrow">What working with us feels like</p></div>
           <h2>Clients talk about the people first</h2>
         </div>
-        <div class="split">
+        <div class="grid grid--2">
           <article class="card stack">
             <p class="quote">"Communication was 10/10 from start to finish … Working with TDP is 100% worth it."</p>
             <div class="cite">
-              <div class="media media--circle" style="width:48px;min-height:48px"></div>
+              <div class="media media--circle" style="width:44px;min-height:44px"></div>
               <div><strong>Colleen McBride</strong><br><span class="muted">CMO, Navengage</span></div>
             </div>
           </article>
           <article class="card stack">
             <p class="quote">"Communication is fluid and enables us to move quickly, adapt to changes and pivot."</p>
             <div class="cite">
-              <div class="media media--circle" style="width:48px;min-height:48px"></div>
+              <div class="media media--circle" style="width:44px;min-height:44px"></div>
               <div><strong>Elliot Chen</strong><br><span class="muted">Head of Product, OXIO</span></div>
             </div>
           </article>
@@ -181,34 +216,15 @@
         <div class="callout"><strong>NPS above 82</strong> across our client teams.</div>
       </section>
 
-      <!-- F. two studios -->
-      <section class="section">
-        <span class="lens">F · Unity + Liking · Ethos</span>
-        <div class="section__head">
-          <div class="row"><span class="pin">7</span><p class="eyebrow">Where we work</p></div>
-          <h2>Two studios, one team, your hours</h2>
-        </div>
-        <div class="split">
-          <div class="stack">
-            <div class="media" style="min-height:240px"><span class="media__tag">photo — Miami studio, team at work</span></div>
-            <p><strong>Miami</strong> · <span class="muted">[who is based here]</span></p>
-          </div>
-          <div class="stack">
-            <div class="media" style="min-height:240px"><span class="media__tag">photo — Buenos Aires studio, team at work</span></div>
-            <p><strong>Buenos Aires</strong> · <span class="muted">[who is based here], [N] hours overlap with US Eastern</span></p>
-          </div>
-        </div>
-      </section>
-
       <!-- G. close -->
       <section class="section section--loud section--center">
         <span class="lens">G · Liking + Commitment + Scarcity · Pathos</span>
-        <div class="media media--circle" style="width:96px;min-height:96px"></div>
+        <div class="row"><span class="avatar avatar--lg">A</span><span class="avatar avatar--lg">B</span><span class="avatar avatar--lg">C</span></div>
         <div class="section__head">
-          <h2>Book 30 minutes with [founder name]</h2>
-          <p class="muted measure">You'll talk to a founder, not a sales rep. Bring your roadmap.</p>
+          <h2>Meet your team before you hire it</h2>
+          <p class="muted measure">A 30-minute call with a lead from the team that would work with you. Miami and Buenos Aires, so we're on your hours, coast to coast.</p>
         </div>
-        <div class="row"><span class="pin">8</span><a class="btn btn--bold btn--lg" href="#">Book with [founder name]</a></div>
+        <div class="row"><span class="pin">7</span><a class="btn btn--bold btn--lg" href="#">Book a call</a></div>
         <p class="muted"><strong>[N] spots open for [month]</strong>. Every new team gets a senior lead from day one.</p>
       </section>
 
@@ -223,7 +239,7 @@
   <div class="stack stack--loose" style="width:420px">
 
     <section>
-      <div class="screen__caption"><b>02</b> First scroll — mobile</div>
+      <div class="screen__caption"><b>V8</b> Meet the Makers · <b>02</b> First scroll — mobile</div>
       <div class="screen screen--mobile">
         <header class="topbar">
           <div class="brand"><span class="brand__mark">T</span> TDP</div>
@@ -239,15 +255,14 @@
           </div>
         </section>
         <section class="section section--tight">
-          <div class="media" style="min-height:180px"><span class="play"></span><span class="media__tag">founder note — 1:00</span></div>
-          <p><strong>Hi, I'm [founder name].</strong><br><span class="muted">Meet the people on your project.</span></p>
-          <div class="row">
-            <div class="media media--circle" style="width:48px;min-height:48px"></div>
-            <div class="media media--circle" style="width:48px;min-height:48px"></div>
-            <div class="media media--circle" style="width:48px;min-height:48px"></div>
-            <div class="media media--circle" style="width:48px;min-height:48px"></div>
-            <span class="muted">+4</span>
+          <div class="logo-wall">
+            <span class="logo">Socure</span><span class="logo">Coursera</span><span class="logo">Imera</span>
           </div>
+          <p class="eyebrow">This could be your team</p>
+          <div class="row">
+            <span class="avatar avatar--lg">A</span><span class="avatar avatar--lg">B</span><span class="avatar avatar--lg">C</span><span class="avatar avatar--lg">D</span>
+          </div>
+          <p class="muted">Swipe through the people; each card shows what they shipped.</p>
         </section>
         <div class="cta-bar"><a class="btn btn--primary btn--block" href="#">Book a call</a></div>
       </div>
@@ -256,16 +271,16 @@
     <section>
       <div class="screen__caption"><b>Story</b> the hypothesis</div>
       <div class="card stack">
-        <p><strong>"People buy from people. Show who'll actually work on your product."</strong></p>
+        <p><strong>"People buy from people. Show the humans, what they shipped, and how AI makes them faster."</strong></p>
         <div class="flow">
-          <span class="flow__step">Hello</span><span class="flow__arrow"></span>
-          <span class="flow__step">Faces</span><span class="flow__arrow"></span>
-          <span class="flow__step">Pairing</span><span class="flow__arrow"></span>
+          <span class="flow__step">Who</span><span class="flow__arrow"></span>
+          <span class="flow__step">Why</span><span class="flow__arrow"></span>
+          <span class="flow__step">Your team</span><span class="flow__arrow"></span>
+          <span class="flow__step">Their work</span><span class="flow__arrow"></span>
           <span class="flow__step">Voices</span><span class="flow__arrow"></span>
-          <span class="flow__step">Places</span><span class="flow__arrow"></span>
-          <span class="flow__step">Book a person</span>
+          <span class="flow__step">Meet them</span>
         </div>
-        <p class="muted">Liking and unity lead; pathos carries the page. Proof stays in the hero and the quotes, and case studies sit one click deep under "Work".</p>
+        <p class="muted">Answers the quiet AI worry, "is a human really doing this?", with faces and the work they shipped.</p>
       </div>
     </section>
 
@@ -275,11 +290,11 @@
         <thead><tr><th>Sec.</th><th>Cialdini</th><th>Aristotle</th></tr></thead>
         <tbody>
           <tr><td>A</td><td>Authority, social proof</td><td>Ethos</td></tr>
-          <tr><td>B</td><td>Liking</td><td>Pathos</td></tr>
-          <tr><td>C</td><td>Liking, unity</td><td>Ethos</td></tr>
-          <tr><td>D</td><td>Unity, commitment</td><td>Logos</td></tr>
-          <tr><td>E</td><td>Social proof, liking</td><td>Pathos</td></tr>
-          <tr><td>F</td><td>Unity, liking</td><td>Ethos</td></tr>
+          <tr><td>B</td><td>Social proof</td><td>Ethos</td></tr>
+          <tr><td>C</td><td>Liking, unity</td><td>Pathos</td></tr>
+          <tr><td>D</td><td>Liking, authority</td><td>Ethos</td></tr>
+          <tr><td>E</td><td>Authority, social proof</td><td>Logos</td></tr>
+          <tr><td>F</td><td>Social proof, liking</td><td>Pathos</td></tr>
           <tr><td>G</td><td>Liking, commitment, scarcity</td><td>Pathos</td></tr>
         </tbody>
       </table>
@@ -291,16 +306,15 @@
       <ol class="notes">
         <li><span class="pin">1</span><span>Hero copy and CTAs are identical in every version so we compare story, not headline.</span></li>
         <li><span class="pin">2</span><span>Homepage says Vyro, /work says Vouch for MrBeast. Confirm before it ships.</span></li>
-        <li><span class="pin">3</span><span>Which founder records it? Script is a placeholder; ship with captions and a transcript.</span></li>
-        <li><span class="pin">4</span><span>Who are the 8 faces? Real photos only, specialties signed off, refreshed when people leave.</span></li>
-        <li><span class="pin">5</span><span>Who talks to whom only. Confirm the pairs match all three offers.</span></li>
-        <li><span class="pin">6</span><span>Need Navengage and OXIO headshots, or drop the faces.</span></li>
-        <li><span class="pin">7</span><span>Do we have studio photos, and what is the real US-hours overlap?</span></li>
-        <li><span class="pin">8</span><span>Close needs a named founder's calendar and a real capacity number.</span></li>
+        <li><span class="pin">3</span><span>Written note, not video: cheaper to make, faster to read. Founder writes it, not us.</span></li>
+        <li><span class="pin">4</span><span>Which 3–4 people? Real names and photos only, each with their own sign-off.</span></li>
+        <li><span class="pin">5</span><span>Who worked on what must be true; check each pairing with the project leads.</span></li>
+        <li><span class="pin">6</span><span>Do we have headshots for the Navengage and OXIO quotes?</span></li>
+        <li><span class="pin">7</span><span>Close needs a named lead's calendar and a real capacity number.</span></li>
       </ol>
       <div class="todo mt-4">
         <div class="todo__head">Out of scope</div>
-        <span class="muted">Full team page, individual bios, hiring/careers, logo wall, case study template, visual design.</span>
+        <span class="muted">Full team page, individual bios, hiring/careers, case study template, visual design.</span>
       </div>
     </section>
 
