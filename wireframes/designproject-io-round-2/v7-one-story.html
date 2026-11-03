@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>designproject.io V7 One Story — wireframe</title>
+<link rel="stylesheet" href="wireframe.css">
+</head>
+<body>
+
+<main class="board">
+
+  <!-- ───────────────────────── why: rationale ───────────────────────── -->
+  <section class="board__intro">
+    <div class="screen__caption"><b>Why</b> the thinking behind this version</div>
+    <div class="card stack">
+      <p class="lead">People remember stories, not grids of logos. So after the hero, this version tells one client's story from start to finish, like a short article: Imera went from a consumer app to a B2B platform that won a global enterprise customer in three months (B). Four short chapters cover the problem (C), the prototype they could click in the first weeks, which the visitor can click too (D), the weekly shipping (E) and the result (F). A row of other clients shows it wasn't a one-off (G). Only then, once the visitor wants that story for themselves, do we show the three ways to work, with full prices (H), and ask for the call (I). <strong>Trade-off:</strong> the page leans on one client. If the visitor isn't in B2B or doesn't care about Imera, it takes longer to win them.</p>
+      <p class="hint"><strong>How to read this board:</strong> the big frame on the left is the full homepage, top to bottom. Each section is lettered (A, B, C…) and carries a small dashed tag naming the persuasion principle it relies on. Those principles are explained in plain words on the round 1 Overview board. The right column shows the phone version, a section-by-section summary and open questions.</p>
+    </div>
+  </section>
+
+
+  <!-- ───────────────────────── 01 homepage desktop ───────────────────────── -->
+  <section>
+    <div class="screen__caption"><b>V7</b> One Story · <b>01</b> Homepage — desktop</div>
+    <div class="screen screen--desktop">
+
+      <header class="topbar">
+        <div class="brand"><span class="brand__mark">T</span> The Design Project</div>
+        <nav class="nav">
+          <a href="#">Work</a>
+          <a href="#">How we work</a>
+          <a href="#">Industries</a>
+          <a href="#">Pricing</a>
+          <a href="#">Resources</a>
+        </nav>
+        <div class="topbar__spacer"></div>
+        <a class="btn btn--sm" href="#">Book a call</a>
+      </header>
+
+      <!-- A. hero (constant across all versions) -->
+      <section class="section section--hero">
+        <span class="lens">A · Constant hero · Ethos + Authority</span>
+        <p class="eyebrow">AI-native product studio &amp; design lab</p>
+        <h1 class="display">A design-led, AI-native product studio</h1>
+        <p class="lead measure">Designers, PMs and engineers working as one team with yours, using AI to take a feature from kickoff to live.</p>
+        <div class="row">
+          <span class="pin">1</span>
+          <a class="btn btn--primary btn--lg" href="#">Book a call</a>
+          <a class="btn btn--quiet btn--lg" href="#">See the results</a>
+        </div>
+        <div class="proof-strip">
+          <span class="pin">2</span>
+          <span class="proof"><b>Woven</b> acquired by <b>Slack</b></span>
+          <span class="proof"><b>Brev</b> acquired by <b>NVIDIA</b></span>
+          <span class="proof"><b>Vyro</b> acquired by <b>MrBeast</b></span>
+          <span class="proof"><b>Monte Carlo</b> backed by <b>Accel</b></span>
+        </div>
+      </section>
+
+      <!-- B. story opener -->
+      <section class="section section--center">
+        <span class="lens">B · Liking + Authority · Pathos</span>
+        <div class="row"><span class="pin">3</span><p class="eyebrow">One story · Imera · 4 chapters, 3 minutes</p></div>
+        <span class="logo">Imera</span>
+        <h2 class="display" style="max-width:26ch">From zero to a global enterprise customer in three months</h2>
+        <p class="lead measure">How a consumer immigration app became the B2B platform companies use to move their people across borders.</p>
+        <div class="proof-strip">
+          <span class="proof"><b>3 months</b> zero to enterprise</span>
+          <span class="proof"><b>1-week</b> sprints</span>
+          <span class="proof"><b>470+</b> tickets shipped</span>
+        </div>
+        <div class="media" style="min-height:360px;width:100%"><span class="media__tag">Imera dashboard on a laptop — the product today</span></div>
+        <div class="row">
+          <span class="badge badge--solid">1 The problem</span><span class="flow__arrow"></span>
+          <span class="badge">2 The prototype</span><span class="flow__arrow"></span>
+          <span class="badge">3 Shipping weekly</span><span class="flow__arrow"></span>
+          <span class="badge">4 The result</span>
+        </div>
+        <p class="hint">The chapter bar sticks to the top while the visitor reads, and fills in as they scroll.</p>
+      </section>
+
+      <!-- C. chapter 1: the problem -->
+      <section class="section">
+        <span class="lens">C · Unity · Pathos</span>
+        <div class="split" style="align-items:center">
+          <div class="stack">
+            <p class="eyebrow">Chapter 1 of 4 · The problem</p>
+            <h2>A consumer app that needed to sell to companies</h2>
+            <p class="lead">Imera helped people move countries. The real money was in helping companies move whole teams, and that needed a different product: self-serve, for HR teams, ready for an enterprise buyer.</p>
+            <p class="muted">No B2B product, no enterprise customer, and a deadline set by the market.</p>
+          </div>
+          <div class="media" style="min-height:260px"><span class="media__tag">The old consumer app</span></div>
+        </div>
+      </section>
+
+      <!-- D. chapter 2: the clickable prototype -->
+      <section class="section">
+        <span class="lens">D · Reciprocity + Commitment · Ethos</span>
+        <div class="row row--between">
+          <div class="section__head">
+            <div class="row"><span class="pin">4</span><p class="eyebrow">Chapter 2 of 4 · The prototype</p></div>
+            <h2>In the first weeks, they could click it. So can you.</h2>
+          </div>
+        </div>
+        <div class="card stack p-0 crop">
+          <div class="row row--between" style="padding:16px;border-bottom:1.5px solid #000">
+            <div class="row"><span class="badge">imera-prototype</span><span class="muted">Live prototype, in code</span></div>
+            <div class="row"><span class="badge badge--solid">Dashboard</span><span class="badge">Move a team</span><span class="badge">Employee profile</span></div>
+          </div>
+          <div class="shell" style="min-height:360px">
+            <aside class="sidebar stack">
+              <span class="tl tl--title w-70"></span>
+              <span class="tl w-90"></span><span class="tl w-80"></span><span class="tl w-60"></span><span class="tl w-70"></span>
+            </aside>
+            <div class="page stack">
+              <div class="grid grid--3">
+                <div class="card stack"><span class="metric__label">Employees moving</span><span class="metric__value">[24]</span></div>
+                <div class="card stack"><span class="metric__label">Visas in progress</span><span class="metric__value">[9]</span></div>
+                <div class="card stack"><span class="metric__label">Countries</span><span class="metric__value">[6]</span></div>
+              </div>
+              <div class="card stack">
+                <span class="tl tl--title w-50"></span>
+                <span class="tl w-100"></span><span class="tl w-90"></span><span class="tl w-100"></span><span class="tl w-80"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="hint">Embedded, clickable, no sign-up. The tabs switch between three real flows. On a phone it opens full screen.</p>
+      </section>
+
+      <!-- E. chapter 3: shipping weekly -->
+      <section class="section">
+        <span class="lens">E · Authority · Logos</span>
+        <div class="split" style="align-items:center">
+          <div class="stack">
+            <p class="eyebrow">Chapter 3 of 4 · Shipping weekly</p>
+            <h2>Something new in Imera's hands every week</h2>
+            <p class="lead">One team (design, product and engineering) working in Imera's repo, with AI agents in the loop. Every week ended with something live on staging, checked, then shipped.</p>
+            <a class="btn btn--quiet btn--sm" href="#" style="justify-self:start">How we work, in depth</a>
+          </div>
+          <div class="grid grid--3">
+            <div class="card stack"><p class="metric__value">1 wk</p><p class="muted">sprints, reprioritised every Monday</p></div>
+            <div class="card stack"><p class="metric__value">470+</p><p class="muted">tickets through one AI-augmented workflow</p></div>
+            <div class="card stack"><p class="metric__value">3x</p><p class="muted">faster than their old sprint workflow</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- F. chapter 4: the result -->
+      <section class="section section--center">
+        <span class="lens">F · Social proof + Liking · Pathos</span>
+        <div class="row"><span class="pin">5</span><p class="eyebrow">Chapter 4 of 4 · The result</p></div>
+        <p class="metric__value" style="font-size:42px">A global enterprise customer, three months in</p>
+        <p class="quote--xl" style="max-width:40ch">"[What it meant for Imera, in their own words.]"</p>
+        <div class="cite">
+          <div class="media media--circle" style="width:56px;min-height:56px"></div>
+          <div><strong>[Name]</strong><br><span class="muted">[Role], Imera</span></div>
+        </div>
+        <a class="btn btn--quiet" href="#">Read the full Imera story</a>
+      </section>
+
+      <!-- G. not a one-off -->
+      <section class="section section--tight">
+        <span class="lens">G · Social proof · Ethos</span>
+        <div class="row"><span class="pin">6</span><p class="eyebrow">Not a one-off</p></div>
+        <div class="grid grid--4">
+          <div class="card stack"><p class="metric__value">$100M</p><p class="muted">raised after the redesign</p><p class="eyebrow">Socure</p></div>
+          <div class="card stack"><p class="metric__value">42%</p><p class="muted">return rate; acquired by Slack</p><p class="eyebrow">Woven</p></div>
+          <div class="card stack"><p class="metric__value">+12%</p><p class="muted">user retention</p><p class="eyebrow">Monte Carlo</p></div>
+          <div class="card stack"><p class="metric__value">99%</p><p class="muted">completed verification</p><p class="eyebrow">Mesh</p></div>
+        </div>
+        <a class="btn btn--quiet btn--sm" href="#" style="justify-self:start">All stories</a>
+      </section>
+
+      <!-- H. ways to work, with full prices -->
+      <section class="section">
+        <span class="lens">H · Commitment · Logos</span>
+        <div class="section__head">
+          <div class="row"><span class="pin">7</span><p class="eyebrow">Ways to work with us</p></div>
+          <h2>Write your own story. Three ways to start.</h2>
+        </div>
+        <div class="grid grid--3">
+          <article class="card stack">
+            <p class="eyebrow">For teams that need design</p>
+            <h3>Design Team</h3>
+            <div><p class="metric__value">$5,990</p><p class="metric__label">per month</p></div>
+            <div class="rule"></div>
+            <ul class="list">
+              <li class="list__item">An embedded, AI-first design team</li>
+              <li class="list__item">Prototypes in code, not just Figma</li>
+              <li class="list__item">Your design system in Storybook</li>
+            </ul>
+            <a class="btn btn--block" href="#">See Design Team</a>
+          </article>
+          <article class="card stack">
+            <p class="eyebrow">For one feature, shipped</p>
+            <h3>Product Sprint</h3>
+            <div><p class="metric__value">$14,500</p><p class="metric__label">per month · 2-month commitment</p></div>
+            <div class="rule"></div>
+            <ul class="list">
+              <li class="list__item">One production-ready feature</li>
+              <li class="list__item">PM, design and engineering together</li>
+              <li class="list__item">Live in your product, not a handoff</li>
+            </ul>
+            <a class="btn btn--block" href="#">See Product Sprint</a>
+          </article>
+          <article class="card stack">
+            <p class="eyebrow">For a whole product</p>
+            <h3>Product Team</h3>
+            <div><p class="metric__value">From [$X]</p><p class="metric__label">per month · scoped on a call</p></div>
+            <div class="rule"></div>
+            <ul class="list">
+              <li class="list__item">A technical PM who runs the roadmap</li>
+              <li class="list__item">Designers plus front and back-end engineers</li>
+              <li class="list__item">Ships every week, like Imera [confirm plan]</li>
+            </ul>
+            <a class="btn btn--block" href="#">See Product Team</a>
+          </article>
+        </div>
+        <div class="callout"><strong>Every plan starts with a risk-free trial.</strong> If the first [N weeks] don't work for you, you don't pay.</div>
+      </section>
+
+      <!-- I. close -->
+      <section class="section section--loud section--center">
+        <span class="lens">I · Scarcity + Commitment · Pathos + Kairos</span>
+        <div class="section__head">
+          <h2>What would your first three months look like?</h2>
+          <p class="muted measure">A 30-minute call with a founder. Bring your roadmap; we'll sketch chapter one together.</p>
+        </div>
+        <div class="row"><span class="pin">8</span><a class="btn btn--bold btn--lg" href="#">Book a call</a></div>
+        <p class="muted"><strong>[N] spots open for [month]</strong> — we cap new teams so every project gets a senior lead.</p>
+      </section>
+
+      <footer class="footer">
+        <span class="muted">The Design Project · Miami · Buenos Aires</span>
+        <span class="muted">Work · How we work · Industries · Pricing · Careers · hello@designproject.io</span>
+      </footer>
+    </div>
+  </section>
+
+  <!-- ───────────────────────── side column ───────────────────────── -->
+  <div class="stack stack--loose" style="width:420px">
+
+    <section>
+      <div class="screen__caption"><b>V7</b> One Story · <b>02</b> First scroll — mobile</div>
+      <div class="screen screen--mobile">
+        <header class="topbar">
+          <div class="brand"><span class="brand__mark">T</span> TDP</div>
+          <div class="topbar__spacer"></div>
+          <button class="btn btn--icon" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        </header>
+        <section class="section section--hero">
+          <h1 class="display">A design-led, AI-native product studio</h1>
+          <p class="muted">Design, product and engineering as one team.</p>
+          <div class="stack full">
+            <span class="proof"><b>Woven</b> acquired by <b>Slack</b></span>
+            <span class="proof"><b>Brev</b> acquired by <b>NVIDIA</b></span>
+          </div>
+        </section>
+        <section class="section section--tight">
+          <p class="eyebrow">One story · Imera</p>
+          <h2>Zero to an enterprise customer in three months</h2>
+          <div class="media" style="min-height:160px"></div>
+          <div class="row"><span class="badge badge--solid">1</span><span class="badge">2</span><span class="badge">3</span><span class="badge">4</span><span class="muted">chapters</span></div>
+        </section>
+        <div class="cta-bar"><a class="btn btn--primary btn--block" href="#">Book a call</a></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="screen__caption"><b>Story</b> the hypothesis</div>
+      <div class="card stack">
+        <p><strong>"One story told well beats ten logos. Make them want it, then show the price."</strong></p>
+        <div class="flow">
+          <span class="flow__step">Problem</span><span class="flow__arrow"></span>
+          <span class="flow__step">Click it</span><span class="flow__arrow"></span>
+          <span class="flow__step">Ship</span><span class="flow__arrow"></span>
+          <span class="flow__step">Result</span><span class="flow__arrow"></span>
+          <span class="flow__step">Price</span><span class="flow__arrow"></span>
+          <span class="flow__step">Talk</span>
+        </div>
+        <p class="muted">The visitor's only interaction is clicking the prototype. No form, no quiz, nothing stored. Prices appear only after the story, in full.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="screen__caption"><b>Map</b> persuasion levers by section</div>
+      <table class="table">
+        <thead><tr><th>Sec.</th><th>Cialdini</th><th>Aristotle</th></tr></thead>
+        <tbody>
+          <tr><td>A</td><td>Authority, social proof</td><td>Ethos</td></tr>
+          <tr><td>B</td><td>Liking, authority</td><td>Pathos</td></tr>
+          <tr><td>C</td><td>Unity</td><td>Pathos</td></tr>
+          <tr><td>D</td><td>Reciprocity, commitment</td><td>Ethos</td></tr>
+          <tr><td>E</td><td>Authority</td><td>Logos</td></tr>
+          <tr><td>F</td><td>Social proof, liking</td><td>Pathos</td></tr>
+          <tr><td>G</td><td>Social proof</td><td>Ethos</td></tr>
+          <tr><td>H</td><td>Commitment</td><td>Logos</td></tr>
+          <tr><td>I</td><td>Scarcity, commitment</td><td>Pathos, kairos</td></tr>
+        </tbody>
+      </table>
+      <p class="hint mt-4">All 7 principles present. Weight: pathos 4, ethos 3, logos 2, kairos 1.</p>
+    </section>
+
+    <section>
+      <div class="screen__caption"><b>Notes</b> open questions</div>
+      <ol class="notes">
+        <li><span class="pin">1</span><span>Hero copy and CTAs are identical across versions so we compare story, not headline.</span></li>
+        <li><span class="pin">2</span><span>Homepage says Vyro, /work says Vouch for MrBeast. Confirm before it ships.</span></li>
+        <li><span class="pin">3</span><span>Imera is the pick: real numbers, AI-native, B2B. Finvisor could rotate in once it has a metric.</span></li>
+        <li><span class="pin">4</span><span>Can we embed Imera's prototype publicly? If not, a clickable mock of the same flows.</span></li>
+        <li><span class="pin">5</span><span>Imera has no testimonial yet. Collect one; the result chapter needs their voice.</span></li>
+        <li><span class="pin">6</span><span>Four numbers, no logos wall: this row only proves the story repeats.</span></li>
+        <li><span class="pin">7</span><span>Full prices. Product Team needs a real "from" number, and which plan Imera is on.</span></li>
+        <li><span class="pin">8</span><span>Scarcity line only ships with a real capacity number.</span></li>
+      </ol>
+      <div class="todo mt-4">
+        <div class="todo__head">Out of scope</div>
+        <span class="muted">Scroll animation for the chapter bar, prototype build, the full Imera case study page, visual design.</span>
+      </div>
+    </section>
+
+  </div>
+
+</main>
+
+</body>
+</html>
