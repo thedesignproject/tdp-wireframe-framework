@@ -7,6 +7,7 @@
 //
 // Once a direction is picked, add wireframes/<project>/site.json:
 //   { "chosen": "<board file name>", "decided": "3 Nov 2026", "why": "One sentence." }
+// An optional "title" overrides the heading of the project's board list.
 // The chosen board is featured at the top of the index; the rest are listed
 // underneath as explorations.
 //
@@ -49,7 +50,8 @@ const features = [];
 
 const wfRoot = join(root, "wireframes");
 if (existsSync(wfRoot)) {
-  for (const project of readdirSync(wfRoot, { withFileTypes: true })) {
+  const projects = readdirSync(wfRoot, { withFileTypes: true }).sort((x, y) => x.name.localeCompare(y.name));
+  for (const project of projects) {
     if (!project.isDirectory()) continue;
     const dir = join(wfRoot, project.name);
     const boards = readdirSync(dir).filter(isBoard).sort()
@@ -63,7 +65,7 @@ if (existsSync(wfRoot)) {
     if (meta.chosen && !chosen) throw new Error(`${siteJson}: no board named ${meta.chosen}`);
     if (chosen) features.push({ project: title, board: chosen, decided: meta.decided, why: meta.why });
     const rest = chosen ? boards.filter((b) => b !== chosen) : boards;
-    if (rest.length) groups.push({ title: chosen ? `Explorations · ${title}` : title, boards: rest });
+    if (rest.length) groups.push({ title: meta.title || (chosen ? `Explorations · ${title}` : title), boards: rest });
   }
 }
 

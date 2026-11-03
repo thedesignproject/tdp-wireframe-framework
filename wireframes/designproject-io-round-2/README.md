@@ -6,6 +6,10 @@ raised on the 2 Nov call ([`../designproject-io`](../designproject-io/README.md)
 tries five stories nobody proposed yet, so the team picks from a wider field. Start with the
 overview, then open any version.
 
+**Decision (3 Nov 2026): V1 Credibility Ladder from round 1 is the chosen spine.** Round 2
+stays as explorations; its overview's **Borrow** table lists the sections that could make
+V1 stronger.
+
 | Board | Story | Hypothesis it tests |
 |---|---|---|
 | [00 Overview](00-overview.png) | all five spines, sections worth borrowing, principle matrix | — |
