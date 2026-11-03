@@ -6,7 +6,7 @@ raised on the 2 Nov call ([`../designproject-io`](../designproject-io/README.md)
 tries five stories nobody proposed yet, so the team picks from a wider field. Start with the
 overview, then open any version.
 
-**Shortlist (3 Nov 2026): round 2 vs. V1 Credibility Ladder from round 1.** Still being
+**Shortlist (3 Nov 2026): V6 Proof Up Front vs. V1 Credibility Ladder from round 1.** Still being
 discussed. Whichever wins, the overview's **Borrow** table lists sections worth taking across.
 
 | Board | Story | Hypothesis it tests |
