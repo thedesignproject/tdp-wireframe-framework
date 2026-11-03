@@ -65,6 +65,60 @@
         ],
         "createdAt": "2026-11-02T19:07:36.268Z",
         "reason": "assistant triage: .card gets 16px padding from the skill's wireframe.css, which the detector cannot resolve; verified in the rendered PNG"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "wireframes/designproject-io-round-2/00-overview.html"
+        ],
+        "createdAt": "2026-11-03T12:58:02.000Z",
+        "reason": "assistant triage: detector cannot resolve wireframe.css (inlined from the create-wireframe skill at render time); rendered scale is 42/32/24/18/15px per the skill's design system"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "wireframes/designproject-io-round-2/v6-proof-up-front.html"
+        ],
+        "createdAt": "2026-11-03T12:58:02.000Z",
+        "reason": "assistant triage: detector cannot resolve wireframe.css (inlined from the create-wireframe skill at render time); rendered scale is 42/32/24/18/15px per the skill's design system"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "wireframes/designproject-io-round-2/v7-one-story.html"
+        ],
+        "createdAt": "2026-11-03T12:58:02.000Z",
+        "reason": "assistant triage: detector cannot resolve wireframe.css (inlined from the create-wireframe skill at render time); rendered scale is 42/32/24/18/15px per the skill's design system"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "wireframes/designproject-io-round-2/v8-meet-the-makers.html"
+        ],
+        "createdAt": "2026-11-03T12:58:02.000Z",
+        "reason": "assistant triage: detector cannot resolve wireframe.css (inlined from the create-wireframe skill at render time); rendered scale is 42/32/24/18/15px per the skill's design system"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "wireframes/designproject-io-round-2/v9-doubts-answered.html"
+        ],
+        "createdAt": "2026-11-03T12:58:02.000Z",
+        "reason": "assistant triage: detector cannot resolve wireframe.css (inlined from the create-wireframe skill at render time); rendered scale is 42/32/24/18/15px per the skill's design system"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "wireframes/designproject-io-round-2/v10-time-receipts.html"
+        ],
+        "createdAt": "2026-11-03T12:58:02.000Z",
+        "reason": "assistant triage: detector cannot resolve wireframe.css (inlined from the create-wireframe skill at render time); rendered scale is 42/32/24/18/15px per the skill's design system"
       }
     ]
   }

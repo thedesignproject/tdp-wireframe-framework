@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>designproject.io V10 Time Receipts — wireframe</title>
+<link rel="stylesheet" href="wireframe.css">
+</head>
+<body>
+
+<main class="board">
+
+  <!-- ───────────────────────── why: rationale ───────────────────────── -->
+  <section class="board__intro">
+    <div class="screen__caption"><b>Why</b> the thinking behind this version</div>
+    <div class="card stack">
+      <p class="lead">Every studio now calls itself "AI-native", so the words alone prove nothing. What a buyer actually wants from AI is speed: the same product, sooner. This version proves speed with time, not adjectives, building on the "three months to one" idea from the 2 Nov call. Right after the hero, one client says in their own words how much time we saved them (B). Then a set of "time receipts" (C) shows, client by client, how long the work was expected to take next to how long it took with us. Next we show what you'll actually have in hand after 7, 30 and 60 days (D), a few short quotes back it up (F), and the close asks you to ship this quarter while there's still room (G). <strong>Trade-off:</strong> it's the most convincing version if the numbers are real, and it falls apart without honest time data from each client.</p>
+      <p class="hint"><strong>How to read this board:</strong> the big frame on the left is the full homepage, top to bottom. Each section is lettered (A, B, C…) and carries a small dashed tag naming the persuasion principle it relies on. Those principles are explained in plain words on the Overview board. The right column shows the phone version, a section-by-section summary and open questions.</p>
+    </div>
+  </section>
+
+
+  <!-- ───────────────────────── 01 homepage desktop ───────────────────────── -->
+  <section>
+    <div class="screen__caption"><b>V10</b> Time Receipts · <b>01</b> Homepage — desktop</div>
+    <div class="screen screen--desktop">
+
+      <header class="topbar">
+        <div class="brand"><span class="brand__mark">T</span> The Design Project</div>
+        <nav class="nav">
+          <a href="#">Work</a>
+          <a href="#">How we work</a>
+          <a href="#">Industries</a>
+          <a href="#">Pricing</a>
+          <a href="#">Resources</a>
+        </nav>
+        <div class="topbar__spacer"></div>
+        <a class="btn btn--sm" href="#">Book a call</a>
+      </header>
+
+      <!-- A. hero (constant across all versions) -->
+      <section class="section section--hero">
+        <span class="lens">A · Constant hero · Ethos + Authority</span>
+        <p class="eyebrow">AI-native product studio &amp; design lab</p>
+        <h1 class="display">A design-led, AI-native product studio</h1>
+        <p class="lead measure">Designers, PMs and engineers working as one team with yours, using AI to take a feature from kickoff to live.</p>
+        <div class="row">
+          <span class="pin">1</span>
+          <a class="btn btn--primary btn--lg" href="#">Book a call</a>
+          <a class="btn btn--quiet btn--lg" href="#">See the results</a>
+        </div>
+        <div class="proof-strip">
+          <span class="pin">2</span>
+          <span class="proof"><b>Woven</b> acquired by <b>Slack</b></span>
+          <span class="proof"><b>Brev</b> acquired by <b>NVIDIA</b></span>
+          <span class="proof"><b>Vyro</b> acquired by <b>MrBeast</b></span>
+          <span class="proof"><b>Monte Carlo</b> backed by <b>Accel</b></span>
+        </div>
+      </section>
+
+      <!-- B. the big time-saved quote -->
+      <section class="section">
+        <span class="lens">B · Social proof · Pathos + Logos</span>
+        <div class="split split--aside">
+          <div class="stack stack--loose">
+            <div class="row"><span class="pin">3</span><p class="eyebrow">Time saved, in their words</p></div>
+            <p class="quote--xl">"[Three months of work, shipped in one.]"</p>
+            <div class="cite">
+              <div class="media media--circle" style="width:56px;min-height:56px"></div>
+              <div><strong>[Client name]</strong><br><span class="muted">[Role, Company]</span></div>
+            </div>
+          </div>
+          <div class="panel stack">
+            <p class="eyebrow">Placeholder, not copy</p>
+            <p class="muted"><strong>This quote must be collected, not written.</strong> Ask a client to say it in their own words, on the record, with name and face.</p>
+            <p class="muted">If no client will say it, this section is cut and C moves up.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- C. time receipts -->
+      <section class="section">
+        <span class="lens">C · Authority · Logos</span>
+        <div class="row row--between">
+          <div class="section__head">
+            <div class="row"><span class="pin">4</span><p class="eyebrow">Time receipts</p></div>
+            <h2>How long it should have taken. How long it took.</h2>
+          </div>
+          <a class="btn btn--quiet" href="#">All case studies</a>
+        </div>
+        <table class="table">
+          <thead><tr><th style="width:250px">Client · what shipped</th><th>Timeline</th><th style="width:150px">Time saved</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Imera</strong> · AI<br><span class="muted">Zero to a B2B platform that won a global enterprise customer</span></td>
+              <td>
+                <div class="stack stack--tight">
+                  <div class="row" style="flex-wrap:nowrap"><span class="hint" style="width:110px;flex:none">Their estimate</span><div class="panel p-0" style="width:68%;height:16px"></div><span class="mono muted">[N] months</span></div>
+                  <div class="row" style="flex-wrap:nowrap"><span class="hint" style="width:110px;flex:none"><strong>With TDP</strong></span><div class="tl tl--title" style="width:23%;margin:0"></div><span class="mono muted"><strong>3 months</strong></span></div>
+                </div>
+              </td>
+              <td><p class="metric__value">[N] mo</p></td>
+            </tr>
+            <tr>
+              <td><strong>Socure</strong> · Identity<br><span class="muted">Product redesign, before a $100M raise</span></td>
+              <td>
+                <div class="stack stack--tight">
+                  <div class="row" style="flex-wrap:nowrap"><span class="hint" style="width:110px;flex:none">Their estimate</span><div class="panel p-0" style="width:60%;height:16px"></div><span class="mono muted">[N] months</span></div>
+                  <div class="row" style="flex-wrap:nowrap"><span class="hint" style="width:110px;flex:none"><strong>With TDP</strong></span><div class="tl tl--title" style="width:25%;margin:0"></div><span class="mono muted"><strong>[N] months</strong></span></div>
+                </div>
+              </td>
+              <td><p class="metric__value">[N] mo</p></td>
+            </tr>
+            <tr>
+              <td><strong>Mesh</strong> · Fintech<br><span class="muted">Business verification flow, 99% completion</span></td>
+              <td>
+                <div class="stack stack--tight">
+                  <div class="row" style="flex-wrap:nowrap"><span class="hint" style="width:110px;flex:none">Their estimate</span><div class="panel p-0" style="width:45%;height:16px"></div><span class="mono muted">[N] weeks</span></div>
+                  <div class="row" style="flex-wrap:nowrap"><span class="hint" style="width:110px;flex:none"><strong>With TDP</strong></span><div class="tl tl--title" style="width:15%;margin:0"></div><span class="mono muted"><strong>[N] weeks</strong></span></div>
+                </div>
+              </td>
+              <td><p class="metric__value">[N] wk</p></td>
+            </tr>
+            <tr>
+              <td><strong>Finvisor</strong> · Fintech<br><span class="muted">[What shipped, one line]</span></td>
+              <td>
+                <div class="stack stack--tight">
+                  <div class="row" style="flex-wrap:nowrap"><span class="hint" style="width:110px;flex:none">Their estimate</span><div class="panel p-0" style="width:52%;height:16px"></div><span class="mono muted">[N] months</span></div>
+                  <div class="row" style="flex-wrap:nowrap"><span class="hint" style="width:110px;flex:none"><strong>With TDP</strong></span><div class="tl tl--title" style="width:18%;margin:0"></div><span class="mono muted"><strong>[N] months</strong></span></div>
+                </div>
+              </td>
+              <td><p class="metric__value">[N] mo</p></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="row">
+          <span class="pin">5</span>
+          <p class="hint">Dashed bar = the client's own estimate before we started. Solid bar = kickoff to live with TDP. Bars drawn to one shared scale. Each row opens its case study.</p>
+        </div>
+      </section>
+
+      <!-- D. what you'll have -->
+      <section class="section">
+        <span class="lens">D · Commitment &amp; consistency · Logos</span>
+        <div class="section__head">
+          <div class="row"><span class="pin">6</span><p class="eyebrow">What you'll have</p></div>
+          <h2>What's in your hands, and when</h2>
+        </div>
+        <div class="grid grid--3">
+          <article class="card stack">
+            <p class="metric__value">Day 7</p>
+            <h3>A prototype you can click</h3>
+            <p class="muted">Your first feature as a working prototype in code, ready to put in front of users.</p>
+          </article>
+          <article class="card stack">
+            <p class="metric__value">Day 30</p>
+            <h3>[A first release in your repo]</h3>
+            <p class="muted">Components in Storybook, living in your codebase, used by your engineers.</p>
+          </article>
+          <article class="card stack">
+            <p class="metric__value">Day 60</p>
+            <h3>A feature live in production</h3>
+            <p class="muted">One production-ready feature, tested and documented. The Product Sprint, done.</p>
+          </article>
+        </div>
+        <p class="hint">Outcomes you own on each date, not the steps we take to get there. How we work lives on its own page.</p>
+      </section>
+
+      <!-- E. what we do -->
+      <section class="section">
+        <span class="lens">E · Logos</span>
+        <div class="section__head">
+          <p class="eyebrow">What we do</p>
+          <h2>One team, from decision to production</h2>
+        </div>
+        <div class="grid grid--4">
+          <article class="card stack">
+            <p class="eyebrow">01</p>
+            <h3>Fractional product leadership</h3>
+            <p class="muted">A senior product lead in your team, part-time, owning the roadmap and the decisions behind it.</p>
+          </article>
+          <article class="card stack">
+            <p class="eyebrow">02</p>
+            <h3>Product design &amp; technology</h3>
+            <p class="muted">Designers and engineers who take a feature from idea to working product in code.</p>
+          </article>
+          <article class="card stack">
+            <p class="eyebrow">03</p>
+            <h3>AI-native design systems</h3>
+            <p class="muted">Designed in Figma and engineered in code, so your team and your AI agents build from one source.</p>
+          </article>
+          <article class="card stack">
+            <p class="eyebrow">04</p>
+            <h3>Staff augmentation</h3>
+            <p class="muted">Designers, PMs and engineers who join your team, plus workshops that train it on AI-native ways of working.</p>
+          </article>
+        </div>
+        <p class="hint">Four services, wording from the team (3 Nov). Process detail lives on its own "How we work" page.</p>
+      </section>
+
+      <!-- F. proof strip of quotes -->
+      <section class="section">
+        <span class="lens">F · Social proof + Liking · Ethos</span>
+        <div class="row"><p class="eyebrow">Others on the pace</p></div>
+        <div class="grid grid--3">
+          <article class="card stack">
+            <p class="quote--sm">"Communication is fluid and enables us to move quickly, adapt to changes and pivot."</p>
+            <span class="muted"><strong>Elliot Chen</strong> · Head of Product, OXIO</span>
+          </article>
+          <article class="card stack">
+            <p class="quote--sm">"The redesign pushed us forward on our mission to verify 100% of IDs in real time."</p>
+            <span class="muted"><strong>Erick Soto</strong> · VP of Product, Socure</span>
+          </article>
+          <article class="card stack">
+            <p class="quote--sm">"Communication was 10/10 from start to finish … Working with TDP is 100% worth it."</p>
+            <span class="muted"><strong>Colleen McBride</strong> · CMO, Navengage</span>
+          </article>
+        </div>
+        <div class="proof-strip">
+          <span class="proof"><b>$84,706</b> saved on average vs a US full-time hire</span>
+          <span class="proof"><b>NPS</b> above <b>82</b></span>
+          <span class="proof"><b>Inc.</b> Power Partner</span>
+        </div>
+      </section>
+
+      <!-- G. kairos close -->
+      <section class="section section--loud section--center">
+        <span class="lens">G · Scarcity + Commitment · Kairos</span>
+        <div class="section__head">
+          <h2>Ship it this quarter</h2>
+          <p class="muted measure">Book a call this week and your first feature can be live before the quarter ends.</p>
+        </div>
+        <div class="row">
+          <span class="pin">7</span>
+          <div class="card stack" style="min-width:220px">
+            <p class="metric__value">[N] weeks</p>
+            <p class="metric__label">left in Q4</p>
+          </div>
+          <div class="card stack" style="min-width:220px">
+            <p class="metric__value">60 days</p>
+            <p class="metric__label">kickoff to a live feature</p>
+          </div>
+        </div>
+        <div class="row"><a class="btn btn--bold btn--lg" href="#">Book a call</a></div>
+        <div class="row"><span class="pin">8</span><p class="muted"><strong>[N] spots open for [month]</strong> — we cap new teams so every project gets a senior lead.</p></div>
+      </section>
+
+      <footer class="footer">
+        <span class="muted">The Design Project · Miami · Buenos Aires</span>
+        <span class="muted">Work · How we work · Industries · Pricing · Careers · hello@designproject.io</span>
+      </footer>
+    </div>
+  </section>
+
+  <!-- ───────────────────────── side column ───────────────────────── -->
+  <div class="stack stack--loose" style="width:420px">
+
+    <section>
+      <div class="screen__caption"><b>02</b> First scroll — mobile</div>
+      <div class="screen screen--mobile">
+        <header class="topbar">
+          <div class="brand"><span class="brand__mark">T</span> TDP</div>
+          <div class="topbar__spacer"></div>
+          <button class="btn btn--icon" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        </header>
+        <section class="section section--hero">
+          <h1 class="display">A design-led, AI-native product studio</h1>
+          <p class="muted">Design, product and engineering as one team.</p>
+          <div class="stack full">
+            <span class="proof"><b>Woven</b> acquired by <b>Slack</b></span>
+            <span class="proof"><b>Brev</b> acquired by <b>NVIDIA</b></span>
+          </div>
+        </section>
+        <section class="section section--tight">
+          <p class="quote">"[Three months of work, shipped in one.]"</p>
+          <span class="muted"><strong>[Client name]</strong> · [Company]</span>
+          <div class="stack stack--tight full">
+            <p class="eyebrow">Imera · B2B platform</p>
+            <div class="row" style="flex-wrap:nowrap"><div class="panel p-0" style="width:75%;height:14px"></div><span class="hint">[N] mo</span></div>
+            <div class="row" style="flex-wrap:nowrap"><div class="tl tl--title" style="width:25%;margin:0"></div><span class="hint"><strong>3 mo with TDP</strong></span></div>
+          </div>
+        </section>
+        <div class="cta-bar"><a class="btn btn--primary btn--block" href="#">Book a call</a></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="screen__caption"><b>Story</b> the hypothesis</div>
+      <div class="card stack">
+        <p><strong>"AI-native has to mean faster. Prove it in time, not in adjectives."</strong></p>
+        <div class="flow">
+          <span class="flow__step">Who</span><span class="flow__arrow"></span>
+          <span class="flow__step">Time saved</span><span class="flow__arrow"></span>
+          <span class="flow__step">Receipts</span><span class="flow__arrow"></span>
+          <span class="flow__step">By when</span><span class="flow__arrow"></span>
+          <span class="flow__step">Others</span><span class="flow__arrow"></span>
+          <span class="flow__step">Now</span>
+        </div>
+        <p class="muted">Built on "three months to one" from the 2 Nov call. Logos carries the middle, kairos closes. Every claim is a date or a duration a client can confirm.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="screen__caption"><b>Map</b> persuasion levers by section</div>
+      <table class="table">
+        <thead><tr><th>Sec.</th><th>Cialdini</th><th>Aristotle</th></tr></thead>
+        <tbody>
+          <tr><td>A</td><td>Authority, social proof</td><td>Ethos</td></tr>
+          <tr><td>B</td><td>Social proof</td><td>Pathos, logos</td></tr>
+          <tr><td>C</td><td>Authority</td><td>Logos</td></tr>
+          <tr><td>D</td><td>Commitment &amp; consistency</td><td>Logos</td></tr>
+          <tr><td>E</td><td>(none)</td><td>Logos</td></tr>
+          <tr><td>F</td><td>Social proof, liking</td><td>Ethos</td></tr>
+          <tr><td>G</td><td>Scarcity, commitment</td><td>Kairos</td></tr>
+        </tbody>
+      </table>
+      <p class="hint mt-4">5 of 7 principles (no reciprocity, no unity). Weight: logos 4, ethos 2, pathos 1, kairos 1.</p>
+    </section>
+
+    <section>
+      <div class="screen__caption"><b>Notes</b> open questions</div>
+      <ol class="notes">
+        <li><span class="pin">1</span><span>Hero copy and CTAs are identical across versions so we compare story, not headline.</span></li>
+        <li><span class="pin">2</span><span>Homepage says Vyro, /work says Vouch for MrBeast. Confirm before it ships.</span></li>
+        <li><span class="pin">3</span><span>The time-saved quote must come from a named client on the record. Who do we ask first?</span></li>
+        <li><span class="pin">4</span><span>Only Imera's 3 months is known. Every other duration needs client data and sign-off.</span></li>
+        <li><span class="pin">5</span><span>"Their estimate" must be the client's own pre-project number, never ours.</span></li>
+        <li><span class="pin">6</span><span>Day 7 / 30 / 60 edges toward process. Can delivery promise these outcomes for every client?</span></li>
+        <li><span class="pin">7</span><span>"[N] weeks left" counts down to quarter end automatically; drop it if it can't stay true.</span></li>
+        <li><span class="pin">8</span><span>Scarcity line only ships with a real capacity number.</span></li>
+      </ol>
+      <div class="todo mt-4">
+        <div class="todo__head">Out of scope</div>
+        <span class="muted">Pricing on the homepage (linked in nav), full case-study timelines, logo wall, visual design.</span>
+      </div>
+    </section>
+
+  </div>
+
+</main>
+
+</body>
+</html>
