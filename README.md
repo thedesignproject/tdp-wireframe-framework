@@ -78,6 +78,10 @@ Every push deploys to Vercel through its Git integration: `master` to production
 and the shared `wireframe.css`) into `dist/` and writes an index, so a new board is
 online after the next push. Build locally with `node scripts/build-site.mjs`.
 
+Once a direction is picked, add `wireframes/<project>/site.json` with
+`{"chosen": "<board>", "decided": "<date>", "why": "<one sentence>"}`. The chosen
+board is featured at the top of the index and the rest are listed as explorations.
+
 ## Design checks (Impeccable)
 
 [Impeccable](https://impeccable.style) (Apache-2.0) is installed per project for Claude

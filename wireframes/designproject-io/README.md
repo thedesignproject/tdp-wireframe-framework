@@ -3,6 +3,8 @@
 Five homepage structures for the new designproject.io, drawn with the `create-wireframe`
 skill (Balsamiq Sans, black on white). Start with the overview, then open any version.
 
+**Decision (3 Nov 2026): V1 Credibility Ladder.** The other four stay here as explorations.
+
 | Board | Story | Hypothesis it tests |
 |---|---|---|
 | [00 Overview](00-overview.png) | all five spines + principle matrix | — |
