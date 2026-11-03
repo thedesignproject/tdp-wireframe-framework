@@ -5,11 +5,11 @@
 // copied too), plus the framework's worked example. The index lists everything,
 // so a new board shows up on the next push with no config change.
 //
-// Once a direction is picked, add wireframes/<project>/site.json:
-//   { "chosen": "<board file name>", "decided": "3 Nov 2026", "why": "One sentence." }
-// An optional "title" overrides the heading of the project's board list.
-// The chosen board is featured at the top of the index; the rest are listed
-// underneath as explorations.
+// To put boards on the shortlist, add wireframes/<project>/site.json:
+//   { "shortlist": ["<board file name>"], "why": "One sentence.", "title": "List heading" }
+// Shortlisted boards from every project sit side by side at the top of the index
+// (set "chosen" instead of "shortlist" once one wins); the rest are listed
+// underneath as explorations. "title" overrides the heading of that list.
 //
 // No dependencies: runs on the Node that Vercel provides.
 
@@ -47,6 +47,7 @@ function addBoard(srcDir, name, destDir) {
 const isBoard = (f) => f.endsWith(".html") && !f.endsWith(".standalone.html");
 const groups = [];
 const features = [];
+let chosenAny = false;
 
 const wfRoot = join(root, "wireframes");
 if (existsSync(wfRoot)) {
@@ -61,11 +62,15 @@ if (existsSync(wfRoot)) {
     const title = heading ? heading[1].trim() : humanise(project.name);
     const siteJson = join(dir, "site.json");
     const meta = existsSync(siteJson) ? JSON.parse(readFileSync(siteJson, "utf8")) : {};
-    const chosen = meta.chosen && boards.find((b) => b.href.endsWith(`/${meta.chosen}`));
-    if (meta.chosen && !chosen) throw new Error(`${siteJson}: no board named ${meta.chosen}`);
-    if (chosen) features.push({ project: title, board: chosen, decided: meta.decided, why: meta.why });
-    const rest = chosen ? boards.filter((b) => b !== chosen) : boards;
-    if (rest.length) groups.push({ title: meta.title || (chosen ? `Explorations · ${title}` : title), boards: rest });
+    const picks = [].concat(meta.chosen || meta.shortlist || []).map((name) => {
+      const board = boards.find((b) => b.href.endsWith(`/${name}`));
+      if (!board) throw new Error(`${siteJson}: no board named ${name}`);
+      return board;
+    });
+    if (meta.chosen) chosenAny = true;
+    for (const board of picks) features.push({ project: title, board, why: meta.why });
+    const rest = boards.filter((b) => !picks.includes(b));
+    if (rest.length) groups.push({ title: meta.title || (picks.length ? `Explorations · ${title}` : title), boards: rest });
   }
 }
 
@@ -81,17 +86,19 @@ const card = (b) => `
         </a>`;
 
 const feature = (f) => `
-    <section class="stack stack--loose">
-      <div class="row"><span class="badge badge--solid">Chosen direction</span>${f.decided ? `<span class="muted">Decided ${esc(f.decided)}</span>` : ""}</div>
-      <a class="card site-card site-feature" href="${f.board.href}">
-        ${f.board.png ? `<img class="site-thumb site-thumb--tall" src="${f.board.png}" alt="">` : `<div class="media media--hero"></div>`}
-        <div class="stack">
+        <a class="card site-card site-feature stack" href="${f.board.href}">
+          ${f.board.png ? `<img class="site-thumb" src="${f.board.png}" alt="">` : `<div class="media media--thumb"></div>`}
           <p class="eyebrow">${esc(f.project)}</p>
-          <h2>${esc(f.board.title)}</h2>
-          ${f.why ? `<p class="lead">${esc(f.why)}</p>` : ""}
-          <span class="btn btn--primary site-cta">Open the board</span>
-        </div>
-      </a>
+          <h3>${esc(f.board.title)}</h3>
+          ${f.why ? `<p class="muted">${esc(f.why)}</p>` : ""}
+          <span class="btn btn--sm site-cta">Open the board</span>
+        </a>`;
+
+const shortlist = () => !features.length ? "" : `
+    <section class="stack stack--loose">
+      <div class="row"><span class="badge badge--solid">${chosenAny ? "Chosen direction" : "Shortlist"}</span><span class="muted">${chosenAny ? "" : "Being discussed: one of these becomes the homepage."}</span></div>
+      <div class="grid grid--${Math.min(features.length, 3)}">${features.map(feature).join("")}
+      </div>
     </section>`;
 
 const section = (g) => `
@@ -111,12 +118,11 @@ writeFileSync(join(out, "index.html"), `<!DOCTYPE html>
 <style>
   .site { max-width: 1200px; margin: 0 auto; padding: var(--s-7) var(--s-5); display: grid; gap: var(--s-7); }
   .site-card { color: inherit; text-decoration: none; }
-  .site-feature { display: grid; grid-template-columns: 3fr 2fr; gap: var(--s-6); align-items: start; padding: var(--s-6); border-width: 3px; }
-  .site-thumb--tall { aspect-ratio: 4 / 3.4; }
+  .site-feature { border-width: 3px; padding: var(--s-5); }
   .site-cta { justify-self: start; }
   .site-thumb { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: top; border: var(--stroke) solid var(--ink); }
   @media (max-width: 800px) {
-    .site .grid--3, .site-feature { grid-template-columns: 1fr; }
+    .site .grid--2, .site .grid--3 { grid-template-columns: 1fr; }
     .site-feature { padding: var(--s-4); }
   }
 </style>
@@ -126,8 +132,8 @@ writeFileSync(join(out, "index.html"), `<!DOCTYPE html>
     <header class="stack">
       <p class="eyebrow">The Design Project</p>
       <h1>Wireframes</h1>
-      <p class="lead measure">The chosen direction first, then every exploration behind it. Rebuilt on each push; open a board for the full-size page.</p>
-    </header>${features.map(feature).join("")}${groups.map(section).join("")}
+      <p class="lead measure">The shortlist first, then every exploration behind it. Rebuilt on each push; open a board for the full-size page.</p>
+    </header>${shortlist()}${groups.map(section).join("")}
   </main>
 </body>
 </html>
