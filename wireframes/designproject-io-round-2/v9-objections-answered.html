@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>designproject.io V9 Objections, Answered — wireframe</title>
+<link rel="stylesheet" href="wireframe.css">
+</head>
+<body>
+
+<main class="board">
+
+  <!-- ───────────────────────── why: rationale ───────────────────────── -->
+  <section class="board__intro">
+    <div class="screen__caption"><b>Why</b> the thinking behind this version</div>
+    <div class="card stack">
+      <p class="lead">Someone who lands on our homepage is usually already half-interested, but they arrive with the same few worries every buyer has: is an outside team slower than hiring, does "AI" mean cheap work, will they fit in with us, can we even talk across time zones, and what if it goes wrong? This version says those worries out loud, in the order people tend to have them, and answers each one with a fact or a client's own words rather than a promise (B). Once the doubts are handled, a quiet row of client names confirms other teams took the leap (C), the trial terms take away the last risk (D), and the page asks for a call (E). <strong>Trade-off:</strong> naming a doubt can plant one the visitor didn't have, and if the answers get long, the page reads like an FAQ instead of a pitch.</p>
+      <p class="hint"><strong>How to read this board:</strong> the big frame on the left is the full homepage, top to bottom. Each section is lettered (A, B, C…) and carries a small dashed tag naming the persuasion principle it relies on. Those principles are explained in plain words on the Overview board. The right column shows the phone version, a section-by-section summary and open questions.</p>
+    </div>
+  </section>
+
+
+  <!-- ───────────────────────── 01 homepage desktop ───────────────────────── -->
+  <section>
+    <div class="screen__caption"><b>V9</b> Objections, Answered · <b>01</b> Homepage — desktop</div>
+    <div class="screen screen--desktop">
+
+      <header class="topbar">
+        <div class="brand"><span class="brand__mark">T</span> The Design Project</div>
+        <nav class="nav">
+          <a href="#">Work</a>
+          <a href="#">How we work</a>
+          <a href="#">Industries</a>
+          <a href="#">Pricing</a>
+          <a href="#">Resources</a>
+        </nav>
+        <div class="topbar__spacer"></div>
+        <a class="btn btn--sm" href="#">Book a call</a>
+      </header>
+
+      <!-- A. hero (constant across all five versions) -->
+      <section class="section section--hero">
+        <span class="lens">A · Constant hero · Ethos + Authority</span>
+        <p class="eyebrow">AI-native product studio &amp; design lab</p>
+        <h1 class="display">A design-led, AI-native product studio</h1>
+        <p class="lead measure">Designers, PMs and engineers working as one team with yours, using AI to take a feature from kickoff to live.</p>
+        <div class="row">
+          <span class="pin">1</span>
+          <a class="btn btn--primary btn--lg" href="#">Book a call</a>
+          <a class="btn btn--quiet btn--lg" href="#">See the results</a>
+        </div>
+        <div class="proof-strip">
+          <span class="pin">2</span>
+          <span class="proof"><b>Woven</b> acquired by <b>Slack</b></span>
+          <span class="proof"><b>Brev</b> acquired by <b>NVIDIA</b></span>
+          <span class="proof"><b>Vyro</b> acquired by <b>MrBeast</b></span>
+          <span class="proof"><b>Monte Carlo</b> backed by <b>Accel</b></span>
+        </div>
+      </section>
+
+      <!-- B. objections, answered -->
+      <section class="section">
+        <span class="lens">B · Authority + Social proof · Logos + Pathos</span>
+        <div class="section__head">
+          <div class="row"><span class="pin">3</span><p class="eyebrow">You're probably wondering…</p></div>
+          <h2>Five fair questions, answered with proof</h2>
+        </div>
+
+        <div class="stack stack--loose">
+
+          <div class="rule"></div>
+          <div class="split split--form">
+            <div class="stack stack--tight">
+              <p class="eyebrow">01 · Speed</p>
+              <h3>"Isn't an agency slower than hiring?"</h3>
+            </div>
+            <div class="stack">
+              <div class="grid grid--2">
+                <div class="stack stack--tight">
+                  <p class="metric__value">$84,706</p>
+                  <p class="muted">saved on average versus a full-time US hire.</p>
+                </div>
+                <div class="stack stack--tight">
+                  <div class="row"><p class="metric__value">[N] days</p><span class="pin">4</span></div>
+                  <p class="muted">from first call to a senior team working on your product.</p>
+                </div>
+              </div>
+              <p class="muted">No recruiting, no ramp-up: design, product and engineering start together.</p>
+            </div>
+          </div>
+
+          <div class="rule"></div>
+          <div class="split split--form">
+            <div class="stack stack--tight">
+              <p class="eyebrow">02 · Quality</p>
+              <h3>"Does AI mean lower quality?"</h3>
+            </div>
+            <div class="stack">
+              <p class="quote" style="max-width:600px">"The redesign pushed us forward on our mission to verify 100% of IDs in real time."</p>
+              <div class="cite">
+                <div class="media media--circle" style="width:48px;min-height:48px"></div>
+                <div><strong>Erick Soto</strong><br><span class="muted">VP of Product, Socure</span></div>
+              </div>
+              <div class="callout"><strong>Socure raised $100M after the redesign.</strong> AI speeds up the work; senior designers still own every decision.</div>
+            </div>
+          </div>
+
+          <div class="rule"></div>
+          <div class="split split--form">
+            <div class="stack stack--tight">
+              <p class="eyebrow">03 · Fit</p>
+              <h3>"Will you fit our stack and team?"</h3>
+            </div>
+            <div class="stack">
+              <p class="measure">We work inside your repo and your tools. Designs arrive as working code and a Storybook design system your engineers can pick up the same day.</p>
+              <div class="row">
+                <span class="badge">Your repo</span>
+                <span class="badge">Storybook</span>
+                <span class="badge">Prototypes in code</span>
+                <span class="badge">Your Slack</span>
+              </div>
+              <p class="quote--sm">"Communication is fluid and enables us to move quickly, adapt to changes and pivot."</p>
+              <span class="muted"><strong>Elliot Chen</strong> · Head of Product, OXIO</span>
+            </div>
+          </div>
+
+          <div class="rule"></div>
+          <div class="split split--form">
+            <div class="stack stack--tight">
+              <p class="eyebrow">04 · Time zones</p>
+              <h3>"What about time zones?"</h3>
+            </div>
+            <div class="stack">
+              <div class="row"><p>Our studios are in Miami and Buenos Aires, so we share <strong>[N] working hours</strong> a day with US teams, coast to coast.</p><span class="pin">5</span></div>
+              <div class="flow">
+                <span class="flow__step">Miami · ET</span><span class="flow__arrow"></span>
+                <span class="flow__step">Buenos Aires · ET+[N]</span><span class="flow__arrow"></span>
+                <span class="flow__step flow__step--quiet">Your team · PT to ET</span>
+              </div>
+              <p class="quote--sm">"Communication was 10/10 from start to finish … Working with TDP is 100% worth it."</p>
+              <span class="muted"><strong>Colleen McBride</strong> · CMO, Navengage</span>
+            </div>
+          </div>
+
+          <div class="rule"></div>
+          <div class="split split--form">
+            <div class="stack stack--tight">
+              <p class="eyebrow">05 · Risk</p>
+              <h3>"What if it doesn't work?"</h3>
+            </div>
+            <div class="stack">
+              <p>Then you shouldn't pay for it. Every engagement starts with a <strong>risk-free trial</strong>, and clients rate us with an NPS above 82.</p>
+              <a class="btn btn--quiet btn--sm" href="#" style="justify-self:start">See the trial terms</a>
+            </div>
+          </div>
+          <div class="rule"></div>
+
+        </div>
+        <p class="hint">Order follows the sales call: cost and speed first, risk last. Each answer is one fact or one named client, never a paragraph.</p>
+      </section>
+
+      <!-- C. quiet logo strip -->
+      <section class="section section--tight section--center">
+        <span class="lens">C · Social proof · Ethos</span>
+        <div class="row"><span class="pin">6</span><p class="eyebrow">Teams that asked the same questions</p></div>
+        <div class="logo-wall full">
+          <span class="logo">Socure</span><span class="logo">Coursera</span><span class="logo">Monte Carlo</span>
+          <span class="logo">Big Health</span><span class="logo">Mesh</span><span class="logo">OXIO</span>
+        </div>
+      </section>
+
+      <!-- D. the trial / guarantee block -->
+      <section class="section">
+        <span class="lens">D · Commitment &amp; consistency · Logos</span>
+        <div class="card stack stack--loose">
+          <div class="row row--between">
+            <div class="section__head">
+              <div class="row"><span class="pin">7</span><p class="eyebrow">The safety net</p></div>
+              <h2>Try us before you commit</h2>
+            </div>
+            <span class="badge badge--solid">Risk-free trial</span>
+          </div>
+          <div class="grid grid--3">
+            <div class="callout"><strong>[N]-week trial</strong><br>Work on a real feature from your roadmap.</div>
+            <div class="callout"><strong>Not a fit? [Terms]</strong><br>You keep everything we made in the trial.</div>
+            <div class="callout"><strong>Month to month after</strong><br>Pause or stop whenever you need [confirm].</div>
+          </div>
+          <div class="rule rule--dashed"></div>
+          <div class="row row--between">
+            <span class="muted"><strong>Design Team</strong> $5,990/mo · <strong>Product Sprint</strong> $14,500/mo · <strong>Product Team</strong> custom</span>
+            <a class="btn btn--quiet btn--sm" href="#">Compare plans</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- E. close -->
+      <section class="section section--loud section--center">
+        <span class="lens">E · Commitment + Scarcity · Pathos + Kairos</span>
+        <div class="section__head">
+          <h2>Still have a question? Ask a founder.</h2>
+          <p class="muted measure">A 30-minute call. Bring your hardest objection; we'll answer it with your roadmap on screen.</p>
+        </div>
+        <div class="row"><span class="pin">8</span><a class="btn btn--bold btn--lg" href="#">Book a call</a></div>
+        <p class="muted"><strong>[N] spots open for [month]</strong> — we cap new teams so every project gets a senior lead.</p>
+      </section>
+
+      <footer class="footer">
+        <span class="muted">The Design Project · Miami · Buenos Aires</span>
+        <span class="muted">Work · How we work · Industries · Pricing · Careers · hello@designproject.io</span>
+      </footer>
+    </div>
+  </section>
+
+  <!-- ───────────────────────── side column ───────────────────────── -->
+  <div class="stack stack--loose" style="width:420px">
+
+    <section>
+      <div class="screen__caption"><b>02</b> First scroll — mobile</div>
+      <div class="screen screen--mobile">
+        <header class="topbar">
+          <div class="brand"><span class="brand__mark">T</span> TDP</div>
+          <div class="topbar__spacer"></div>
+          <button class="btn btn--icon" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        </header>
+        <section class="section section--hero">
+          <h1 class="display">A design-led, AI-native product studio</h1>
+          <p class="muted">Design, product and engineering as one team.</p>
+          <div class="stack full">
+            <span class="proof"><b>Woven</b> acquired by <b>Slack</b></span>
+            <span class="proof"><b>Brev</b> acquired by <b>NVIDIA</b></span>
+          </div>
+        </section>
+        <section class="section section--tight">
+          <h2 class="eyebrow">You're probably wondering…</h2>
+          <h3>"Isn't an agency slower than hiring?"</h3>
+          <p class="metric__value">$84,706</p>
+          <p class="muted">saved on average versus a full-time US hire.</p>
+          <p class="muted"><strong>Start in [N] days.</strong></p>
+          <div class="rule"></div>
+          <h3>"Does AI mean lower quality?"</h3>
+        </section>
+        <div class="cta-bar"><a class="btn btn--primary btn--block" href="#">Book a call</a></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="screen__caption"><b>Story</b> the hypothesis</div>
+      <div class="card stack">
+        <p><strong>"Buyers arrive with doubts. Answer them in the order they have them."</strong></p>
+        <div class="flow">
+          <span class="flow__step">Who</span><span class="flow__arrow"></span>
+          <span class="flow__step">Doubt</span><span class="flow__arrow"></span>
+          <span class="flow__step">Proof</span><span class="flow__arrow"></span>
+          <span class="flow__step">Others</span><span class="flow__arrow"></span>
+          <span class="flow__step">Safety net</span><span class="flow__arrow"></span>
+          <span class="flow__step">Talk</span>
+        </div>
+        <p class="muted">Pathos comes from naming the fear; every answer is logos or ethos. Logos are deliberately quiet: they confirm, they don't lead.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="screen__caption"><b>Map</b> persuasion levers by section</div>
+      <table class="table">
+        <thead><tr><th>Sec.</th><th>Cialdini</th><th>Aristotle</th></tr></thead>
+        <tbody>
+          <tr><td>A</td><td>Authority, social proof</td><td>Ethos</td></tr>
+          <tr><td>B</td><td>Authority, social proof, liking</td><td>Logos, pathos</td></tr>
+          <tr><td>C</td><td>Social proof</td><td>Ethos</td></tr>
+          <tr><td>D</td><td>Commitment &amp; consistency</td><td>Logos</td></tr>
+          <tr><td>E</td><td>Commitment, scarcity</td><td>Pathos, kairos</td></tr>
+        </tbody>
+      </table>
+      <p class="hint mt-4">5 of 7 principles present (no reciprocity, no unity). Weight: logos 2, ethos 2, pathos 2.</p>
+    </section>
+
+    <section>
+      <div class="screen__caption"><b>Notes</b> open questions</div>
+      <ol class="notes">
+        <li><span class="pin">1</span><span>Hero copy and CTAs are identical across all versions so we compare story, not headline.</span></li>
+        <li><span class="pin">2</span><span>Homepage says Vyro, /work says Vouch for MrBeast. Confirm before it ships.</span></li>
+        <li><span class="pin">3</span><span>Are these the five objections sales actually hears, and in this order?</span></li>
+        <li><span class="pin">4</span><span>Real days from signed to started; don't round down to sound fast.</span></li>
+        <li><span class="pin">5</span><span>Confirm overlap hours with US Pacific, the hardest case.</span></li>
+        <li><span class="pin">6</span><span>Six logos only, no headline: the strip confirms, it doesn't sell.</span></li>
+        <li><span class="pin">7</span><span>Trial length and what "not a fit" means need written terms from the founders.</span></li>
+        <li><span class="pin">8</span><span>Scarcity line only ships with a real capacity number.</span></li>
+      </ol>
+      <div class="todo mt-4">
+        <div class="todo__head">Out of scope</div>
+        <span class="muted">A full FAQ page, case studies (one click deep), vertical pages, visual design.</span>
+      </div>
+    </section>
+
+  </div>
+
+</main>
+
+</body>
+</html>
