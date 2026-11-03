@@ -10,7 +10,7 @@ overview, then open any version.
 |---|---|---|
 | [00 Overview](00-overview.png) | all five spines, sections worth borrowing, principle matrix | — |
 | [V6 Proof Up Front](v6-proof-up-front.png) | Split hero (project shot + client quote) → logo wall → results (projects with their numbers) → what we do → watch us build → call | "Show who trusts us and what we built before anyone has to scroll." |
-| [V7 Offer First](v7-offer-first.png) | Hero → three plans with prices → three-question chooser → proof per plan → FAQ → call | "Buyers want to know what they get and what it costs before they talk to anyone." |
+| [V7 One Story](v7-one-story.png) | Hero → Imera, zero to enterprise in 3 months, told in four chapters with a clickable prototype → other results → ways to work with full prices → call | "One story told well beats ten logos. Make them want it, then show the price." |
 | [V8 Meet the Makers](v8-meet-the-makers.png) | Hero → founder video → the team by face → who pairs with whom → quotes → two studios → book with a founder | "People buy from people. Show who'll actually work on your product." |
 | [V9 Objections, Answered](v9-objections-answered.png) | Hero → five buyer questions, each answered with proof → logo strip → trial terms → call | "Buyers arrive with doubts. Answer them in the order they have them." |
 | [V10 Time Receipts](v10-time-receipts.png) | Hero → time-saved quote → their estimate vs. shipped → Day 7 / 30 / 60 → quotes → ship this quarter | "AI-native has to mean faster. Prove it in time, not in adjectives." |
@@ -34,7 +34,7 @@ Each `.html` is the source (needs the skill's `wireframe.css`).
 ## How round 2 relates to round 1
 
 Round 1's main bets were social proof, reciprocity and unity. Round 2 bets on what round 1
-used only as support: proof in the first screen (V6), authority (V9), commitment (V7), liking (V8) and timing (V10). The
+used only as support: proof in the first screen (V6), authority (V9), one story (V7), liking (V8) and timing (V10). The
 likely winner is one spine from either round plus one or two borrowed sections. The
 overview's **Borrow** table suggests where each round 2 section could slot into a round 1
 spine.
@@ -47,7 +47,7 @@ toolbox or V5's "teams like you".
 | Version | Needs |
 |---|---|
 | V6 | Three hero slides, each a project shot + quote + face + logo (only Socure has all four today); Finvisor and Big Health result metrics. |
-| V7 | A decision to publish prices on the homepage; sales data behind "most picked"; a "from [$X]" for Product Team; trial and pause terms that match the Pricing page. |
+| V7 | An Imera testimonial (they have none); OK to embed Imera's prototype publicly, or a clickable mock; which plan Imera is on; a "from [$X]" for Product Team; trial terms. |
 | V8 | A founder on camera, 8 real team photos with each person's sign-off, studio photos, real US-hours overlap. |
 | V9 | Confirmation from sales that these are the five objections, in this order; real days from signed to started; trial terms in writing. |
 | V10 | One client's time-saved quote on the record; their own pre-project estimate and the real duration for each receipt (only Imera's 3 months is known). |

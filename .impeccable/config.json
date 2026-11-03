@@ -88,7 +88,7 @@
         "rule": "flat-type-hierarchy",
         "value": "*",
         "files": [
-          "wireframes/designproject-io-round-2/v7-offer-first.html"
+          "wireframes/designproject-io-round-2/v7-one-story.html"
         ],
         "createdAt": "2026-11-03T12:58:02.000Z",
         "reason": "assistant triage: detector cannot resolve wireframe.css (inlined from the create-wireframe skill at render time); rendered scale is 42/32/24/18/15px per the skill's design system"
