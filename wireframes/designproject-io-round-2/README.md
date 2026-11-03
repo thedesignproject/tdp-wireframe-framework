@@ -12,7 +12,7 @@ overview, then open any version.
 | [V6 Proof Up Front](v6-proof-up-front.png) | Split hero (project shot + client quote) → logo wall → results (projects with their numbers) → what we do → watch us build → call | "Show who trusts us and what we built before anyone has to scroll." |
 | [V7 One Story](v7-one-story.png) | Hero → Imera, zero to enterprise in 3 months, told in four chapters with a clickable prototype → other results → ways to work with full prices → call | "One story told well beats ten logos. Make them want it, then show the price." |
 | [V8 Meet the Makers](v8-meet-the-makers.png) | Hero → logo strip → founder's note → ways to work, shown by who's on each team (no prices) → work, with the faces of who shipped it → quotes → meet your team | "Senior people, made faster by AI. Show the humans and what they shipped." |
-| [V9 Objections, Answered](v9-objections-answered.png) | Hero → five buyer questions, each answered with proof → logo strip → trial terms → call | "Buyers arrive with doubts. Answer them in the order they have them." |
+| [V9 Doubts, Answered with Work](v9-doubts-answered.png) | Hero → logo strip → four doubts (speed, quality, fit, risk), each answered by a project or the guarantee → ways to work, full prices → call | "Buyers arrive with doubts. Answer each one with work, not words." |
 | [V10 Time Receipts](v10-time-receipts.png) | Hero → time-saved quote → their estimate vs. shipped → Day 7 / 30 / 60 → quotes → ship this quarter | "AI-native has to mean faster. Prove it in time, not in adjectives." |
 
 Each `.png` is what to review. Each `.standalone.html` opens in any browser with no repo.
@@ -46,9 +46,9 @@ toolbox or V5's "teams like you".
 | Version | Needs |
 |---|---|
 | V6 | Three hero slides, each a project shot + quote + face + logo (only Socure has all four today); Finvisor and Big Health result metrics. |
-| V7 | An Imera testimonial (they have none); OK to embed Imera's prototype publicly, or a clickable mock; which plan Imera is on; a "from [$X]" for Product Team; trial terms. |
+| V7 | An Imera testimonial (they have none); OK to embed Imera's prototype publicly, or a clickable mock; which plan Imera is on; a "from [$X]" for Product Team; guarantee terms. |
 | V8 | A founder's note in their own words; real team photos with each person's sign-off; true "who worked on what" pairings. |
-| V9 | Confirmation from sales that these are the five objections, in this order; real days from signed to started; trial terms in writing. |
+| V9 | Confirmation from sales that these are the four doubts, in this order; real days from signed to started; whether the 7-day money-back guarantee holds for Sprint and Team; OK to say AI was part of the Socure work; the Monte Carlo Storybook claim. |
 | V10 | One client's time-saved quote on the record; their own pre-project estimate and the real duration for each receipt (only Imera's 3 months is known). |
 
 Still open from round 1: Vyro vs. Vouch (MrBeast), the Finvisor metric, and a true capacity
