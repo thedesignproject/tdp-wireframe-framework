@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>designproject.io V5 Pick Your Path — wireframe</title>
+<link rel="stylesheet" href="wireframe.css">
+</head>
+<body>
+
+<main class="board">
+
+  <!-- ───────────────────────── why: rationale ───────────────────────── -->
+  <section class="board__intro">
+    <div class="screen__caption"><b>Why</b> the thinking behind this version</div>
+    <div class="card stack">
+      <p class="lead">The call agreed we need industry pages (HealthTech first). This version turns the homepage into a signpost that sends each visitor to the right one. Visitors pick their industry and see results from companies like theirs (B). Then they pick the sentence that sounds like them, which shows the matching plan and price (C). A free 5-minute assessment (D) gives them something useful before we ask for anything. Each small choice ("this is us") makes booking a call (F) feel like the natural next step rather than a leap. <strong>Trade-off:</strong> it's a signpost rather than a story, and it only works once each industry page exists with at least two results.</p>
+      <p class="hint"><strong>How to read this board:</strong> the big frame on the left is the full homepage, top to bottom. Each section is lettered (A, B, C…) and carries a small dashed tag naming the persuasion principle it relies on. Those principles are explained in plain words on the Overview board. The right column shows the phone version, a section-by-section summary and open questions.</p>
+    </div>
+  </section>
+
+
+  <!-- ───────────────────────── 01 homepage desktop ───────────────────────── -->
+  <section>
+    <div class="screen__caption"><b>V5</b> Pick Your Path · <b>01</b> Homepage — desktop</div>
+    <div class="screen screen--desktop">
+
+      <header class="topbar">
+        <div class="brand"><span class="brand__mark">T</span> The Design Project</div>
+        <nav class="nav">
+          <a href="#">Work</a>
+          <a href="#">How we work</a>
+          <a href="#">Industries</a>
+          <a href="#">Pricing</a>
+          <a href="#">Resources</a>
+        </nav>
+        <div class="topbar__spacer"></div>
+        <a class="btn btn--sm" href="#">Book a call</a>
+      </header>
+
+      <!-- A. hero (constant) -->
+      <section class="section section--hero">
+        <span class="lens">A · Constant hero · Ethos + Authority</span>
+        <p class="eyebrow">AI-native product studio &amp; design lab</p>
+        <h1 class="display">A design-led, AI-native product studio</h1>
+        <p class="lead measure">Designers, PMs and engineers working as one team with yours, using AI to take a feature from kickoff to live.</p>
+        <div class="row">
+          <span class="pin">1</span>
+          <a class="btn btn--primary btn--lg" href="#">Book a call</a>
+          <a class="btn btn--quiet btn--lg" href="#">See the results</a>
+        </div>
+        <div class="proof-strip">
+          <span class="proof"><b>Woven</b> acquired by <b>Slack</b></span>
+          <span class="proof"><b>Brev</b> acquired by <b>NVIDIA</b></span>
+          <span class="proof"><b>Vyro</b> acquired by <b>MrBeast</b></span>
+          <span class="proof"><b>Monte Carlo</b> backed by <b>Accel</b></span>
+        </div>
+      </section>
+
+      <!-- B. industry router -->
+      <section class="section">
+        <span class="lens">B · Unity + Social proof · Ethos</span>
+        <div class="section__head">
+          <div class="row"><span class="pin">2</span><p class="eyebrow">Your industry</p></div>
+          <h2>We've already shipped in your world</h2>
+        </div>
+        <div class="tabs">
+          <a href="#" aria-selected="true">HealthTech</a>
+          <a href="#">Fintech</a>
+          <a href="#">AI &amp; data</a>
+          <a href="#">PropTech</a>
+          <a href="#">Energy</a>
+        </div>
+        <div class="split split--aside">
+          <div class="stack stack--loose">
+            <div class="grid grid--2">
+              <article class="card stack">
+                <p class="metric__value">FDA</p>
+                <p class="muted">approval, with engagement up 10% for returning users.</p>
+                <p class="eyebrow">Big Health</p>
+              </article>
+              <article class="card stack">
+                <div class="tl tl--title w-40"></div>
+                <p class="muted">[Second HealthTech result: xCures, Eleanor Health or Discern Health]</p>
+                <p class="eyebrow">[Client]</p>
+              </article>
+            </div>
+            <div class="row"><span class="logo">Big Health</span><span class="logo">Eleanor Health</span><span class="logo">xCures</span><span class="logo">Discern Health</span></div>
+          </div>
+          <div class="card stack">
+            <p class="eyebrow">What we know about HealthTech [confirm]</p>
+            <ul class="stack stack--tight" style="padding-left:18px;margin:0">
+              <li>Clinical and patient flows</li>
+              <li>HIPAA-aware design and build</li>
+              <li>Regulatory-grade documentation</li>
+            </ul>
+            <a class="btn" href="#">HealthTech page</a>
+          </div>
+        </div>
+        <p class="hint">Each tab swaps results, logos and the side panel. Each links to its own vertical page.</p>
+      </section>
+
+      <!-- C. stage router -->
+      <section class="section">
+        <span class="lens">C · Commitment &amp; consistency · Logos</span>
+        <div class="section__head">
+          <div class="row"><span class="pin">3</span><p class="eyebrow">Where are you?</p></div>
+          <h2>Pick the one that sounds like you</h2>
+        </div>
+        <div class="grid grid--3">
+          <article class="card stack">
+            <h3>"We need design capacity."</h3>
+            <p class="muted">You have engineers. You need product design that ships in code.</p>
+            <div class="rule"></div>
+            <div class="row row--between"><strong>Design Team</strong><span class="muted">$5,990/mo</span></div>
+            <a class="btn btn--sm" href="#">This is us</a>
+          </article>
+          <article class="card stack">
+            <h3>"We need one feature live."</h3>
+            <p class="muted">A decision is made. You need it in production, with docs.</p>
+            <div class="rule"></div>
+            <div class="row row--between"><strong>Product Sprint</strong><span class="muted">$14,500/mo · 2 mo</span></div>
+            <a class="btn btn--sm" href="#">This is us</a>
+          </article>
+          <article class="card stack">
+            <h3>"We need a whole product team."</h3>
+            <p class="muted">PM, design and engineering, continuously, on your roadmap.</p>
+            <div class="rule"></div>
+            <div class="row row--between"><strong>Product Team</strong><span class="muted">Custom</span></div>
+            <a class="btn btn--sm" href="#">This is us</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- D. assessment -->
+      <section class="section">
+        <span class="lens">D · Reciprocity + Commitment · Logos</span>
+        <div class="split">
+          <div class="section__head">
+            <div class="row"><span class="pin">4</span><p class="eyebrow">Free, 5 minutes</p></div>
+            <h2>How AI-native is your product team?</h2>
+            <p class="muted">Answer 8 questions. Get a score and three moves you can make this month, whether or not you work with us.</p>
+          </div>
+          <div class="card stack">
+            <p class="eyebrow">Question 1 of 8</p>
+            <strong>Where do product decisions live today?</strong>
+            <label class="radio"><span class="radio__dot"></span> Slack threads and people's heads</label>
+            <label class="radio"><span class="radio__dot radio__dot--on"></span> Docs, but they drift from the code</label>
+            <label class="radio"><span class="radio__dot"></span> One connected source our agents read</label>
+            <div class="row row--between"><span class="hint">Score emailed. No call required.</span><button class="btn btn--sm">Next</button></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- E. testimonials matched -->
+      <section class="section">
+        <span class="lens">E · Social proof + Liking · Pathos</span>
+        <div class="split">
+          <div class="stack">
+            <div class="row"><span class="pin">5</span><p class="eyebrow">From teams like yours</p></div>
+            <p class="quote">"TDP helped identify the main pain points and designed a new UX that is accessible and easy to understand."</p>
+            <span class="muted"><strong>Erick Soto</strong> · VP of Product, Socure</span>
+          </div>
+          <div class="stack">
+            <p class="quote">"TDP does a great job at understanding our business challenges and coming up with elegant design solutions."</p>
+            <span class="muted"><strong>Elliot Chen</strong> · Head of Product, OXIO</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- F. close -->
+      <section class="section section--loud section--center">
+        <span class="lens">F · Scarcity + Consistency · Pathos</span>
+        <div class="section__head">
+          <h2>Tell us your industry and stage. We'll bring a plan to the call.</h2>
+        </div>
+        <div class="row">
+          <select class="select" style="width:200px"><option>HealthTech</option></select>
+          <select class="select" style="width:220px"><option>One feature live</option></select>
+          <span class="pin">6</span>
+          <a class="btn btn--bold btn--lg" href="#">Book a call</a>
+        </div>
+        <p class="muted"><strong>[N] spots open for [month]</strong></p>
+      </section>
+
+      <footer class="footer">
+        <span class="muted">The Design Project · Miami · Buenos Aires</span>
+        <span class="muted">HealthTech · Fintech · AI &amp; data · PropTech · Energy · hello@designproject.io</span>
+      </footer>
+    </div>
+  </section>
+
+  <!-- ───────────────────────── side column ───────────────────────── -->
+  <div class="stack stack--loose" style="width:420px">
+
+    <section>
+      <div class="screen__caption"><b>02</b> First scroll — mobile</div>
+      <div class="screen screen--mobile">
+        <header class="topbar">
+          <div class="brand"><span class="brand__mark">T</span> TDP</div>
+          <div class="topbar__spacer"></div>
+          <button class="btn btn--icon" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        </header>
+        <section class="section section--hero">
+          <h1 class="display">A design-led, AI-native product studio</h1>
+          <p class="muted">Design, product and engineering as one team.</p>
+          <span class="proof"><b>Woven</b> acquired by <b>Slack</b></span>
+        </section>
+        <section class="section section--tight">
+          <p class="eyebrow">Your industry</p>
+          <select class="select full"><option>HealthTech</option></select>
+          <div class="card stack"><p class="metric__value">FDA</p><span class="muted">approval · Big Health</span></div>
+        </section>
+        <div class="cta-bar"><a class="btn btn--primary btn--block" href="#">Book a call</a></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="screen__caption"><b>Story</b> the hypothesis</div>
+      <div class="card stack">
+        <p><strong>"We need verticals. HealthTech, this other thing, this other thing. Each one needs its own page."</strong></p>
+        <div class="flow">
+          <span class="flow__step">Who</span><span class="flow__arrow"></span>
+          <span class="flow__step">Your world</span><span class="flow__arrow"></span>
+          <span class="flow__step">Your stage</span><span class="flow__arrow"></span>
+          <span class="flow__step">Score</span><span class="flow__arrow"></span>
+          <span class="flow__step">Talk</span>
+        </div>
+        <p class="muted">The homepage is a router, not a story. The visitor picks an industry and a stage; each small yes ("this is us") makes the call a consistent next step. The vertical pages do the deep selling.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="screen__caption"><b>Map</b> persuasion levers by section</div>
+      <table class="table">
+        <thead><tr><th>Sec.</th><th>Cialdini</th><th>Aristotle</th></tr></thead>
+        <tbody>
+          <tr><td>A</td><td>Authority, social proof</td><td>Ethos</td></tr>
+          <tr><td>B</td><td>Unity, social proof</td><td>Ethos</td></tr>
+          <tr><td>C</td><td>Commitment &amp; consistency</td><td>Logos</td></tr>
+          <tr><td>D</td><td>Reciprocity, commitment</td><td>Logos</td></tr>
+          <tr><td>E</td><td>Social proof, liking</td><td>Pathos</td></tr>
+          <tr><td>F</td><td>Scarcity, consistency</td><td>Pathos</td></tr>
+        </tbody>
+      </table>
+      <p class="hint mt-4">All 7 present. Strongest on commitment &amp; unity; weakest on story.</p>
+    </section>
+
+    <section>
+      <div class="screen__caption"><b>Notes</b> open questions</div>
+      <ol class="notes">
+        <li><span class="pin">1</span><span>Hero identical to the other four versions.</span></li>
+        <li><span class="pin">2</span><span>Which verticals? Each needs 2+ results. PropTech has none yet.</span></li>
+        <li><span class="pin">3</span><span>"This is us" pre-fills the booking form and the close in F.</span></li>
+        <li><span class="pin">4</span><span>/agentic-workflow-assessment exists; inline it or link out?</span></li>
+        <li><span class="pin">5</span><span>Quotes should follow the industry tab; needs tagged quotes.</span></li>
+        <li><span class="pin">6</span><span>Selects pre-filled from B and C; the call is the only solid-feeling action.</span></li>
+      </ol>
+      <div class="todo mt-4">
+        <div class="todo__head">Out of scope</div>
+        <span class="muted">Vertical page template (next board), assessment results page.</span>
+      </div>
+    </section>
+
+  </div>
+
+</main>
+
+</body>
+</html>

@@ -5,6 +5,12 @@
 // copied too), plus the framework's worked example. The index lists everything,
 // so a new board shows up on the next push with no config change.
 //
+// To put boards on the shortlist, add wireframes/<project>/site.json:
+//   { "shortlist": ["<board file name>"], "why": "One sentence.", "title": "List heading" }
+// Shortlisted boards from every project sit side by side at the top of the index
+// (set "chosen" instead of "shortlist" once one wins); the rest are listed
+// underneath as explorations. "title" overrides the heading of that list.
+//
 // No dependencies: runs on the Node that Vercel provides.
 
 import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
@@ -40,17 +46,31 @@ function addBoard(srcDir, name, destDir) {
 
 const isBoard = (f) => f.endsWith(".html") && !f.endsWith(".standalone.html");
 const groups = [];
+const features = [];
+let chosenAny = false;
 
 const wfRoot = join(root, "wireframes");
 if (existsSync(wfRoot)) {
-  for (const project of readdirSync(wfRoot, { withFileTypes: true })) {
+  const projects = readdirSync(wfRoot, { withFileTypes: true }).sort((x, y) => x.name.localeCompare(y.name));
+  for (const project of projects) {
     if (!project.isDirectory()) continue;
     const dir = join(wfRoot, project.name);
     const boards = readdirSync(dir).filter(isBoard).sort()
       .map((f) => addBoard(dir, basename(f, ".html"), project.name));
     const readme = join(dir, "README.md");
     const heading = existsSync(readme) && readFileSync(readme, "utf8").match(/^#\s+(.+)$/m);
-    if (boards.length) groups.push({ title: heading ? heading[1].trim() : humanise(project.name), boards });
+    const title = heading ? heading[1].trim() : humanise(project.name);
+    const siteJson = join(dir, "site.json");
+    const meta = existsSync(siteJson) ? JSON.parse(readFileSync(siteJson, "utf8")) : {};
+    const picks = [].concat(meta.chosen || meta.shortlist || []).map((name) => {
+      const board = boards.find((b) => b.href.endsWith(`/${name}`));
+      if (!board) throw new Error(`${siteJson}: no board named ${name}`);
+      return board;
+    });
+    if (meta.chosen) chosenAny = true;
+    for (const board of picks) features.push({ project: title, board, why: meta.why });
+    const rest = boards.filter((b) => !picks.includes(b));
+    if (rest.length) groups.push({ title: meta.title || (picks.length ? `Explorations · ${title}` : title), boards: rest });
   }
 }
 
@@ -64,6 +84,22 @@ const card = (b) => `
           ${b.png ? `<img class="site-thumb" src="${b.png}" alt="" loading="lazy">` : `<div class="media media--thumb"></div>`}
           <strong>${esc(b.title)}</strong>
         </a>`;
+
+const feature = (f) => `
+        <a class="card site-card site-feature stack" href="${f.board.href}">
+          ${f.board.png ? `<img class="site-thumb" src="${f.board.png}" alt="">` : `<div class="media media--thumb"></div>`}
+          <p class="eyebrow">${esc(f.project)}</p>
+          <h3>${esc(f.board.title)}</h3>
+          ${f.why ? `<p class="muted">${esc(f.why)}</p>` : ""}
+          <span class="btn btn--sm site-cta">Open the board</span>
+        </a>`;
+
+const shortlist = () => !features.length ? "" : `
+    <section class="stack stack--loose">
+      <div class="row"><span class="badge badge--solid">${chosenAny ? "Chosen direction" : "Shortlist"}</span><span class="muted">${chosenAny ? "" : "Being discussed: one of these becomes the homepage."}</span></div>
+      <div class="grid grid--${Math.min(features.length, 3)}">${features.map(feature).join("")}
+      </div>
+    </section>`;
 
 const section = (g) => `
     <section class="stack stack--loose">
@@ -82,8 +118,13 @@ writeFileSync(join(out, "index.html"), `<!DOCTYPE html>
 <style>
   .site { max-width: 1200px; margin: 0 auto; padding: var(--s-7) var(--s-5); display: grid; gap: var(--s-7); }
   .site-card { color: inherit; text-decoration: none; }
+  .site-feature { border-width: 3px; padding: var(--s-5); }
+  .site-cta { justify-self: start; }
   .site-thumb { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: top; border: var(--stroke) solid var(--ink); }
-  @media (max-width: 800px) { .site .grid--3 { grid-template-columns: 1fr; } }
+  @media (max-width: 800px) {
+    .site .grid--2, .site .grid--3 { grid-template-columns: 1fr; }
+    .site-feature { padding: var(--s-4); }
+  }
 </style>
 </head>
 <body>
@@ -91,8 +132,8 @@ writeFileSync(join(out, "index.html"), `<!DOCTYPE html>
     <header class="stack">
       <p class="eyebrow">The Design Project</p>
       <h1>Wireframes</h1>
-      <p class="lead measure">Every board in the repo, rebuilt on each push. Open a board for the full-size page.</p>
-    </header>${groups.map(section).join("")}
+      <p class="lead measure">The shortlist first, then every exploration behind it. Rebuilt on each push; open a board for the full-size page.</p>
+    </header>${shortlist()}${groups.map(section).join("")}
   </main>
 </body>
 </html>
