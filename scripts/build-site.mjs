@@ -11,6 +11,11 @@
 // (set "chosen" instead of "shortlist" once one wins); the rest are listed
 // underneath as explorations. "title" overrides the heading of that list.
 //
+// CRRT feedback: set "crrt": { "projectId": "<public project key>" } in site.config.json
+// and every hosted page gets the CRRT widget (github.com/thedesignproject/CRRT), loaded
+// from a CDN through an import map. Only dist/ is touched: the board sources, PNGs and
+// standalone files stay offline and monochrome.
+//
 // No dependencies: runs on the Node that Vercel provides.
 
 import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
@@ -37,12 +42,40 @@ function addBoard(srcDir, name, destDir) {
   const html = join(srcDir, `${name}.html`);
   mkdirSync(join(out, destDir), { recursive: true });
   cpSync(html, join(out, destDir, `${name}.html`));
+  withCrrt(join(out, destDir, `${name}.html`));
   if (!existsSync(join(out, destDir, "wireframe.css"))) cpSync(css, join(out, destDir, "wireframe.css"));
   const png = join(srcDir, `${name}.png`);
   const hasPng = existsSync(png);
   if (hasPng) cpSync(png, join(out, destDir, `${name}.png`));
   return { title: titleOf(html), href: `/${destDir}/${name}`, png: hasPng ? `/${destDir}/${name}.png` : null };
 }
+
+const siteConfigFile = join(root, "site.config.json");
+const siteConfig = existsSync(siteConfigFile) ? JSON.parse(readFileSync(siteConfigFile, "utf8")) : {};
+const crrt = siteConfig.crrt && siteConfig.crrt.projectId ? siteConfig.crrt : null;
+const crrtSnippet = crrt ? `
+<!-- CRRT feedback widget (added by scripts/build-site.mjs; not part of the wireframe) -->
+<script type="importmap">${JSON.stringify({ imports: {
+  "react": "https://esm.sh/react@19.1.0",
+  "react/jsx-runtime": "https://esm.sh/react@19.1.0/jsx-runtime",
+  "react-dom/client": "https://esm.sh/react-dom@19.1.0/client?external=react",
+  "@thedesignproject/crrt": `https://cdn.jsdelivr.net/npm/@thedesignproject/crrt@${crrt.version || "0.3.24"}/dist/crrt.es.js`,
+} })}</script>
+<script type="module">
+  import { createElement } from "react";
+  import { createRoot } from "react-dom/client";
+  import { FeedbackWidget } from "@thedesignproject/crrt";
+  const host = document.createElement("div");
+  host.id = "crrt-root";
+  document.body.append(host);
+  createRoot(host).render(createElement(FeedbackWidget, ${JSON.stringify({ projectId: crrt.projectId, theme: crrt.theme || "light" })}));
+</script>
+` : "";
+const withCrrt = (file) => {
+  if (!crrt) return;
+  const html = readFileSync(file, "utf8");
+  if (html.includes("</body>")) writeFileSync(file, html.replace(/<\/body>(?![\s\S]*<\/body>)/i, `${crrtSnippet}</body>`));
+};
 
 const isBoard = (f) => f.endsWith(".html") && !f.endsWith(".standalone.html");
 const groups = [];
@@ -142,5 +175,7 @@ writeFileSync(join(out, "index.html"), `<!DOCTYPE html>
 </html>
 `);
 
+withCrrt(join(out, "index.html"));
+
 const count = groups.reduce((n, g) => n + g.boards.length, 0);
-console.log(`built ${count} boards in ${groups.length} groups → dist/`);
+console.log(`built ${count} boards in ${groups.length} groups → dist/${crrt ? ` (CRRT widget: ${crrt.projectId})` : ""}`);

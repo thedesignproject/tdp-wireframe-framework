@@ -83,6 +83,19 @@ To shortlist boards, add `wireframes/<project>/site.json` with
 Shortlisted boards sit side by side at the top of the index and the rest are listed
 as explorations. Use `"chosen"` instead of `"shortlist"` once one wins.
 
+### Feedback on the hosted boards (CRRT)
+
+Reviewers can pin comments on any hosted page with [CRRT](https://github.com/thedesignproject/CRRT).
+Put the project's public key in `site.config.json`:
+
+```json
+{ "crrt": { "projectId": "<public project key>" } }
+```
+
+The build then adds the widget to every page in `dist/` (React and the widget load from
+a CDN through an import map). Board sources, PNGs and standalone files are not touched,
+so they stay offline and monochrome. Without the file, no widget is added.
+
 ## Design checks (Impeccable)
 
 [Impeccable](https://impeccable.style) (Apache-2.0) is installed per project for Claude
