@@ -64,7 +64,7 @@ See the matrix on [00 Overview](00-overview.png) for which version leads with wh
 2. The **Finvisor result metric** (Finvisor is first in "Selected work" today but has no number).
 3. **8–12 quotes with faces** if V2 wins (we have 3 usable today: Socure, Navengage, OXIO).
 4. **Real team photos**, no stock.
-5. A **true capacity number** for any scarcity line.
+5. A **true capacity number**, only if a scarcity line comes back. V1 (chosen) closes without one.
 
 ## Fix before anything ships
 

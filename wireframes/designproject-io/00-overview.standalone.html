@@ -457,6 +457,10 @@ small { font-size: var(--fs-xs); }
 
 /* ── list ─────────────────────────────────────────────────── */
 .list { list-style: none; padding: 0; display: grid; gap: 0; }
+/* Short deliverable lists inside a card: no rules, a › marker per line. */
+.bullets { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--s-1); font-size: var(--fs-sm); }
+.bullets li { display: flex; gap: var(--s-2); }
+.bullets li::before { content: "›"; font-weight: 700; }
 .list__item {
   display: flex;
   align-items: center;
@@ -532,6 +536,42 @@ small { font-size: var(--fs-xs); }
   font-weight: 700;
   line-height: 1;
 }
+
+/* Live pins: a board's script turns each pin into a button that opens its note
+   in a popover next to it (hover, focus or tap). The notes list stays as the
+   print and PNG fallback; popovers never render unless opened. */
+.pin--live { position: relative; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.pin--live::after { content: ""; position: absolute; inset: -10px; border-radius: 50%; } /* 42px tap target */
+.pin--live:hover, .pin--live[aria-expanded="true"] { background: var(--ink); color: var(--paper); }
+.pin--live:focus-visible { outline: var(--stroke) solid var(--ink); outline-offset: 3px; }
+
+.pin-pop {
+  position: fixed;
+  z-index: 100;
+  width: max-content;
+  max-width: min(340px, calc(100vw - 16px));
+  background: var(--paper);
+  border: var(--stroke-bold) solid var(--ink);
+  border-radius: var(--radius-sm);
+  padding: var(--s-3);
+  display: grid;
+  gap: var(--s-1);
+  font-size: var(--fs-sm);
+  line-height: 1.4;
+  text-align: left;
+}
+.pin-pop[hidden] { display: none; }
+.pin-pop__label { font-size: var(--fs-xs); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+.pin-pop__arrow {
+  position: absolute;
+  width: 12px; height: 12px;
+  background: var(--paper);
+  border: var(--stroke-bold) solid var(--ink);
+  transform: rotate(45deg);
+}
+.pin-pop[data-side="below"] .pin-pop__arrow { top: -8px; border-right: 0; border-bottom: 0; }
+.pin-pop[data-side="above"] .pin-pop__arrow { bottom: -8px; border-left: 0; border-top: 0; }
+@media print { .pin-pop { display: none !important; } }
 
 .notes { list-style: none; padding: 0; display: grid; gap: var(--s-2); font-size: var(--fs-sm); }
 .notes li { display: flex; gap: var(--s-2); align-items: flex-start; }
@@ -848,7 +888,7 @@ small { font-size: var(--fs-xs); }
           <tr><td><strong>Social proof</strong></td><td><span class="badge badge--solid">Main bet</span><br>Logo wall, big testimonial</td><td><span class="badge badge--solid">Main bet</span><br>Testimonial wall</td><td>Proof</td><td>Proof strip, testimonials</td><td>Industry results, teams like you</td></tr>
           <tr><td><strong>Authority</strong></td><td>Hero, results</td><td>Hero, numbers</td><td>Hero, proof, team</td><td>Hero, proof strip, toolbox</td><td>Hero</td></tr>
           <tr><td><strong>Liking</strong></td><td>Big testimonial, YouTube</td><td><span class="badge badge--solid">Main bet</span><br>Testimonial wall</td><td>Team</td><td><span class="badge badge--solid">Main bet</span><br>Watch us build, community</td><td>Teams like you</td></tr>
-          <tr><td><strong>Scarcity</strong></td><td>Close</td><td>Close</td><td>Close</td><td>Close</td><td>Close</td></tr>
+          <tr><td><strong>Scarcity</strong></td><td><span class="muted">Not used</span></td><td>Close</td><td>Close</td><td>Close</td><td>Close</td></tr>
           <tr><td><strong>Unity</strong></td><td>Close</td><td>Teams like you</td><td>Your pain</td><td>Community</td><td><span class="badge badge--solid">Main bet</span><br>Your industry</td></tr>
         <tr><td colspan="6"><div class="rule--dashed"></div></td></tr>
           <tr><td><strong>Ethos (trust)</strong></td><td>Strong (3 of 7 sections)</td><td>Light (1 of 6)</td><td>Strong (3 of 7)</td><td><span class="badge badge--solid">Main bet</span><br>Strongest (4 of 7)</td><td>Medium (2 of 6)</td></tr>
