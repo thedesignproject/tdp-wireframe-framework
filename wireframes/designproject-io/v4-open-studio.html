@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>designproject.io V4 Open Studio — wireframe</title>
+<link rel="stylesheet" href="wireframe.css">
+</head>
+<body>
+
+<main class="board">
+
+  <!-- ───────────────────────── why: rationale ───────────────────────── -->
+  <section class="board__intro">
+    <div class="screen__caption"><b>Why</b> the thinking behind this version</div>
+    <div class="card stack">
+      <p class="lead">Our unfair advantage is that we work in public, with YouTube episodes and open GitHub repos. Most studios only claim they're good; we can show it. So right after the hero, the visitor watches us build a real feature (B), then sees a short strip of proof (C) and gets free tools they can use today (D). Giving something useful first makes people more willing to give something back, in our case a call. Testimonials (E) and the community (F) show that other people are already here. The close (G) offers a call or, for people who aren't ready yet, an email signup. <strong>Trade-off:</strong> it depends on having one episode good enough to be the centerpiece of the homepage.</p>
+      <p class="hint"><strong>How to read this board:</strong> the big frame on the left is the full homepage, top to bottom. Each section is lettered (A, B, C…) and carries a small dashed tag naming the persuasion principle it relies on. Those principles are explained in plain words on the Overview board. The right column shows the phone version, a section-by-section summary and open questions.</p>
+    </div>
+  </section>
+
+
+  <!-- ───────────────────────── 01 homepage desktop ───────────────────────── -->
+  <section>
+    <div class="screen__caption"><b>V4</b> Open Studio · <b>01</b> Homepage — desktop</div>
+    <div class="screen screen--desktop">
+
+      <header class="topbar">
+        <div class="brand"><span class="brand__mark">T</span> The Design Project</div>
+        <nav class="nav">
+          <a href="#">Work</a>
+          <a href="#">How we work</a>
+          <a href="#">Industries</a>
+          <a href="#">Pricing</a>
+          <a href="#">Resources</a>
+        </nav>
+        <div class="topbar__spacer"></div>
+        <a class="btn btn--sm" href="#">Book a call</a>
+      </header>
+
+      <!-- A. hero (constant) -->
+      <section class="section section--hero">
+        <span class="lens">A · Constant hero · Ethos + Authority</span>
+        <p class="eyebrow">AI-native product studio &amp; design lab</p>
+        <h1 class="display">A design-led, AI-native product studio</h1>
+        <p class="lead measure">Designers, PMs and engineers working as one team with yours, using AI to take a feature from kickoff to live.</p>
+        <div class="row">
+          <span class="pin">1</span>
+          <a class="btn btn--primary btn--lg" href="#">Book a call</a>
+          <a class="btn btn--quiet btn--lg" href="#">See the results</a>
+        </div>
+        <div class="proof-strip">
+          <span class="proof"><b>Woven</b> acquired by <b>Slack</b></span>
+          <span class="proof"><b>Brev</b> acquired by <b>NVIDIA</b></span>
+          <span class="proof"><b>Vyro</b> acquired by <b>MrBeast</b></span>
+          <span class="proof"><b>Monte Carlo</b> backed by <b>Accel</b></span>
+        </div>
+      </section>
+
+      <!-- B. watch us build -->
+      <section class="section">
+        <span class="lens">B · Liking · Logos + Pathos</span>
+        <div class="section__head">
+          <div class="row"><span class="pin">2</span><p class="eyebrow">Watch us build</p></div>
+          <h2>Kickoff to live, in one episode</h2>
+        </div>
+        <div class="split split--aside">
+          <div class="media media--hero"><span class="play"></span><span class="media__tag">YouTube embed — real client feature, start to finish</span></div>
+          <div class="stack">
+            <p class="eyebrow">Chapters</p>
+            <ul class="list">
+              <li class="list__item"><span class="mono">00:00</span><span>Customer call becomes context</span></li>
+              <li class="list__item"><span class="mono">03:10</span><span>Prototype in code, same day</span></li>
+              <li class="list__item"><span class="mono">07:45</span><span>Design system in Storybook</span></li>
+              <li class="list__item"><span class="mono">10:20</span><span>Shipped to production</span></li>
+            </ul>
+            <a class="btn btn--sm" href="#" style="justify-self:start">More episodes on YouTube</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- C. compact proof -->
+      <section class="section section--tight">
+        <span class="lens">C · Social proof + Authority · Ethos</span>
+        <div class="row row--between">
+          <div class="row"><span class="pin">3</span><span class="logo">Socure</span><span class="logo">Coursera</span><span class="logo">Monte Carlo</span><span class="logo">Big Health</span><span class="logo">Finvisor</span></div>
+          <span class="muted"><strong>50+</strong> funded B2B teams</span>
+        </div>
+        <div class="grid grid--3">
+          <div class="callout"><strong>42%</strong> return rate · Woven</div>
+          <div class="callout"><strong>99%</strong> verification completion · Mesh</div>
+          <div class="callout"><strong>+12%</strong> retention · Monte Carlo</div>
+        </div>
+      </section>
+
+      <!-- D. open toolbox -->
+      <section class="section">
+        <span class="lens">D · Reciprocity + Authority · Ethos</span>
+        <div class="row row--between">
+          <div class="section__head">
+            <div class="row"><span class="pin">4</span><p class="eyebrow">Open toolbox</p></div>
+            <h2>The way we work is open. Take it.</h2>
+            <p class="muted">The skills, guides and repos we use on client work, free.</p>
+          </div>
+          <a class="btn btn--quiet" href="#">All resources</a>
+        </div>
+        <div class="grid grid--4">
+          <article class="card stack">
+            <span class="badge" style="justify-self:start">GitHub</span>
+            <strong>Agent skills</strong>
+            <p class="muted">Skills and prompts for Claude Code and other agents.</p>
+            <a class="btn btn--sm" href="#">Open repo</a>
+          </article>
+          <article class="card stack">
+            <span class="badge" style="justify-self:start">Guide</span>
+            <strong>Product context guide</strong>
+            <p class="muted">Keep decisions, designs and code connected.</p>
+            <a class="btn btn--sm" href="#">Read</a>
+          </article>
+          <article class="card stack">
+            <span class="badge" style="justify-self:start">Guide</span>
+            <strong>Figma to Storybook</strong>
+            <p class="muted">Our design-system pipeline, step by step.</p>
+            <a class="btn btn--sm" href="#">Read</a>
+          </article>
+          <article class="card stack" style="border-width:3px">
+            <span class="badge badge--solid" style="justify-self:start">5 min</span>
+            <strong>Agentic workflow assessment</strong>
+            <p class="muted">Score how AI-ready your product team is.</p>
+            <a class="btn btn--sm" href="#">Take it</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- E. testimonials -->
+      <section class="section">
+        <span class="lens">E · Social proof · Pathos</span>
+        <div class="row"><span class="pin">5</span><p class="eyebrow">In their words</p></div>
+        <div class="grid grid--3">
+          <article class="stack"><p class="quote--sm">"The redesign pushed us forward on our mission to verify 100% of IDs in real time."</p><span class="muted"><strong>Erick Soto</strong> · Socure</span></article>
+          <article class="stack"><p class="quote--sm">"Communication was 10/10 from start to finish."</p><span class="muted"><strong>Colleen McBride</strong> · Navengage</span></article>
+          <article class="stack"><p class="quote--sm">"TDP does a great job at understanding our business challenges."</p><span class="muted"><strong>Elliot Chen</strong> · OXIO</span></article>
+        </div>
+      </section>
+
+      <!-- F. community -->
+      <section class="section">
+        <span class="lens">F · Unity + Liking · Ethos</span>
+        <div class="split">
+          <div class="section__head">
+            <div class="row"><span class="pin">6</span><p class="eyebrow">Community</p></div>
+            <h2>Builders learning out loud, together</h2>
+            <p class="muted">We run Friends of Figma in Buenos Aires and Valencia, a WhatsApp community for product builders, and open podcast sessions.</p>
+          </div>
+          <div class="grid grid--3">
+            <div class="stack stack--tight"><p class="metric__value">[N]</p><p class="muted">YouTube subscribers</p></div>
+            <div class="stack stack--tight"><p class="metric__value">[N]</p><p class="muted">GitHub stars</p></div>
+            <div class="stack stack--tight"><p class="metric__value">[N]</p><p class="muted">community members</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- G. close -->
+      <section class="section section--loud section--center">
+        <span class="lens">G · Commitment + Scarcity · Pathos</span>
+        <div class="section__head">
+          <h2>Like how we work? Let's build yours.</h2>
+          <p class="muted measure">Bring a feature. We'll show you how we'd ship it.</p>
+        </div>
+        <div class="row"><span class="pin">7</span><a class="btn btn--bold btn--lg" href="#">Book a call</a></div>
+        <div class="row">
+          <span class="muted">Not ready?</span>
+          <input class="input" placeholder="you@company.com" style="width:260px">
+          <button class="btn btn--sm">Get the weekly build notes</button>
+        </div>
+        <p class="muted"><strong>[N] spots open for [month]</strong></p>
+      </section>
+
+      <footer class="footer">
+        <span class="muted">The Design Project · Miami · Buenos Aires</span>
+        <span class="muted">YouTube · GitHub · Work · Pricing · Careers · hello@designproject.io</span>
+      </footer>
+    </div>
+  </section>
+
+  <!-- ───────────────────────── side column ───────────────────────── -->
+  <div class="stack stack--loose" style="width:420px">
+
+    <section>
+      <div class="screen__caption"><b>02</b> First scroll — mobile</div>
+      <div class="screen screen--mobile">
+        <header class="topbar">
+          <div class="brand"><span class="brand__mark">T</span> TDP</div>
+          <div class="topbar__spacer"></div>
+          <button class="btn btn--icon" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        </header>
+        <section class="section section--hero">
+          <h1 class="display">A design-led, AI-native product studio</h1>
+          <p class="muted">Design, product and engineering as one team.</p>
+          <span class="proof"><b>Woven</b> acquired by <b>Slack</b></span>
+        </section>
+        <section class="section section--tight">
+          <p class="eyebrow">Watch us build</p>
+          <div class="media" style="min-height:190px"><span class="play"></span></div>
+          <span class="muted">Kickoff to live, in one episode · 12 min</span>
+        </section>
+        <div class="cta-bar"><a class="btn btn--primary btn--block" href="#">Book a call</a></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="screen__caption"><b>Story</b> the hypothesis</div>
+      <div class="card stack">
+        <p><strong>"Come see it on YouTube, come see us on GitHub, then book a call."</strong></p>
+        <div class="flow">
+          <span class="flow__step">Who</span><span class="flow__arrow"></span>
+          <span class="flow__step">Watch</span><span class="flow__arrow"></span>
+          <span class="flow__step">Take</span><span class="flow__arrow"></span>
+          <span class="flow__step">Join</span><span class="flow__arrow"></span>
+          <span class="flow__step">Talk</span>
+        </div>
+        <p class="muted">Show, don't tell. Give real value before asking, so the call feels like a return favour. Plays to the assets we have and others don't: YouTube and open repos.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="screen__caption"><b>Map</b> persuasion levers by section</div>
+      <table class="table">
+        <thead><tr><th>Sec.</th><th>Cialdini</th><th>Aristotle</th></tr></thead>
+        <tbody>
+          <tr><td>A</td><td>Authority, social proof</td><td>Ethos</td></tr>
+          <tr><td>B</td><td>Liking</td><td>Logos, pathos</td></tr>
+          <tr><td>C</td><td>Social proof, authority</td><td>Ethos</td></tr>
+          <tr><td>D</td><td>Reciprocity, authority</td><td>Ethos</td></tr>
+          <tr><td>E</td><td>Social proof</td><td>Pathos</td></tr>
+          <tr><td>F</td><td>Unity, liking</td><td>Ethos</td></tr>
+          <tr><td>G</td><td>Commitment (micro: email), scarcity</td><td>Pathos</td></tr>
+        </tbody>
+      </table>
+      <p class="hint mt-4">All 7 present. Reciprocity is the spine; the only version with a soft second conversion.</p>
+    </section>
+
+    <section>
+      <div class="screen__caption"><b>Notes</b> open questions</div>
+      <ol class="notes">
+        <li><span class="pin">1</span><span>Hero identical to the other four versions.</span></li>
+        <li><span class="pin">2</span><span>Needs one episode good enough to be the homepage. Exists today?</span></li>
+        <li><span class="pin">3</span><span>Proof shrinks to one strip; the video carries credibility.</span></li>
+        <li><span class="pin">4</span><span>All four resources exist on the current site; links stay.</span></li>
+        <li><span class="pin">5</span><span>Quotes trimmed to one line each.</span></li>
+        <li><span class="pin">6</span><span>Show counts only when they're impressive; otherwise drop the numbers.</span></li>
+        <li><span class="pin">7</span><span>Email capture is a second goal. Does it cannibalise calls?</span></li>
+      </ol>
+      <div class="todo mt-4">
+        <div class="todo__head">Out of scope</div>
+        <span class="muted">Episode production, resources page redesign, newsletter.</span>
+      </div>
+    </section>
+
+  </div>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>designproject.io V1 Credibility Ladder — wireframe</title>
+<link rel="stylesheet" href="wireframe.css">
+</head>
+<body>
+
+<main class="board">
+
+  <!-- ───────────────────────── why: rationale ───────────────────────── -->
+  <section class="board__intro">
+    <div class="screen__caption"><b>Why</b> the thinking behind this version</div>
+    <div class="card stack">
+      <p class="lead">Nobody knows The Design Project yet, so the page's first job is to make a stranger trust us. On the 2 Nov call the team proposed this exact order (hero, logos and testimonials, results, what we do, YouTube and GitHub, book a call), and this board draws it as the homepage. After the hero, each section adds one more reason to believe us: famous client logos (B), a client in their own words (C), then hard numbers (D). Only once trust is built do we explain what we do (E), because people ignore explanations from a company they don't trust yet. YouTube and GitHub (F) come late, as a bonus for people who want to dig deeper, and the ask comes last (G). <strong>Trade-off:</strong> it's the safest order, and it looks like most studio websites.</p>
+      <p class="hint"><strong>How to read this board:</strong> the big frame on the left is the full homepage, top to bottom. Each section is lettered (A, B, C…) and carries a small dashed tag naming the persuasion principle it relies on. Those principles are explained in plain words on the Overview board. The right column shows the phone version, a section-by-section summary and the notes. Each numbered circle has a note: the principles that section pulls, why it sits there, and what the visitor should think by the end of it. In a browser, hover or tap a circle to read its note right there.</p>
+    </div>
+  </section>
+
+
+  <!-- ───────────────────────── 01 homepage desktop ───────────────────────── -->
+  <section>
+    <div class="screen__caption"><b>V1</b> Credibility Ladder · <b>01</b> Homepage — desktop</div>
+    <div class="screen screen--desktop">
+
+      <header class="topbar">
+        <div class="brand"><span class="brand__mark">T</span> The Design Project</div>
+        <nav class="nav">
+          <a href="#">Work</a>
+          <a href="#">How we work</a>
+          <a href="#">Industries</a>
+          <a href="#">Pricing</a>
+          <a href="#">Resources</a>
+        </nav>
+        <div class="topbar__spacer"></div>
+        <a class="btn btn--sm" href="#">Book a call</a>
+      </header>
+
+      <!-- A. hero -->
+      <section class="section section--hero">
+        <span class="lens">A · Hero · Authority + Unity · Ethos</span>
+        <p class="eyebrow">AI-native product studio &amp; design lab</p>
+        <h1 class="display">A design-led, AI-native product studio</h1>
+        <p class="lead measure">Designers, PMs and engineers working as one team with yours, using autonomous agents to take a feature from kickoff to live</p>
+        <div class="row">
+          <span class="pin">1</span>
+          <a class="btn btn--primary btn--lg" href="#">Book a call</a>
+          <a class="btn btn--quiet btn--lg" href="#">See the results</a>
+        </div>
+        <div class="proof-strip">
+          <span class="pin">2</span>
+          <span class="proof"><b>Woven</b> acquired by <b>Slack</b></span>
+          <span class="proof"><b>Brev</b> acquired by <b>NVIDIA</b></span>
+          <span class="proof"><b>Vyro</b> acquired by <b>MrBeast</b></span>
+          <span class="proof"><b>Monte Carlo</b> backed by <b>Accel</b></span>
+        </div>
+      </section>
+
+      <!-- B. logo wall -->
+      <section class="section section--tight section--center">
+        <span class="lens">B · Social proof · Ethos</span>
+        <div class="row"><span class="pin">3</span><p class="eyebrow">Trusted by 50+ funded B2B teams</p></div>
+        <div class="logo-wall full">
+          <span class="logo">Socure</span><span class="logo">Coursera</span><span class="logo">Monte Carlo</span>
+          <span class="logo">Big Health</span><span class="logo">Mesh</span><span class="logo">Woven</span>
+          <span class="logo">Finvisor</span><span class="logo">Imera</span><span class="logo">Scalestack</span>
+          <span class="logo">OXIO</span><span class="logo">PureSpectrum</span><span class="logo">JupiterOne</span>
+        </div>
+      </section>
+
+      <!-- C. the big testimonial -->
+      <section class="section">
+        <span class="lens">C · Social proof + Liking · Pathos</span>
+        <div class="split split--aside">
+          <div class="stack stack--loose">
+            <div class="row"><span class="pin">4</span><p class="eyebrow">In their words</p></div>
+            <p class="quote--xl">"The redesign pushed us forward on our mission to verify 100% of IDs in real time."</p>
+            <div class="cite">
+              <div class="media media--circle" style="width:56px;min-height:56px"></div>
+              <div><strong>Erick Soto</strong><br><span class="muted">VP of Product, Socure</span></div>
+            </div>
+            <div class="callout"><strong>Socure raised $100M after the redesign.</strong> Outcome sits under the quote, never in a separate block.</div>
+          </div>
+          <div class="stack">
+            <article class="card stack">
+              <p class="quote--sm">"Communication was 10/10 from start to finish … Working with TDP is 100% worth it."</p>
+              <span class="muted"><strong>Colleen McBride</strong> · CMO, Navengage</span>
+            </article>
+            <article class="card stack">
+              <p class="quote--sm">"Communication is fluid and enables us to move quickly, adapt to changes and pivot."</p>
+              <span class="muted"><strong>Elliot Chen</strong> · Head of Product, OXIO</span>
+            </article>
+            <a class="btn btn--quiet btn--sm" href="#">Read more reviews</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- D. results -->
+      <section class="section">
+        <span class="lens">D · Authority · Logos</span>
+        <div class="row row--between">
+          <div class="section__head">
+            <div class="row"><span class="pin">5</span><p class="eyebrow">Results</p></div>
+            <h2>What changed after we shipped</h2>
+          </div>
+          <a class="btn btn--quiet" href="#">All case studies</a>
+        </div>
+        <div class="grid grid--4">
+          <article class="card stack">
+            <div class="media media--thumb"></div>
+            <p class="metric__value">42%</p>
+            <p class="muted">user return rate after the redesign; then acquired by Slack.</p>
+            <p class="eyebrow">Woven · HR tech</p>
+          </article>
+          <article class="card stack">
+            <div class="media media--thumb"></div>
+            <p class="metric__value">+12%</p>
+            <p class="muted">user retention with actionable dashboards; raised a Series D.</p>
+            <p class="eyebrow">Monte Carlo · Data</p>
+          </article>
+          <article class="card stack">
+            <div class="media media--thumb"></div>
+            <p class="metric__value">99%</p>
+            <p class="muted">of applicants completed business verification.</p>
+            <p class="eyebrow">Mesh · Fintech</p>
+          </article>
+          <article class="card stack">
+            <div class="media media--thumb"></div>
+            <p class="metric__value">3 mo</p>
+            <p class="muted">from zero to a B2B platform that won a global enterprise customer.</p>
+            <p class="eyebrow">Imera · AI</p>
+          </article>
+        </div>
+        <p class="hint">Each card opens its case study. Headline = the number, not the client name.</p>
+      </section>
+
+      <!-- E. what we do -->
+      <section class="section">
+        <span class="lens">E · Logos</span>
+        <div class="section__head">
+          <div class="row"><span class="pin">6</span><p class="eyebrow">What we do</p></div>
+          <h2>One team, from decision to production</h2>
+        </div>
+        <div class="grid grid--4">
+          <article class="card stack">
+            <p class="eyebrow">01</p>
+            <h3>Fractional leadership</h3>
+            <p class="muted">CTO, product and design leadership in your team. A senior leader who owns the roadmap, the architecture and the hard calls, without a full-time hire.</p>
+            <ul class="bullets">
+              <li>Product &amp; tech strategy</li>
+              <li>Architecture &amp; roadmap</li>
+              <li>Hiring &amp; team setup</li>
+            </ul>
+          </article>
+          <article class="card stack">
+            <p class="eyebrow">02</p>
+            <h3>AI-native design systems</h3>
+            <p class="muted">One system your designers, developers and AI agents all build from. Designed in Figma, built in code and kept in sync, so every new screen starts from what you already have.</p>
+            <ul class="bullets">
+              <li>AI-readiness check</li>
+              <li>Shared components and tokens</li>
+              <li>Agents wired in through MCP</li>
+            </ul>
+          </article>
+          <article class="card stack">
+            <p class="eyebrow">03</p>
+            <h3>Staff augmentation</h3>
+            <p class="muted">Senior designers, PMs and engineers who join your team. They work in your tools and your codebase, and ship alongside your people.</p>
+            <ul class="bullets">
+              <li>Senior people in your standups</li>
+              <li>Design and code in one team</li>
+              <li>Mentorship for your team</li>
+            </ul>
+          </article>
+          <article class="card stack">
+            <p class="eyebrow">04</p>
+            <h3>Workshops &amp; training</h3>
+            <p class="muted">Your team learns the AI-native way of working we use on client projects every day, taught by the people doing it. Sessions run on your own product, not on made-up examples.</p>
+            <ul class="bullets">
+              <li>Hands-on workshops for your team</li>
+              <li>Training for designers, PMs and engineers</li>
+              <li>Follow-up sessions as you roll it out</li>
+            </ul>
+          </article>
+        </div>
+        <a class="btn btn--quiet btn--sm" href="#" style="justify-self:start">How we work, in depth</a>
+      </section>
+
+      <!-- F. see us build -->
+      <section class="section">
+        <span class="lens">F · Reciprocity + Liking · Ethos</span>
+        <div class="section__head">
+          <div class="row"><span class="pin">7</span><p class="eyebrow">See us build</p></div>
+          <h2>We build in public. Watch, fork, steal.</h2>
+        </div>
+        <div class="split">
+          <div class="stack">
+            <div class="media" style="min-height:220px"><span class="play"></span><span class="media__tag">YouTube — latest episode</span></div>
+            <div class="row row--between">
+              <span class="muted"><strong>YouTube</strong> · weekly episodes</span>
+              <a class="btn btn--sm" href="#">Subscribe</a>
+            </div>
+          </div>
+          <div class="stack">
+            <ul class="list">
+              <li class="list__item"><div><strong>CRRT</strong><br><span class="muted">Visual feedback on any page, handed straight to your coding agents</span></div></li>
+              <li class="list__item"><div><strong>agent-skills</strong><br><span class="muted">Skills and prompts for Claude Code and other agents</span></div></li>
+              <li class="list__item"><div><strong>product-context-guide</strong><br><span class="muted">How we keep decisions, designs and code connected</span></div></li>
+              <li class="list__item"><div><strong>figma-to-storybook</strong><br><span class="muted">Our design-system pipeline, open</span></div></li>
+            </ul>
+            <div class="row row--between">
+              <span class="muted"><strong>GitHub</strong> · open repos</span>
+              <a class="btn btn--sm" href="#">Follow on GitHub</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- G. close -->
+      <section class="section section--loud section--center">
+        <span class="lens">G · Commitment + Unity · Pathos + Kairos</span>
+        <div class="section__head">
+          <h2>Ship it this quarter, not next year</h2>
+          <p class="muted measure">You know what’s stuck. Meet the people who’ll get it live.</p>
+        </div>
+        <div class="grid grid--3" style="max-width:820px;text-align:left">
+          <div class="callout">1 — Name the thing that keeps slipping</div>
+          <div class="callout">2 — Meet the team who’d build it</div>
+          <div class="callout">3 — Ship it together</div>
+        </div>
+        <div class="row"><span class="pin">8</span><a class="btn btn--bold btn--lg" href="#">Let’s ship it</a></div>
+      </section>
+
+      <footer class="footer">
+        <span class="muted">The Design Project · Miami · Buenos Aires</span>
+        <span class="muted">Work · How we work · Industries · Pricing · Careers · hello@designproject.io</span>
+      </footer>
+    </div>
+  </section>
+
+  <!-- ───────────────────────── side column ───────────────────────── -->
+  <div class="stack stack--loose" style="width:420px">
+
+    <section>
+      <div class="screen__caption"><b>02</b> First scroll — mobile</div>
+      <div class="screen screen--mobile">
+        <header class="topbar">
+          <div class="brand"><span class="brand__mark">T</span> TDP</div>
+          <div class="topbar__spacer"></div>
+          <button class="btn btn--icon" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+        </header>
+        <section class="section section--hero">
+          <h1 class="display">A design-led, AI-native product studio</h1>
+          <p class="muted">Design, product and engineering as one team.</p>
+          <div class="stack full">
+            <span class="proof"><b>Woven</b> acquired by <b>Slack</b></span>
+            <span class="proof"><b>Brev</b> acquired by <b>NVIDIA</b></span>
+          </div>
+        </section>
+        <section class="section section--tight">
+          <div class="logo-wall">
+            <span class="logo">Socure</span><span class="logo">Coursera</span><span class="logo">Mesh</span>
+          </div>
+          <p class="quote">"Verify 100% of IDs in real time."</p>
+          <span class="muted"><strong>Erick Soto</strong> · Socure</span>
+        </section>
+        <div class="cta-bar"><a class="btn btn--primary btn--block" href="#">Book a call</a></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="screen__caption"><b>Story</b> the hypothesis</div>
+      <div class="card stack">
+        <p><strong>"We have zero brand. Be credible right away, then keep stacking credibility."</strong></p>
+        <div class="flow">
+          <span class="flow__step">Who</span><span class="flow__arrow"></span>
+          <span class="flow__step">Proof</span><span class="flow__arrow"></span>
+          <span class="flow__step">What</span><span class="flow__arrow"></span>
+          <span class="flow__step">See us</span><span class="flow__arrow"></span>
+          <span class="flow__step">Talk</span>
+        </div>
+        <p class="muted">The flow proposed in the 2 Nov call. Ethos front-loaded, pathos only at the close. Case studies sit behind the testimonials, one click deep.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="screen__caption"><b>Map</b> persuasion levers by section</div>
+      <table class="table">
+        <thead><tr><th>Sec.</th><th>Cialdini</th><th>Aristotle</th></tr></thead>
+        <tbody>
+          <tr><td>A</td><td>Authority, social proof, unity</td><td>Ethos</td></tr>
+          <tr><td>B</td><td>Social proof</td><td>Ethos</td></tr>
+          <tr><td>C</td><td>Social proof, liking</td><td>Pathos</td></tr>
+          <tr><td>D</td><td>Authority</td><td>Logos</td></tr>
+          <tr><td>E</td><td>(none)</td><td>Logos</td></tr>
+          <tr><td>F</td><td>Reciprocity, liking</td><td>Ethos</td></tr>
+          <tr><td>G</td><td>Commitment, unity</td><td>Pathos, kairos</td></tr>
+        </tbody>
+      </table>
+      <p class="hint mt-4">6 of 7 principles; scarcity is left out on purpose, so the close doesn't feel like a sales trick. Weight: ethos 3, logos 2, pathos 2, plus kairos at the close.</p>
+    </section>
+
+    <section>
+      <div class="screen__caption"><b>Notes</b> what each section is for</div>
+      <ol class="notes">
+        <li><span class="pin">1</span><span><strong>Authority + unity · Ethos.</strong> The headline says who we are in one line; “one team with yours” says we work inside your team, not beside it. It comes first because a stranger decides in seconds whether to stay. Leaves them thinking: “senior people who’d feel like part of my team.”</span></li>
+        <li><span class="pin">2</span><span><strong>Authority + social proof · Ethos.</strong> Slack, NVIDIA, MrBeast and Accel are names the visitor already trusts, so we borrow that trust before they read anything else. It sits right under the headline to back the claim up at once. Leaves them thinking: “products they worked on got bought by companies I know.”</span></li>
+        <li><span class="pin">3</span><span><strong>Social proof · Ethos.</strong> Twelve logos and “50+ funded B2B teams” show this isn’t new for us. One famous name could be luck; a wall of them is a track record, so it comes straight after the hero. Leaves them thinking: “lots of teams like mine already trust them.”</span></li>
+        <li><span class="pin">4</span><span><strong>Social proof + liking · Pathos.</strong> A real person, with a face and a title, saying what the work did for their mission. It follows the logos to turn names into a human voice, and the $100M raise under the quote keeps it from sounding like flattery. Leaves them thinking: “people like me were glad they hired them.”</span></li>
+        <li><span class="pin">5</span><span><strong>Authority · Logos.</strong> Every card leads with a number, not a client name. It comes after the quotes because feelings get people listening and numbers get them believing. Leaves them thinking: “it works, and here’s by how much.”</span></li>
+        <li><span class="pin">6</span><span><strong>Logos, no Cialdini lever on purpose.</strong> Only now do we explain what we do, because people skip a company’s explanation until they trust it. Four plain names, a line each and three concrete deliverables, so visitors spot their own need fast. Leaves them thinking: “I know which one I’d buy.”</span></li>
+        <li><span class="pin">7</span><span><strong>Reciprocity + liking · Ethos.</strong> Free episodes and open repos give something away before we ask for anything, and show the team doing the real work. It sits late, for visitors who want to dig deeper before they talk to us. Leaves them thinking: “they’re generous, and they’re the real thing.”</span></li>
+        <li><span class="pin">8</span><span><strong>Commitment + unity · Pathos + Kairos.</strong> “This quarter, not next year” gives a reason to act now, “You know what’s stuck” names the project they already worry about, and “meet the people” promises real humans, not a sales funnel. Three small steps make the call an easy yes; “Let’s ship it” makes it a joint project. It’s last because an ask only lands once trust is built. No countdown or “spots left” line: the urgency comes from their own backlog, not from pressure. Leaves them thinking: “that could actually be live this quarter.”</span></li>
+      </ol>
+      <div class="todo mt-4">
+        <div class="todo__head">Out of scope</div>
+        <span class="muted">Pricing on the homepage (linked in nav), vertical pages, case study template, visual design.</span>
+      </div>
+    </section>
+
+  </div>
+
+</main>
+
+<script>
+/* Live pins: hover, focus or tap a numbered circle to read its note in place.
+   Notes come from the board's .notes list, which stays as the print/PNG fallback. */
+(() => {
+  const notes = new Map();
+  document.querySelectorAll(".notes li").forEach((li) => {
+    const pin = li.querySelector(".pin");
+    const text = pin && pin.nextElementSibling;
+    if (text) notes.set(pin.textContent.trim(), text.innerHTML);
+  });
+  if (!notes.size) return;
+
+  const pop = document.createElement("div");
+  pop.className = "pin-pop";
+  pop.id = "pin-pop";
+  pop.setAttribute("role", "tooltip");
+  pop.hidden = true;
+  pop.innerHTML = '<span class="pin-pop__arrow"></span><span class="pin-pop__label"></span><span class="pin-pop__text"></span>';
+  document.body.append(pop);
+
+  let current = null, sticky = false, hideTimer = 0;
+
+  function place() {
+    if (!current) return;
+    const r = current.getBoundingClientRect(), gap = 12, edge = 8;
+    const w = pop.offsetWidth, h = pop.offsetHeight;
+    const below = r.bottom + gap + h <= innerHeight - edge || r.top - gap - h < edge;
+    const cx = r.left + r.width / 2;
+    const left = Math.min(Math.max(cx - 24, edge), innerWidth - w - edge);
+    pop.dataset.side = below ? "below" : "above";
+    pop.style.left = `${left}px`;
+    pop.style.top = `${below ? r.bottom + gap : r.top - gap - h}px`;
+    pop.firstChild.style.left = `${Math.min(Math.max(cx - left - 6, 10), w - 22)}px`;
+  }
+  function show(pin, keep) {
+    clearTimeout(hideTimer);
+    if (current && current !== pin) current.setAttribute("aria-expanded", "false");
+    current = pin;
+    sticky = keep;
+    pop.querySelector(".pin-pop__label").textContent = `Note ${pin.textContent.trim()}`;
+    pop.querySelector(".pin-pop__text").innerHTML = notes.get(pin.textContent.trim());
+    pop.hidden = false;
+    pin.setAttribute("aria-expanded", "true");
+    place();
+  }
+  function hide() {
+    if (current) current.setAttribute("aria-expanded", "false");
+    current = null; sticky = false; pop.hidden = true;
+  }
+  const hideSoon = () => { if (!sticky) hideTimer = setTimeout(hide, 150); };
+
+  document.querySelectorAll(".pin").forEach((pin) => {
+    const n = pin.textContent.trim();
+    if (pin.closest(".notes") || !notes.has(n)) return;
+    pin.classList.add("pin--live");
+    pin.tabIndex = 0;
+    pin.setAttribute("role", "button");
+    pin.setAttribute("aria-label", `Note ${n}`);
+    pin.setAttribute("aria-expanded", "false");
+    pin.setAttribute("aria-describedby", pop.id);
+    pin.addEventListener("pointerenter", (e) => { if (e.pointerType === "mouse" && !sticky) show(pin, false); });
+    pin.addEventListener("pointerleave", (e) => { if (e.pointerType === "mouse") hideSoon(); });
+    pin.addEventListener("focus", () => { if (!sticky) show(pin, false); });
+    pin.addEventListener("blur", hideSoon);
+    pin.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      if (current === pin && sticky) hide(); else show(pin, true);
+    });
+    pin.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pin.click(); }
+    });
+  });
+  pop.addEventListener("pointerenter", () => clearTimeout(hideTimer));
+  pop.addEventListener("pointerleave", hideSoon);
+  document.addEventListener("click", (e) => { if (current && !pop.contains(e.target)) hide(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && current) { const p = current; hide(); p.focus(); } });
+  addEventListener("scroll", place, { passive: true, capture: true });
+  addEventListener("resize", place);
+})();
+</script>
+
+</body>
+</html>

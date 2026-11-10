@@ -138,6 +138,10 @@ Rule of thumb: at most one level of nesting. A `.card` inside a `.card` inside a
 <ul class="list">
   <li class="list__item"><div class="avatar">PR</div><div>…</div></li>
 </ul>
+
+<ul class="bullets">                 <!-- short deliverables inside a card, › markers -->
+  <li>Component libraries</li>
+</ul>
 ```
 
 Tables get a 2px head rule and 1.5px row rules. No zebra shading (that would be
@@ -198,6 +202,13 @@ Pins belong on the element they describe, in reading order. The notes panel sits
 the last section of the board at `width:420px`. Keep notes to one sentence each;
 if a note needs three, the screen needs a decision.
 
+**Live pins (optional).** For boards reviewed in a browser, copy the `<script>` at the
+end of `wireframes/designproject-io/v1-credibility-ladder.html` before `</body>`. It reads
+the `.notes` list, turns every other `.pin` with a matching number into a button
+(`.pin--live`), and shows its note in a `.pin-pop` popover next to it on hover, focus or
+tap; Escape or a tap elsewhere closes it. Keep the notes list: it is the fallback for
+print and the PNG, where popovers never appear.
+
 ## Icons
 
 Inline SVG only, `stroke="currentColor"` or `#000`, `stroke-width="2"`,
@@ -225,6 +236,48 @@ Inline SVG only, `stroke="currentColor"` or `#000`, `stroke-width="2"`,
 <!-- filter -->
 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
 ```
+
+## Marketing pages (long-scroll sites)
+
+A homepage is one tall `.screen--desktop` made of stacked `.section` blocks.
+
+```html
+<section class="section section--hero">          <!-- centred, no top rule -->
+  <span class="lens">A · Ethos + Authority</span>  <!-- annotation, not UI -->
+  <h1 class="display">A design-led, AI-native product studio</h1>
+  <div class="proof-strip"><span class="proof"><b>Woven</b> acquired by <b>Slack</b></span></div>
+</section>
+
+<section class="section section--tight section--center">
+  <div class="logo-wall"><span class="logo">Socure</span> …</div>   <!-- names, never logo images -->
+</section>
+
+<section class="section">
+  <p class="quote--xl">"…"</p>                      <!-- also .quote, .quote--sm -->
+  <div class="cite"><div class="avatar">ES</div><div><strong>Name</strong> · Role</div></div>
+  <div class="media"><span class="play"></span></div>            <!-- video placeholder -->
+  <div class="flow"><span class="flow__step">Context</span><span class="flow__arrow"></span>…</div>
+</section>
+
+<section class="section section--loud section--center">   <!-- the close: 3px top rule -->
+  <a class="btn btn--bold btn--lg">Book a call</a>          <!-- repeat CTA: bold, never solid -->
+</section>
+
+<div class="cta-bar"><a class="btn btn--primary btn--block">Book a call</a></div>  <!-- sticky mobile -->
+```
+
+- `.lens` names the persuasion lever (Cialdini / Aristotle) a section pulls. It is
+  dashed and italic so it never reads as UI. On mobile it drops into the flow.
+- The hero CTA is the page's one solid button. Later repeats of the same action use
+  `.btn--bold`.
+- `.board__intro` is a full-width block above the screens for the board's rationale:
+  why this structure, what it is based on, and its main trade-off. Put it first in
+  `.board`, with a `<b>Why</b>` caption and a `.card` holding one `.lead` paragraph.
+- `.board--doc` makes a board of cards, tables and notes (an overview, a summary)
+  reflow to any viewport instead of fixed widths: `.grid--5` drops to 3 then 1
+  column, `.split` stacks, and wide tables go in `.table-scroll` so they scroll inside
+  their box, never the page. Device frames keep their fixed widths.
+- `.flow__step--quiet` (dashed) is the "old way" or not-yet state in a before/after.
 
 ## Adding a component
 

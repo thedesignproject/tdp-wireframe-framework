@@ -102,6 +102,7 @@ done
 shot="$work/shot.png"
 "$browser" \
   --headless --disable-gpu --no-sandbox --hide-scrollbars \
+  --user-data-dir="$work/profile" \
   --force-device-scale-factor="$scale" \
   --window-size="$width,$height" \
   --virtual-time-budget=4000 \
