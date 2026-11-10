@@ -198,6 +198,13 @@ Pins belong on the element they describe, in reading order. The notes panel sits
 the last section of the board at `width:420px`. Keep notes to one sentence each;
 if a note needs three, the screen needs a decision.
 
+**Live pins (optional).** For boards reviewed in a browser, copy the `<script>` at the
+end of `wireframes/designproject-io/v1-credibility-ladder.html` before `</body>`. It reads
+the `.notes` list, turns every other `.pin` with a matching number into a button
+(`.pin--live`), and shows its note in a `.pin-pop` popover next to it on hover, focus or
+tap; Escape or a tap elsewhere closes it. Keep the notes list: it is the fallback for
+print and the PNG, where popovers never appear.
+
 ## Icons
 
 Inline SVG only, `stroke="currentColor"` or `#000`, `stroke-width="2"`,

@@ -15,7 +15,7 @@
     <div class="screen__caption"><b>Why</b> the thinking behind this version</div>
     <div class="card stack">
       <p class="lead">Nobody knows The Design Project yet, so the page's first job is to make a stranger trust us. On the 2 Nov call the team proposed this exact order (hero, logos and testimonials, results, what we do, YouTube and GitHub, book a call), so this board draws it as-is to give us a baseline. After the hero, each section adds one more reason to believe us: famous client logos (B), a client in their own words (C), then hard numbers (D). Only once trust is built do we explain what we do (E), because people ignore explanations from a company they don't trust yet. YouTube and GitHub (F) come late, as a bonus for people who want to dig deeper, and the ask comes last (G). <strong>Trade-off:</strong> it's the safest order, and it looks like most studio websites.</p>
-      <p class="hint"><strong>How to read this board:</strong> the big frame on the left is the full homepage, top to bottom. Each section is lettered (A, B, C…) and carries a small dashed tag naming the persuasion principle it relies on. Those principles are explained in plain words on the Overview board. The right column shows the phone version, a section-by-section summary and open questions.</p>
+      <p class="hint"><strong>How to read this board:</strong> the big frame on the left is the full homepage, top to bottom. Each section is lettered (A, B, C…) and carries a small dashed tag naming the persuasion principle it relies on. Those principles are explained in plain words on the Overview board. The right column shows the phone version, a section-by-section summary and open questions. The numbered circles match those questions; in a browser, hover or tap a circle to read its note right there.</p>
     </div>
   </section>
 
@@ -303,6 +303,88 @@
   </div>
 
 </main>
+
+<script>
+/* Live pins: hover, focus or tap a numbered circle to read its note in place.
+   Notes come from the board's .notes list, which stays as the print/PNG fallback. */
+(() => {
+  const notes = new Map();
+  document.querySelectorAll(".notes li").forEach((li) => {
+    const pin = li.querySelector(".pin");
+    const text = pin && pin.nextElementSibling;
+    if (text) notes.set(pin.textContent.trim(), text.innerHTML);
+  });
+  if (!notes.size) return;
+
+  const pop = document.createElement("div");
+  pop.className = "pin-pop";
+  pop.id = "pin-pop";
+  pop.setAttribute("role", "tooltip");
+  pop.hidden = true;
+  pop.innerHTML = '<span class="pin-pop__arrow"></span><span class="pin-pop__label"></span><span class="pin-pop__text"></span>';
+  document.body.append(pop);
+
+  let current = null, sticky = false, hideTimer = 0;
+
+  function place() {
+    if (!current) return;
+    const r = current.getBoundingClientRect(), gap = 12, edge = 8;
+    const w = pop.offsetWidth, h = pop.offsetHeight;
+    const below = r.bottom + gap + h <= innerHeight - edge || r.top - gap - h < edge;
+    const cx = r.left + r.width / 2;
+    const left = Math.min(Math.max(cx - 24, edge), innerWidth - w - edge);
+    pop.dataset.side = below ? "below" : "above";
+    pop.style.left = `${left}px`;
+    pop.style.top = `${below ? r.bottom + gap : r.top - gap - h}px`;
+    pop.firstChild.style.left = `${Math.min(Math.max(cx - left - 6, 10), w - 22)}px`;
+  }
+  function show(pin, keep) {
+    clearTimeout(hideTimer);
+    if (current && current !== pin) current.setAttribute("aria-expanded", "false");
+    current = pin;
+    sticky = keep;
+    pop.querySelector(".pin-pop__label").textContent = `Note ${pin.textContent.trim()}`;
+    pop.querySelector(".pin-pop__text").innerHTML = notes.get(pin.textContent.trim());
+    pop.hidden = false;
+    pin.setAttribute("aria-expanded", "true");
+    place();
+  }
+  function hide() {
+    if (current) current.setAttribute("aria-expanded", "false");
+    current = null; sticky = false; pop.hidden = true;
+  }
+  const hideSoon = () => { if (!sticky) hideTimer = setTimeout(hide, 150); };
+
+  document.querySelectorAll(".pin").forEach((pin) => {
+    const n = pin.textContent.trim();
+    if (pin.closest(".notes") || !notes.has(n)) return;
+    pin.classList.add("pin--live");
+    pin.tabIndex = 0;
+    pin.setAttribute("role", "button");
+    pin.setAttribute("aria-label", `Note ${n}`);
+    pin.setAttribute("aria-expanded", "false");
+    pin.setAttribute("aria-describedby", pop.id);
+    pin.addEventListener("pointerenter", (e) => { if (e.pointerType === "mouse" && !sticky) show(pin, false); });
+    pin.addEventListener("pointerleave", (e) => { if (e.pointerType === "mouse") hideSoon(); });
+    pin.addEventListener("focus", () => { if (!sticky) show(pin, false); });
+    pin.addEventListener("blur", hideSoon);
+    pin.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      if (current === pin && sticky) hide(); else show(pin, true);
+    });
+    pin.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pin.click(); }
+    });
+  });
+  pop.addEventListener("pointerenter", () => clearTimeout(hideTimer));
+  pop.addEventListener("pointerleave", hideSoon);
+  document.addEventListener("click", (e) => { if (current && !pop.contains(e.target)) hide(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && current) { const p = current; hide(); p.focus(); } });
+  addEventListener("scroll", place, { passive: true, capture: true });
+  addEventListener("resize", place);
+})();
+</script>
 
 </body>
 </html>
