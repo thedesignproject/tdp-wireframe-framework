@@ -3,13 +3,14 @@
 Five homepage structures for the new designproject.io, drawn with the `create-wireframe`
 skill (Balsamiq Sans, black on white). Start with the overview, then open any version.
 
-**Shortlist (3 Nov 2026): V1 Credibility Ladder vs. V6 Proof Up Front** from round 2
-([`../designproject-io-round-2`](../designproject-io-round-2/README.md)). Still being discussed; the other round 1 versions stay as explorations.
+**Chosen (10 Nov 2026): V1 Credibility Ladder.** Visual design starts from V1. V6 Proof Up Front
+from round 2 ([`../designproject-io-round-2`](../designproject-io-round-2/README.md)), which was on
+the shortlist against it, and V2–V5 stay as explorations.
 
 | Board | Story | Hypothesis it tests |
 |---|---|---|
 | [00 Overview](00-overview.png) | all five spines + principle matrix | — |
-| [V1 Credibility Ladder](v1-credibility-ladder.png) | Hero → logos → big testimonial → results → what we do → YouTube/GitHub → call | "We have zero brand: be credible right away, then keep stacking it." |
+| [V1 Credibility Ladder](v1-credibility-ladder.png) **(chosen)** | Hero → logos → big testimonial → results → what we do → YouTube/GitHub → call | "We have zero brand: be credible right away, then keep stacking it." |
 | [V2 Wall of Voices](v2-wall-of-voices.png) | Hero → testimonial wall → numbers → one-line what → teams like you → call | "If I don't know the company, I won't read a case study. Many voices beat one deep case." |
 | [V3 Problem, Shift, Proof](v3-problem-shift-proof.png) | Hero → your pain → old way vs. TDP → proof → team → ways to work → call | Joshua Bell: the right frame changes the value. Name the pain, then proof lands as the answer. |
 | [V4 Open Studio](v4-open-studio.png) | Hero → watch us build → proof strip → open toolbox → quotes → community → call | "Come see us on YouTube and GitHub, then book a call." Give before asking. |
@@ -83,5 +84,5 @@ See the matrix on [00 Overview](00-overview.png) for which version leads with wh
 S=.agents/skills/create-wireframe/scripts
 $S/lint-mono.sh wireframes/designproject-io/*.html
 $S/render.sh wireframes/designproject-io/v1-credibility-ladder.html --width 1820 --height 9000 --inline
-$S/render.sh wireframes/designproject-io/00-overview.html --width 1800 --height 3000 --inline
+$S/render.sh wireframes/designproject-io/00-overview.html --width 1800 --height 4000 --inline
 ```

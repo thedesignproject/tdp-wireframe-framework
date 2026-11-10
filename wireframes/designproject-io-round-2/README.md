@@ -6,8 +6,9 @@ raised on the 2 Nov call ([`../designproject-io`](../designproject-io/README.md)
 tries five stories nobody proposed yet, so the team picks from a wider field. Start with the
 overview, then open any version.
 
-**Shortlist (3 Nov 2026): V6 Proof Up Front vs. V1 Credibility Ladder from round 1.** Still being
-discussed. Whichever wins, the overview's **Borrow** table lists sections worth taking across.
+**Chosen (10 Nov 2026): V1 Credibility Ladder from round 1.** V6 Proof Up Front was on the
+shortlist against it; V6–V10 now stay as explorations. The overview's **Borrow** table lists
+round 2 sections worth taking into V1.
 
 | Board | Story | Hypothesis it tests |
 |---|---|---|
@@ -40,13 +41,9 @@ Each `.html` is the source (needs the skill's `wireframe.css`).
 ## How round 2 relates to round 1
 
 Round 1's main bets were social proof, reciprocity and unity. Round 2 bets on what round 1
-used only as support: proof in the first screen (V6), authority (V9), one story (V7), liking (V8) and timing (V10). The
-likely winner is one spine from either round plus one or two borrowed sections. The
-overview's **Borrow** table suggests where each round 2 section could slot into a round 1
-spine.
-
-Round 2 mostly skips reciprocity and unity. If a round 2 spine wins, borrow V4's open
-toolbox or V5's "teams like you".
+used only as support: proof in the first screen (V6), authority (V9), one story (V7), liking (V8) and timing (V10). V1 won,
+so the overview's **Borrow** table now reads as where each round 2 section could slot into
+V1's spine.
 
 ## New content asks
 

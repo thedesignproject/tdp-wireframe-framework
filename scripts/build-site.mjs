@@ -55,7 +55,7 @@ if (existsSync(wfRoot)) {
   for (const project of projects) {
     if (!project.isDirectory()) continue;
     const dir = join(wfRoot, project.name);
-    const boards = readdirSync(dir).filter(isBoard).sort()
+    const boards = readdirSync(dir).filter(isBoard).sort((x, y) => x.localeCompare(y, "en", { numeric: true }))
       .map((f) => addBoard(dir, basename(f, ".html"), project.name));
     const readme = join(dir, "README.md");
     const heading = existsSync(readme) && readFileSync(readme, "utf8").match(/^#\s+(.+)$/m);
@@ -88,17 +88,19 @@ const card = (b) => `
 const feature = (f) => `
         <a class="card site-card site-feature stack" href="${f.board.href}">
           ${f.board.png ? `<img class="site-thumb" src="${f.board.png}" alt="">` : `<div class="media media--thumb"></div>`}
-          <p class="eyebrow">${esc(f.project)}</p>
-          <h3>${esc(f.board.title)}</h3>
-          ${f.why ? `<p class="muted">${esc(f.why)}</p>` : ""}
-          <span class="btn btn--sm site-cta">Open the board</span>
+          <div class="stack">
+            <p class="eyebrow">${esc(f.project)}</p>
+            <h3>${esc(f.board.title)}</h3>
+            ${f.why ? `<p class="muted">${esc(f.why)}</p>` : ""}
+            <span class="btn btn--sm site-cta">Open the board</span>
+          </div>
         </a>`;
 
 const shortlist = () => !features.length ? "" : `
     <section class="stack stack--loose">
-      <div class="row"><span class="badge badge--solid">${chosenAny ? "Chosen direction" : "Shortlist"}</span><span class="muted">${chosenAny ? "" : "Being discussed: one of these becomes the homepage."}</span></div>
-      <div class="grid grid--${Math.min(features.length, 3)}">${features.map(feature).join("")}
-      </div>
+      <div class="row"><span class="badge badge--solid">${chosenAny ? "Chosen direction" : "Shortlist"}</span><span class="muted">${chosenAny ? "The team picked this one. Everything below stays as exploration." : "Being discussed: one of these becomes the homepage."}</span></div>
+      ${features.length === 1 ? feature(features[0]).replace("site-feature stack", "site-feature site-feature--solo") : `<div class="grid grid--${Math.min(features.length, 3)}">${features.map(feature).join("")}
+      </div>`}
     </section>`;
 
 const section = (g) => `
@@ -120,9 +122,10 @@ writeFileSync(join(out, "index.html"), `<!DOCTYPE html>
   .site-card { color: inherit; text-decoration: none; }
   .site-feature { border-width: 3px; padding: var(--s-5); }
   .site-cta { justify-self: start; }
+  .site-feature--solo { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: var(--s-6); align-items: start; }
   .site-thumb { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; object-position: top; border: var(--stroke) solid var(--ink); }
   @media (max-width: 800px) {
-    .site .grid--2, .site .grid--3 { grid-template-columns: 1fr; }
+    .site .grid--2, .site .grid--3, .site-feature--solo { grid-template-columns: 1fr; }
     .site-feature { padding: var(--s-4); }
   }
 </style>
@@ -132,7 +135,7 @@ writeFileSync(join(out, "index.html"), `<!DOCTYPE html>
     <header class="stack">
       <p class="eyebrow">The Design Project</p>
       <h1>Wireframes</h1>
-      <p class="lead measure">The shortlist first, then every exploration behind it. Rebuilt on each push; open a board for the full-size page.</p>
+      <p class="lead measure">The ${chosenAny ? "chosen direction" : "shortlist"} first, then every exploration behind it. Rebuilt on each push; open a board for the full-size page.</p>
     </header>${shortlist()}${groups.map(section).join("")}
   </main>
 </body>
