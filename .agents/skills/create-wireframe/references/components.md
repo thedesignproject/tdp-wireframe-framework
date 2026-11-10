@@ -138,6 +138,10 @@ Rule of thumb: at most one level of nesting. A `.card` inside a `.card` inside a
 <ul class="list">
   <li class="list__item"><div class="avatar">PR</div><div>…</div></li>
 </ul>
+
+<ul class="bullets">                 <!-- short deliverables inside a card, › markers -->
+  <li>Component libraries</li>
+</ul>
 ```
 
 Tables get a 2px head rule and 1.5px row rules. No zebra shading (that would be

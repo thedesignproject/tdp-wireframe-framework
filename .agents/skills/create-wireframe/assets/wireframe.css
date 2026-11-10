@@ -450,6 +450,10 @@ small { font-size: var(--fs-xs); }
 
 /* ── list ─────────────────────────────────────────────────── */
 .list { list-style: none; padding: 0; display: grid; gap: 0; }
+/* Short deliverable lists inside a card: no rules, a › marker per line. */
+.bullets { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--s-1); font-size: var(--fs-sm); }
+.bullets li { display: flex; gap: var(--s-2); }
+.bullets li::before { content: "›"; font-weight: 700; }
 .list__item {
   display: flex;
   align-items: center;

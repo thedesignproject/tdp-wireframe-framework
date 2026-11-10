@@ -457,6 +457,10 @@ small { font-size: var(--fs-xs); }
 
 /* ── list ─────────────────────────────────────────────────── */
 .list { list-style: none; padding: 0; display: grid; gap: 0; }
+/* Short deliverable lists inside a card: no rules, a › marker per line. */
+.bullets { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--s-1); font-size: var(--fs-sm); }
+.bullets li { display: flex; gap: var(--s-2); }
+.bullets li::before { content: "›"; font-weight: 700; }
 .list__item {
   display: flex;
   align-items: center;
@@ -857,23 +861,43 @@ small { font-size: var(--fs-xs); }
         <div class="grid grid--4">
           <article class="card stack">
             <p class="eyebrow">01</p>
-            <h3>Fractional product leadership</h3>
-            <p class="muted">A senior product lead in your team, part-time, owning the roadmap and the decisions behind it.</p>
+            <h3>Fractional leadership</h3>
+            <p class="muted">CTO, product and design leadership in your team, part-time. A senior leader who owns the roadmap, the architecture and the hard calls, without a full-time hire.</p>
+            <ul class="bullets">
+              <li>Product &amp; tech strategy</li>
+              <li>Architecture &amp; roadmap</li>
+              <li>Hiring &amp; team setup</li>
+            </ul>
           </article>
           <article class="card stack">
             <p class="eyebrow">02</p>
-            <h3>Product design &amp; technology</h3>
-            <p class="muted">Designers and engineers who take a feature from idea to working product in code.</p>
+            <h3>AI-native design systems</h3>
+            <p class="muted">Your design system is about to become the most important API your company owns. We build it from Figma to production, so your team and your AI agents build from one source.</p>
+            <ul class="bullets">
+              <li>AI-readiness audits &amp; MCP</li>
+              <li>Component libraries &amp; tokens</li>
+              <li>Storybook &amp; docs</li>
+            </ul>
           </article>
           <article class="card stack">
             <p class="eyebrow">03</p>
-            <h3>AI-native design systems</h3>
-            <p class="muted">Designed in Figma and engineered in code, so your team and your AI agents build from one source.</p>
+            <h3>Staff augmentation</h3>
+            <p class="muted">Senior designers, PMs and engineers embedded with your team. They slot into your codebase and ship: direct access to the people doing the work, no hand-offs to a B-team.</p>
+            <ul class="bullets">
+              <li>Embedded designers &amp; engineers</li>
+              <li>Front-end architecture</li>
+              <li>Mentorship for your team</li>
+            </ul>
           </article>
           <article class="card stack">
             <p class="eyebrow">04</p>
-            <h3>Staff augmentation</h3>
-            <p class="muted">Designers, PMs and engineers who join your team, plus workshops that train it on AI-native ways of working.</p>
+            <h3>Workshops &amp; training</h3>
+            <p class="muted">We teach what we practice: hands-on team workshops, talks, and the AI &amp; Design Systems course with Brad Frost. Live demos from real client work, no slideware.</p>
+            <ul class="bullets">
+              <li>Team workshops</li>
+              <li>Speaking engagements</li>
+              <li>AI &amp; DS course with Brad Frost</li>
+            </ul>
           </article>
         </div>
         <a class="btn btn--quiet btn--sm" href="#" style="justify-self:start">How we work, in depth</a>
@@ -1001,7 +1025,7 @@ small { font-size: var(--fs-xs); }
         <li><span class="pin">3</span><span><strong>Social proof · Ethos.</strong> Twelve logos and “50+ funded B2B teams” show this isn’t new for us. One famous name could be luck; a wall of them is a track record, so it comes straight after the hero. Leaves them thinking: “lots of teams like mine already trust them.”</span></li>
         <li><span class="pin">4</span><span><strong>Social proof + liking · Pathos.</strong> A real person, with a face and a title, saying what the work did for their mission. It follows the logos to turn names into a human voice, and the $100M raise under the quote keeps it from sounding like flattery. Leaves them thinking: “people like me were glad they hired them.”</span></li>
         <li><span class="pin">5</span><span><strong>Authority · Logos.</strong> Every card leads with a number, not a client name. It comes after the quotes because feelings get people listening and numbers get them believing. Leaves them thinking: “it works, and here’s by how much.”</span></li>
-        <li><span class="pin">6</span><span><strong>Logos, no Cialdini lever on purpose.</strong> Only now do we explain what we do, because people skip a company’s explanation until they trust it. Four plain names, one line each, so visitors spot their own need fast. Leaves them thinking: “I know which one I’d buy.”</span></li>
+        <li><span class="pin">6</span><span><strong>Logos, no Cialdini lever on purpose.</strong> Only now do we explain what we do, because people skip a company’s explanation until they trust it. Four plain names, a line each and three concrete deliverables, so visitors spot their own need fast. Leaves them thinking: “I know which one I’d buy.”</span></li>
         <li><span class="pin">7</span><span><strong>Reciprocity + liking · Ethos.</strong> Free episodes and open repos give something away before we ask for anything, and show the team doing the real work. It sits late, for visitors who want to dig deeper before they talk to us. Leaves them thinking: “they’re generous, and they’re the real thing.”</span></li>
         <li><span class="pin">8</span><span><strong>Scarcity + commitment + unity · Pathos + Kairos.</strong> “Let’s build” makes it a joint project; three clear steps make the call a small yes; “start within 7 days” and capped spots say why now. It’s last because an ask only lands once trust is built. Ship the spots line only with a real number: fake scarcity undoes everything above. Leaves them thinking: “low risk, and worth doing this month.”</span></li>
       </ol>
