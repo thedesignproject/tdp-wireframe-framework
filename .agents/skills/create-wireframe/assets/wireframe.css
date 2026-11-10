@@ -538,7 +538,7 @@ small { font-size: var(--fs-xs); }
   position: fixed;
   z-index: 100;
   width: max-content;
-  max-width: min(300px, calc(100vw - 16px));
+  max-width: min(340px, calc(100vw - 16px));
   background: var(--paper);
   border: var(--stroke-bold) solid var(--ink);
   border-radius: var(--radius-sm);
